@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="default_edit_text_size">12sp</dimen>
+    <dimen name="default_height_edit_text">44dp</dimen>
+    <dimen name="button_submit">44dp</dimen>
 </resources>

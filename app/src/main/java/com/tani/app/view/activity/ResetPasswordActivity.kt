@@ -7,19 +7,24 @@ import com.tani.app.base.activity.BaseActivity
 import com.tani.app.helper.Validator
 import com.tani.app.helper.ViewUtils
 import kotlinx.android.synthetic.main.login_activity.*
-import org.jetbrains.anko.startActivity
+import kotlinx.android.synthetic.main.reset_password_activity.*
+import kotlinx.android.synthetic.main.reset_password_activity.btnEye
+import kotlinx.android.synthetic.main.reset_password_activity.cvSubmit
+import kotlinx.android.synthetic.main.reset_password_activity.etPassword
+import kotlinx.android.synthetic.main.reset_password_activity.tilPassword
+import kotlinx.android.synthetic.main.reset_password_activity.tvSkip
 
 /**
  * Created by Ramana on 21-Sep-19.
  */
 
-class LoginActivity : BaseActivity() {
+class ResetPasswordActivity : BaseActivity() {
 
     override fun statusBarColor(): Int = R.color.white
 
     override fun setTitle(): String = "Login"
 
-    override fun setLayout(): Int = R.layout.login_activity
+    override fun setLayout(): Int = R.layout.reset_password_activity
 
     override fun onCreate(savedInstanceState: Bundle?, actionBar: ActionBar?) {
         initComponent()
@@ -27,9 +32,8 @@ class LoginActivity : BaseActivity() {
 
     override fun onClick() {
         tvSkip.setOnClickListener { finish() }
-        tvForgot.setOnClickListener { startActivity<ForgotPasswordActivity>() }
-        tvRegister.setOnClickListener { startActivity<RegisterActivity>() }
         btnEye.setOnClickListener { ViewUtils.passwordState(it, etPassword) }
+        btnReEye.setOnClickListener { ViewUtils.passwordState(it, etRePassword) }
         cvSubmit.setOnClickListener { validateForm() }
     }
 

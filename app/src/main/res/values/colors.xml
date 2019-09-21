@@ -4,5 +4,49 @@
     <color name="colorPrimaryDark">#436625</color>
     <color name="colorAccent">#689f39</color>
 
+    <!--color-->
+    <color name="black">#2B2B2B</color>
+    <color name="white">#FFFFFF</color>
+    <color name="blue">#2121FF</color>
+    <color name="gray">#4A473E</color>
+    <color name="brown_yellow">#DCD8CD</color>
+    <color name="black_opacity2">#80000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray_brown">#F2F1EC</color>
+    <color name="colorBackgroundSplash">#292929</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="gray_light">#5F5F5F</color>
+    <color name="gray_semi_dark">#333333</color>
+    <color name="brown_dark">#a98f57</color>
+    <color name="silver">#efefef</color>
+    <color name="light_gold">#F7F7F7</color>
+    <color name="gold">#D2F7F7F7</color>
+    <color name="light_grey">#dcd8cd</color>
+    <color name="dark_sand">#a98f57</color>
+    <color name="white_two">#dedede</color>
+    <color name="grayish">#b7b7b7</color>
+    <color name="black_opacity">#70000000</color>
+    <color name="brown_light">#ebebeb</color>
+    <color name="red_light">#c42651</color>
+    <color name="blue_old">#268ac4</color>
+    <color name="gray_fastaloka">#979797</color>
+    <color name="pink">#ce4d70</color>
+    <color name="grey_v2">#605f5f</color>
+    <color name="black_red">#982643</color>
+    <color name="gray_old">#605f5f</color>
+    <color name="red_blood">#a12043</color>
+    <color name="yellow">#f7ca93</color>
+    <color name="merah_jambu">#ff8b8b</color>
+    <color name="green_light">#9ac479</color>
+    <color name="green_light_v2">#9ac479</color>
+    <color name="green_light_v3">#d0e3c1</color>
+    <color name="grey_v3">#9B9B9B</color>
+    <color name="grey_v4">#abaaaa</color>
+    <color name="grey_v5">#bcbabb</color>
+    <color name="green">#588717</color>
+    <color name="green_v1">#7bb34e</color>
+    <color name="alert_color_text">#a86a1f</color>
+    <color name="alert_bg_color">#F7DEBF</color>
     <color name="box_stroke_color" tools:override="true">#646464</color>
+    <color name="facebook_blue">#4067B2</color>
 </resources>
