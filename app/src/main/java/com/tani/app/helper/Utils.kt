@@ -112,6 +112,15 @@ object Utils {
         act.window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_NOTHING)
     }
 
+    fun adjustLayoutFullscreen(act: Activity) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            act.window.setFlags(
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+            )
+        }
+    }
+
     fun getContact(context: Context, data: Uri?): String? {
         val contentResolver = context.contentResolver
         val c = data?.let { contentResolver.query(it, null, null, null, null) }

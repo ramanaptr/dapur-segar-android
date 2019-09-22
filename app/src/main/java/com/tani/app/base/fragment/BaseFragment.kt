@@ -1,5 +1,6 @@
 package com.tani.app.base.fragment
 
+import android.app.ActionBar
 import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.tani.app.helper.DialogLoading
+import org.jetbrains.anko.support.v4.act
 
 abstract class BaseFragment : Fragment() {
 
@@ -22,7 +24,7 @@ abstract class BaseFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        onCreate(savedInstanceState, view)
+        onCreate(savedInstanceState, act.actionBar)
         initComponent()
     }
 
@@ -32,5 +34,7 @@ abstract class BaseFragment : Fragment() {
 
     protected abstract fun setLayout(): Int
 
-    protected abstract fun onCreate(savedInstanceState: Bundle?, view: View)
+    protected abstract fun onCreate(savedInstanceState: Bundle?, actionBar: ActionBar?)
+
+    protected abstract fun onClick()
 }

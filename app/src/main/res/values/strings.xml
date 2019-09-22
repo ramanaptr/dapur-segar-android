@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">Tani App</string>
+    <string name="search_des">search fruit, vegetable, meat ...</string>
+    <string name="back_message_on_main">Tekan sekali lagi untuk keluar dari aplikasi</string>
+    <string name="pressed_back_message">Press back again to exit</string>
+    <string name="default_error_message">Sorry, There is something problem</string>
+    <string name="default_connection_error">No internet connection</string>
+
+    <string name="font_family_light">sans-serif-light</string>
+    <string name="font_family_medium">sans-serif-medium</string>
+    <string name="font_family_regular">sans-serif</string>
+    <string name="font_family_condensed">sans-serif-condensed</string>
+    <string name="font_family_black">sans-serif-black</string>
+    <string name="font_family_thin">sans-serif-thin</string>
+
+    <integer-array name="ic_main_tab">
+        <item>@drawable/ic_home</item>
+        <item>@drawable/ic_bill</item>
+        <item>@drawable/ic_favorite</item>
+        <item>@drawable/ic_profile</item>
+    </integer-array>
+
+    <integer-array name="ic_main_tab_off">
+        <item>@drawable/ic_home_off</item>
+        <item>@drawable/ic_bill_off</item>
+        <item>@drawable/ic_favorite_off</item>
+        <item>@drawable/ic_profile_off</item>
+    </integer-array>
+
 </resources>

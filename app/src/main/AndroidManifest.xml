@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name="com.tani.app.view.activity.LoginActivity">
+        <activity android:name="com.tani.app.view.activity.login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,9 +23,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".base.webview.BaseWebView" />
-        <activity android:name=".view.activity.RegisterActivity" />
-        <activity android:name=".view.activity.ForgotPasswordActivity" />
-        <activity android:name=".view.activity.ResetPasswordActivity" />
+        <activity android:name=".view.activity.register.RegisterActivity" />
+        <activity android:name=".view.activity.forgot.ForgotPasswordActivity" />
+        <activity android:name=".view.activity.forgot.ResetPasswordActivity" />
+        <activity android:name=".view.activity.main.MainActivity" />
     </application>
 
 </manifest>

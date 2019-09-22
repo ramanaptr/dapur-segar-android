@@ -23,14 +23,10 @@
     <style name="App_Modal_Style" parent="Widget.Design.BottomSheet.Modal">
         <item name="android:background">@drawable/rounded_white_top_only</item>
     </style>
-
-    <style name="clickable_with_ripple">
+c
+    <style name="selectable_with_ripple">
         <item name="android:clickable">true</item>
         <item name="android:background">?attr/selectableItemBackground</item>
     </style>
-
-
-    android:background=""
-    android:clickable="true"
 
 </resources>

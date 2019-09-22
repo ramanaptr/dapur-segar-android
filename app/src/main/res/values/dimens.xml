@@ -3,4 +3,8 @@
     <dimen name="default_edit_text_size">12sp</dimen>
     <dimen name="default_height_edit_text">44dp</dimen>
     <dimen name="button_submit">44dp</dimen>
+    <dimen name="default_padding_start">24dp</dimen>
+    <dimen name="default_padding_end">24dp</dimen>
+    <dimen name="status_bar_dimen">24dp</dimen>
+    <dimen name="top_margin">16dp</dimen>
 </resources>

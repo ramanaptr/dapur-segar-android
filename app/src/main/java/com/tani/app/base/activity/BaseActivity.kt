@@ -1,12 +1,11 @@
 package com.tani.app.base.activity
 
-import android.Manifest
 import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
+import com.tani.app.R
 import com.tani.app.helper.DialogLoading
-import com.livinglifetechway.quickpermissions_kotlin.runWithPermissions
 import com.tani.app.helper.Utils
 import com.tani.app.helper.ViewUtils
 import kotlinx.android.synthetic.main.default_toolbar.*
@@ -56,7 +55,7 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     private fun networkCheck() {
-        if (!Utils.isNetworkAvailable(this)) toast("Tidak ada koneksi internet")
+        if (!Utils.isNetworkAvailable(this)) toast(getString(R.string.default_connection_error))
     }
 
     protected abstract fun statusBarColor(): Int

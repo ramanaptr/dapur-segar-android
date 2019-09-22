@@ -49,4 +49,6 @@
     <color name="alert_bg_color">#F7DEBF</color>
     <color name="box_stroke_color" tools:override="true">#646464</color>
     <color name="facebook_blue">#4067B2</color>
+    <color name="cream">#fefefe</color>
+    <color name="red">#cf3a5c</color>
 </resources>

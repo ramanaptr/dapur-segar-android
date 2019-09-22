@@ -1,4 +1,4 @@
-package com.fastaloka.app.base.adapter
+package com.tani.app.base.adapter
 
 import android.util.SparseArray
 import androidx.fragment.app.Fragment
