@@ -3,6 +3,7 @@ package com.tani.app.helper
 import android.os.Handler
 import androidx.viewpager.widget.ViewPager
 import java.util.*
+import java.util.concurrent.TimeUnit
 
 
 object TimerHelper {
@@ -12,7 +13,7 @@ object TimerHelper {
     private var timer: Timer? = null
     var task: TimerTask? = null
 
-    fun autoSlide(viewPager: ViewPager, size: Int, time: Long) {
+    fun autoSlide(viewPager: ViewPager, size: Int, seconds: Long) {
         var nextSlider = 0
         val handler = Handler()
         val timer = Timer()
@@ -26,12 +27,21 @@ object TimerHelper {
                     } else {
                         viewPager.currentItem = nextSlider
                     }
-                }, time)
+                }, TimeUnit.SECONDS.toMillis(seconds))
             }
         }
-        timer.schedule(task, 0, time)
+        timer.schedule(task, 0, TimeUnit.SECONDS.toMillis(seconds))
         this.task = task
         this.timer = timer
+    }
+
+    fun start(seconds: Long) {
+        timer?.cancel()
+        timer?.schedule(task, 0, TimeUnit.SECONDS.toMillis(seconds))
+    }
+
+    fun cancel() {
+        timer?.cancel()
     }
 
     fun looper(loops: Int, time: Long, listener: (Int) -> Unit) {
@@ -47,15 +57,6 @@ object TimerHelper {
                 }
             }
         }
-        timer.schedule(task, 0, time)
-    }
-
-    fun start(time: Long) {
-        timer?.cancel()
-        timer?.schedule(task, 0, time)
-    }
-
-    fun cancel() {
-        timer?.cancel()
+        timer.schedule(task, 0, TimeUnit.MILLISECONDS.toMillis(time))
     }
 }

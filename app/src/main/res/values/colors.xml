@@ -7,6 +7,7 @@
     <!--color-->
     <color name="black">#2B2B2B</color>
     <color name="white">#FFFFFF</color>
+    <color name="white_transparent">#B5FFFFFF</color>
     <color name="blue">#2121FF</color>
     <color name="gray">#4A473E</color>
     <color name="brown_yellow">#DCD8CD</color>
@@ -32,6 +33,7 @@
     <color name="gray_fastaloka">#979797</color>
     <color name="pink">#ce4d70</color>
     <color name="grey_v2">#605f5f</color>
+    <color name="grey_new">#8a8a8a</color>
     <color name="black_red">#982643</color>
     <color name="gray_old">#605f5f</color>
     <color name="red_blood">#a12043</color>

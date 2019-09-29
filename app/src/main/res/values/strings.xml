@@ -27,4 +27,7 @@
         <item>@drawable/ic_profile_off</item>
     </integer-array>
 
+
+    <string name="ic_arrow_bottom">&#xf35f;</string>
+
 </resources>

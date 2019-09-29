@@ -7,4 +7,5 @@
     <dimen name="default_padding_end">24dp</dimen>
     <dimen name="status_bar_dimen">24dp</dimen>
     <dimen name="top_margin">16dp</dimen>
+    <dimen name="product_item_margin">8dp</dimen>
 </resources>
