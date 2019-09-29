@@ -24,7 +24,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
+        <com.tani.app.base.customview.CustomTextView
             android:id="@+id/tvMenuTitle"
             android:layout_width="wrap_content"
             android:layout_height="24dp"
@@ -32,7 +32,6 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:fontFamily="@font/os_regular"
             android:text="Fruit"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"

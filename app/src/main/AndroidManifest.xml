@@ -15,18 +15,31 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name="com.tani.app.view.activity.login.LoginActivity">
+        <activity
+            android:name="com.tani.app.view.activity.login.LoginActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".base.webview.BaseWebView" />
-        <activity android:name=".view.activity.register.RegisterActivity" />
-        <activity android:name=".view.activity.forgot.ForgotPasswordActivity" />
-        <activity android:name=".view.activity.forgot.ResetPasswordActivity" />
-        <activity android:name=".view.activity.main.MainActivity" />
+        <activity
+            android:name=".base.webview.BaseWebView"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".view.activity.register.RegisterActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".view.activity.forgot.ForgotPasswordActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".view.activity.forgot.ResetPasswordActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".view.activity.main.MainActivity"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
     </application>
 
 </manifest>

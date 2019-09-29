@@ -45,7 +45,6 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     private fun screenStatus() {
-        Utils.adjustLayoutResize(this)
         Utils.changeColorStatusBar(this, statusBarColor())
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
     }

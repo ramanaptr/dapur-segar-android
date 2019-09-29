@@ -9,7 +9,10 @@ import com.tani.app.R
 import com.tani.app.base.activity.BaseActivity
 import com.tani.app.base.adapter.BaseMainPagerAdapter
 import com.tani.app.helper.ViewUtils
+import com.tani.app.view.activity.main.bill.BillFragment
+import com.tani.app.view.activity.main.favorite.FavoriteFragment
 import com.tani.app.view.activity.main.home.HomepageFragment
+import com.tani.app.view.activity.main.profile.ProfileFragment
 import kotlinx.android.synthetic.main.main_activity.*
 
 /**
@@ -52,9 +55,9 @@ class MainActivity : BaseActivity() {
     private fun addFragments(): SparseArray<Fragment> {
         val fragments = SparseArray<Fragment>()
         fragments.put(0, HomepageFragment())
-        fragments.put(1, HomepageFragment())
-        fragments.put(2, HomepageFragment())
-        fragments.put(3, HomepageFragment())
+        fragments.put(1, BillFragment())
+        fragments.put(2, FavoriteFragment())
+        fragments.put(3, ProfileFragment())
         return fragments
     }
 
