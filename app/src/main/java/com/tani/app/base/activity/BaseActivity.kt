@@ -6,8 +6,9 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.tani.app.R
 import com.tani.app.helper.DialogLoading
-import com.tani.app.helper.Utils
-import com.tani.app.helper.ViewUtils
+import com.tani.app.helper.changeColorStatusBar
+import com.tani.app.helper.isNetworkAvailable
+import com.tani.app.helper.settingToolbar
 import kotlinx.android.synthetic.main.default_toolbar.*
 import org.jetbrains.anko.toast
 
@@ -23,19 +24,11 @@ abstract class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(setLayout())
-        onCreate(savedInstanceState, initToolbar())
+        onCreate(savedInstanceState, settingToolbar(tvTitle, setTitle(), toolbar))
         onClick()
         initDialog()
         screenStatus()
         networkCheck()
-    }
-
-    private fun initToolbar(): ActionBar? {
-        if (toolbar != null) {
-            setSupportActionBar(toolbar)
-            return ViewUtils.initToolbar(tvTitle, setTitle(), toolbar, supportActionBar)
-        }
-        return supportActionBar
     }
 
     override fun onResume() {
@@ -45,7 +38,7 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     private fun screenStatus() {
-        Utils.changeColorStatusBar(this, statusBarColor())
+        changeColorStatusBar(statusBarColor())
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
     }
 
@@ -54,7 +47,7 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     private fun networkCheck() {
-        if (!Utils.isNetworkAvailable(this)) toast(getString(R.string.default_connection_error))
+        if (!isNetworkAvailable()) toast(getString(R.string.default_connection_error))
     }
 
     protected abstract fun statusBarColor(): Int

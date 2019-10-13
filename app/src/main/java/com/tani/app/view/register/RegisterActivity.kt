@@ -1,4 +1,4 @@
-package com.tani.app.view.activity.register
+package com.tani.app.view.register
 
 import android.os.Bundle
 import androidx.appcompat.app.ActionBar

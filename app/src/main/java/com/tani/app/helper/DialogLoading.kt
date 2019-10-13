@@ -1,13 +1,13 @@
 package com.tani.app.helper
 
-import android.app.Activity
 import android.app.Dialog
+import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.view.ViewGroup
 import com.tani.app.R
 
-class DialogLoading(act: Activity) : Dialog(act) {
+class DialogLoading(context: Context) : Dialog(context) {
 
     override fun show() {
         super.show()

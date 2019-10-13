@@ -16,7 +16,7 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity
-            android:name="com.tani.app.view.activity.login.LoginActivity"
+            android:name="com.tani.app.view.login.LoginActivity"
             android:launchMode="singleTask"
             android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
@@ -29,17 +29,19 @@
             android:name=".base.webview.BaseWebView"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".view.activity.register.RegisterActivity"
+            android:name="com.tani.app.view.register.RegisterActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".view.activity.forgot.ForgotPasswordActivity"
+            android:name="com.tani.app.view.forgot.ForgotPasswordActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".view.activity.forgot.ResetPasswordActivity"
+            android:name="com.tani.app.view.forgot.ResetPasswordActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".view.activity.main.MainActivity"
+            android:name="com.tani.app.view.main.MainActivity"
             android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <activity android:name=".view.search.SearchActivity" />
+        <activity android:name=".view.activity.forgot.ResetPasswordActivity" />
     </application>
 
 </manifest>

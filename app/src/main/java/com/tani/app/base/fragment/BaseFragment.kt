@@ -1,7 +1,6 @@
 package com.tani.app.base.fragment
 
 import android.app.ActionBar
-import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -29,7 +28,7 @@ abstract class BaseFragment : Fragment() {
     }
 
     private fun initComponent() {
-        baseLoading = DialogLoading(activity as Activity)
+        context?.apply { baseLoading = DialogLoading(this) }
     }
 
     protected abstract fun setLayout(): Int

@@ -4,9 +4,12 @@ import android.os.Bundle
 import androidx.appcompat.app.ActionBar
 import com.tani.app.R
 import com.tani.app.base.activity.BaseActivity
-import com.tani.app.helper.Validator
-import com.tani.app.helper.ViewUtils
+import com.tani.app.helper.hideError
+import com.tani.app.helper.passwordState
+import com.tani.app.helper.showError
+import com.tani.app.helper.validatePassword
 import kotlinx.android.synthetic.main.reset_password_activity.*
+import java.lang.String.format
 
 /**
  * Created by Ramana on 21-Sep-19.
@@ -26,28 +29,53 @@ class ResetPasswordActivity : BaseActivity() {
 
     override fun onClick() {
         tvSkip.setOnClickListener { finish() }
-        btnEye.setOnClickListener { ViewUtils.passwordState(it, etPassword) }
-        btnReEye.setOnClickListener { ViewUtils.passwordState(it, etRePassword) }
+        btnEye.setOnClickListener { btnEye.passwordState(etPassword) }
+        btnReEye.setOnClickListener { btnReEye.passwordState(etRePassword) }
         cvSubmit.setOnClickListener { validateForm() }
     }
 
-    private fun validateForm() {
-        val password = etPassword.text.toString()
-        val rePassword = etRePassword.text.toString()
-        when {
-            password.isEmpty() -> Validator.showErrorTextInput(
-                tilPassword,
-                "Password can't be empty"
-            )
-            rePassword.isEmpty() -> Validator.showErrorTextInput(
-                tilRePassword,
-                "Re Password can't be empty"
-            )
-            else -> {
-                Validator.hideErrorTextInput(tilPassword)
-                Validator.hideErrorTextInput(tilRePassword)
-            }
+    private fun validateForm(): Boolean {
+        val password = etPassword.text.toString().trim()
+        val rePassword = etRePassword.text.toString().trim()
+
+        if (password.isEmpty()) {
+            tilPassword.showError(getString(R.string.empty_password))
+            return false
+        } else {
+            tilPassword.hideError()
         }
+
+        if (!password.validatePassword(6)) {
+            val passwordMsg = format(getString(R.string.invalid_minimal_input), 6)
+            tilPassword.showError(passwordMsg)
+            return false
+        } else {
+            tilPassword.hideError()
+        }
+
+        if (rePassword.isEmpty()) {
+            tilRePassword.showError(getString(R.string.empty_repassword))
+            return false
+        } else {
+            tilRePassword.hideError()
+        }
+
+        if (!rePassword.validatePassword(6)) {
+            val passwordMsg = format(getString(R.string.invalid_minimal_input), 6)
+            tilRePassword.showError(passwordMsg)
+            return false
+        } else {
+            tilRePassword.hideError()
+        }
+
+        if (!rePassword.validatePassword(password)) {
+            val passwordMsg = format("Re Password not match", 6)
+            tilRePassword.showError(passwordMsg)
+            return false
+        } else {
+            tilRePassword.hideError()
+        }
+        return true
     }
 
     private fun initComponent() {

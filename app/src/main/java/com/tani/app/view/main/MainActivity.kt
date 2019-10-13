@@ -1,4 +1,4 @@
-package com.tani.app.view.activity.main
+package com.tani.app.view.main
 
 import android.os.Bundle
 import android.util.SparseArray
@@ -8,11 +8,12 @@ import androidx.fragment.app.Fragment
 import com.tani.app.R
 import com.tani.app.base.activity.BaseActivity
 import com.tani.app.base.adapter.BaseMainPagerAdapter
-import com.tani.app.helper.ViewUtils
-import com.tani.app.view.activity.main.bill.BillFragment
-import com.tani.app.view.activity.main.favorite.FavoriteFragment
-import com.tani.app.view.activity.main.home.HomepageFragment
-import com.tani.app.view.activity.main.profile.ProfileFragment
+import com.tani.app.helper.handleBackFromMain
+import com.tani.app.helper.setupTablayout
+import com.tani.app.view.main.bill.BillFragment
+import com.tani.app.view.main.favorite.FavoriteFragment
+import com.tani.app.view.main.home.HomepageFragment
+import com.tani.app.view.main.profile.ProfileFragment
 import kotlinx.android.synthetic.main.main_activity.*
 
 /**
@@ -47,7 +48,7 @@ class MainActivity : BaseActivity() {
         }
         tlMain?.apply {
             setupWithViewPager(vpMain)
-            ViewUtils.setupTablayout(this, vpMain)
+            setupTablayout(vpMain)
             isTabIndicatorFullWidth = false
         }
     }
@@ -62,6 +63,6 @@ class MainActivity : BaseActivity() {
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
-        return ViewUtils.handleBackFromMain(this, keyCode, vpMain)
+        return handleBackFromMain(keyCode, vpMain)
     }
 }

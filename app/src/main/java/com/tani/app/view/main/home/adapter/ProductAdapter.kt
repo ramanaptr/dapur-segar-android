@@ -1,4 +1,4 @@
-package com.tani.app.view.activity.main.home.adapter
+package com.tani.app.view.main.home.adapter
 
 import android.view.LayoutInflater
 import android.view.View

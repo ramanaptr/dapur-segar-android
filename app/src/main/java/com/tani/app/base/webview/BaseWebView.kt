@@ -7,7 +7,7 @@ import android.webkit.WebViewClient
 import androidx.appcompat.app.ActionBar
 import com.tani.app.R
 import com.tani.app.base.activity.BaseActivity
-import com.tani.app.helper.ViewUtils
+import com.tani.app.helper.gone
 import kotlinx.android.synthetic.main.default_web_view.*
 
 class BaseWebView : BaseActivity() {
@@ -48,7 +48,7 @@ class BaseWebView : BaseActivity() {
         webView.webViewClient = object : WebViewClient() {
             override fun onPageFinished(view: WebView?, url: String?) {
                 super.onPageFinished(view, url)
-                ViewUtils.gone(loading)
+                loading.gone()
             }
         }
     }

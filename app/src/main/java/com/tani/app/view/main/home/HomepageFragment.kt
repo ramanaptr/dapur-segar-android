@@ -1,7 +1,6 @@
-package com.tani.app.view.activity.main.home
+package com.tani.app.view.main.home
 
 import android.app.ActionBar
-import android.os.Build
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,12 +11,13 @@ import com.tani.app.helper.TimerHelper
 import com.tani.app.model.home.CategoryHome
 import com.tani.app.model.home.MenuHome
 import com.tani.app.model.home.ProductHome
-import com.tani.app.view.activity.main.home.adapter.CategoryAdapter
-import com.tani.app.view.activity.main.home.adapter.MenuAdapter
+import com.tani.app.view.main.home.adapter.CategoryAdapter
+import com.tani.app.view.main.home.adapter.MenuAdapter
+import com.tani.app.view.search.SearchActivity
 import kotlinx.android.synthetic.main.home_toolbar.*
 import kotlinx.android.synthetic.main.homepage_fragment.*
+import org.jetbrains.anko.*
 import org.jetbrains.anko.support.v4.toast
-import org.jetbrains.anko.toast
 
 class HomepageFragment : BaseFragment() {
 
@@ -33,9 +33,6 @@ class HomepageFragment : BaseFragment() {
     override fun setLayout(): Int = R.layout.homepage_fragment
 
     override fun onCreate(savedInstanceState: Bundle?, actionBar: ActionBar?) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            homeToolbar.elevation = 0f
-        }
         loadData()
         setupAdapter()
     }
@@ -49,7 +46,7 @@ class HomepageFragment : BaseFragment() {
     }
 
     override fun onClick() {
-
+        cvSearch.setOnClickListener { context?.startActivity<SearchActivity>() }
     }
 
     private fun setupAdapter() {
@@ -79,12 +76,12 @@ class HomepageFragment : BaseFragment() {
     }
 
     private fun onClickMore(data: CategoryHome) {
-        context?.toast(data.categoryName)
+        toast(data.categoryName)
     }
 
     private fun onClickCategory(data: ProductHome) {
         data.apply {
-            context?.toast("Adding $name")
+            toast("Adding $name")
         }
     }
 

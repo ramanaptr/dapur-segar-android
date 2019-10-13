@@ -28,6 +28,21 @@
     </integer-array>
 
 
+    <!--Text Icon-->
     <string name="ic_arrow_bottom">&#xf35f;</string>
+    <string name="ic_sign_right">&#xf125;</string>
+
+    <!--Profile-->
+    <string name="profile_text_setting">Setting</string>
+    <string name="profile_text_support">Support</string>
+    <string name="profile_text_terms_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="profile_text_edit">Edit</string>
+
+    <!--Message-->
+    <string name="invalid_minimal_input">Minimal input is %d</string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="empty_password">Password can\'t be empty</string>
+    <string name="empty_username">Username can\'t be empty</string>
+    <string name="empty_repassword">Re Password can\'t be empty</string>
 
 </resources>

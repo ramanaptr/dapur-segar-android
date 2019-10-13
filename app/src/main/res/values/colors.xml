@@ -53,4 +53,7 @@
     <color name="facebook_blue">#4067B2</color>
     <color name="cream">#fefefe</color>
     <color name="red">#cf3a5c</color>
+    <color name="text_view_color_gray">#868686</color>
+    <color name="transparent_gray">#14083558</color>
+    <color name="young_black">#424242</color>
 </resources>
