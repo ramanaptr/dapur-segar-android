@@ -4,6 +4,9 @@ import android.app.ActionBar
 import android.os.Bundle
 import com.tani.app.R
 import com.tani.app.base.fragment.BaseFragment
+import com.tani.app.view.main.profile.edit.EditProfileActivity
+import kotlinx.android.synthetic.main.profile_fragment.*
+import org.jetbrains.anko.support.v4.startActivity
 
 class ProfileFragment : BaseFragment() {
 
@@ -13,7 +16,7 @@ class ProfileFragment : BaseFragment() {
     }
 
     override fun onClick() {
-
+        tvEdit.setOnClickListener { startActivity<EditProfileActivity>() }
     }
 
 }

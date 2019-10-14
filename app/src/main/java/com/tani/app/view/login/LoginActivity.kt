@@ -43,31 +43,19 @@ class LoginActivity : BaseActivity() {
     private fun isValidateForm(): Boolean {
         val username = etUsername.text.toString().trim()
         val password = etPassword.text.toString().trim()
-        if (username.isEmpty()) {
-            tilUsername.showError(getString(R.string.empty_username))
-            return false
-        } else {
-            tilUsername.hideError()
-        }
 
-        if (!username.validateEmail()) {
-            tilUsername.showError(getString(R.string.invalid_email))
-            return false
-        } else {
-            tilUsername.hideError()
-        }
+        if (username.isEmpty()) return tilUsername.showError(getString(R.string.empty_username))
+        else tilUsername.hideError()
 
-        if (password.isEmpty()) {
-            tilPassword.showError(getString(R.string.empty_password))
-            return false
-        } else {
-            tilPassword.hideError()
-        }
+        if (!username.validateEmail()) return tilUsername.showError(getString(R.string.invalid_email))
+        else tilUsername.hideError()
+
+        if (password.isEmpty()) return tilPassword.showError(getString(R.string.empty_password))
+        else tilPassword.hideError()
 
         if (!password.validatePassword(6)) {
             val passwordMsg = format(getString(R.string.invalid_minimal_input), 6)
-            tilPassword.showError(passwordMsg)
-            return false
+            return tilPassword.showError(passwordMsg)
         } else {
             tilPassword.hideError()
         }

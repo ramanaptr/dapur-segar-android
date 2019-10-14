@@ -25,6 +25,7 @@ abstract class BaseFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         onCreate(savedInstanceState, act.actionBar)
         initComponent()
+        onClick()
     }
 
     private fun initComponent() {

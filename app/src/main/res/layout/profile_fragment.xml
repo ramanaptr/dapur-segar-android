@@ -22,6 +22,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
                 android:padding="2dp"
                 android:text="@string/profile_text_edit"
                 android:textColor="@color/young_black"
@@ -30,12 +32,14 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/ciUserImage"
+                android:id="@+id/civUserImage"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginTop="16dp"
+                android:elevation="1dp"
                 android:src="@drawable/ic_launcher_background"
                 app:civ_border_color="@color/white"
+                app:civ_border_overlay="true"
                 app:civ_border_width="2dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -50,9 +54,9 @@
                 android:text="User Name"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@id/ciUserImage"
-                app:layout_constraintStart_toStartOf="@id/ciUserImage"
-                app:layout_constraintTop_toBottomOf="@id/ciUserImage" />
+                app:layout_constraintEnd_toEndOf="@id/civUserImage"
+                app:layout_constraintStart_toStartOf="@id/civUserImage"
+                app:layout_constraintTop_toBottomOf="@id/civUserImage" />
 
             <com.tani.app.base.customview.CustomTextView
                 android:id="@+id/tvUserId"
@@ -76,8 +80,8 @@
 
                 <RelativeLayout
                     android:id="@+id/rlSetting"
-                    android:layout_width="match_parent"
                     style="@style/selectable_with_ripple"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingStart="40dp"
                     android:paddingEnd="40dp">
@@ -122,9 +126,9 @@
 
                 <RelativeLayout
                     android:id="@+id/rlSupport"
+                    style="@style/selectable_with_ripple"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/selectable_with_ripple"
                     android:paddingStart="40dp"
                     android:paddingEnd="40dp">
 
@@ -168,9 +172,9 @@
 
                 <RelativeLayout
                     android:id="@+id/rlTerms"
+                    style="@style/selectable_with_ripple"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/selectable_with_ripple"
                     android:paddingStart="40dp"
                     android:paddingEnd="40dp">
 

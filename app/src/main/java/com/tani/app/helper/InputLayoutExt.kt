@@ -45,10 +45,10 @@ fun TextInputLayout.isNotEmpty(target: AppCompatEditText, msg: String): EditText
     }
 }
 
-fun TextInputLayout.showError(msg: String): TextInputLayout {
+fun TextInputLayout.showError(msg: String): Boolean {
 //    enableError()
     error = msg
-    return this
+    return false
 }
 
 fun TextInputLayout.hideError(): Boolean {

@@ -42,6 +42,7 @@
             android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
         <activity android:name=".view.search.SearchActivity" />
         <activity android:name=".view.activity.forgot.ResetPasswordActivity" />
+        <activity android:name=".view.main.profile.edit.EditProfileActivity" />
     </application>
 
 </manifest>
