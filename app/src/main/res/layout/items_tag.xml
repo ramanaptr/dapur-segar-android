@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tani.app.base.customview.CustomTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvTagName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:background="@drawable/rounded_grey_stroke"
+    android:paddingStart="8dp"
+    android:paddingTop="6dp"
+    android:paddingEnd="8dp"
+    android:layout_marginBottom="8dp"
+    android:paddingBottom="6dp"
+    android:text="Fruit"
+    android:textColor="@color/colorPrimaryDark"
+    android:textSize="12sp" />

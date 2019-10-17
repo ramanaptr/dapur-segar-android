@@ -82,4 +82,7 @@ dependencies {
 
     // Circle Image
     implementation 'de.hdodenhof:circleimageview:3.0.1'
+
+    // Google Flexbox
+    implementation 'com.google.android:flexbox:1.1.1'
 }
