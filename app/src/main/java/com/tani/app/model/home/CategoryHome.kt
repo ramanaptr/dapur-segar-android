@@ -2,5 +2,5 @@ package com.tani.app.model.home
 
 data class CategoryHome(
     var categoryName: String = "",
-    var products : MutableList<ProductHome> = mutableListOf()
+    var products : MutableList<ProductItem> = mutableListOf()
 )

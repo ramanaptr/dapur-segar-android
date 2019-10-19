@@ -45,4 +45,7 @@
     <string name="empty_username">Username can\'t be empty</string>
     <string name="empty_repassword">Re Password can\'t be empty</string>
 
+    <!--Favorite-->
+    <string name="favorite_title">Favorite</string>
+
 </resources>

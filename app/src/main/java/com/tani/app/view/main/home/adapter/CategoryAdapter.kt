@@ -7,12 +7,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.tani.app.R
 import com.tani.app.model.home.CategoryHome
-import com.tani.app.model.home.ProductHome
+import com.tani.app.model.home.ProductItem
 import kotlinx.android.synthetic.main.items_category.view.*
 
 class CategoryAdapter(
     private val moreListener: (CategoryHome) -> Unit,
-    private val listener: (ProductHome) -> Unit
+    private val listener: (ProductItem) -> Unit
 ) : RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
 
     private var items: MutableList<CategoryHome> = mutableListOf()
@@ -45,7 +45,7 @@ class CategoryAdapter(
         fun bindItem(
             data: CategoryHome,
             moreListener: (CategoryHome) -> Unit,
-            listener: (ProductHome) -> Unit
+            listener: (ProductItem) -> Unit
         ) {
             data.apply {
                 tvCategory.text = categoryName

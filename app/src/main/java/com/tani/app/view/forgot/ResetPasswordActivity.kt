@@ -1,4 +1,4 @@
-package com.tani.app.view.activity.forgot
+package com.tani.app.view.forgot
 
 import android.os.Bundle
 import androidx.appcompat.app.ActionBar

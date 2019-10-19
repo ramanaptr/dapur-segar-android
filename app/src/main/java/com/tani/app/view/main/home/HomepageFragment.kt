@@ -10,7 +10,7 @@ import com.tani.app.base.fragment.BaseFragment
 import com.tani.app.helper.TimerHelper
 import com.tani.app.model.home.CategoryHome
 import com.tani.app.model.home.MenuHome
-import com.tani.app.model.home.ProductHome
+import com.tani.app.model.home.ProductItem
 import com.tani.app.view.main.home.adapter.CategoryAdapter
 import com.tani.app.view.main.home.adapter.MenuAdapter
 import com.tani.app.view.search.SearchActivity
@@ -38,9 +38,9 @@ class HomepageFragment : BaseFragment() {
     }
 
     private fun loadData() {
-        val products = mutableListOf<ProductHome>()
+        val products = mutableListOf<ProductItem>()
         for (category in 1..5) {
-            products.add(ProductHome(R.drawable.durian, "Durian Bali"))
+            products.add(ProductItem(R.drawable.durian, "Durian Bali"))
             categoryHomeDummy.add(CategoryHome("Choice product", products))
         }
     }
@@ -79,7 +79,7 @@ class HomepageFragment : BaseFragment() {
         toast(data.categoryName)
     }
 
-    private fun onClickCategory(data: ProductHome) {
+    private fun onClickCategory(data: ProductItem) {
         data.apply {
             toast("Adding $name")
         }

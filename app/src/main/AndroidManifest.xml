@@ -40,9 +40,13 @@
         <activity
             android:name="com.tani.app.view.main.MainActivity"
             android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
-        <activity android:name=".view.search.SearchActivity" />
-        <activity android:name=".view.activity.forgot.ResetPasswordActivity" />
-        <activity android:name=".view.main.profile.edit.EditProfileActivity" />
+        <activity
+            android:name=".view.search.SearchActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".view.main.profile.edit.EditProfileActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
     </application>
 
 </manifest>

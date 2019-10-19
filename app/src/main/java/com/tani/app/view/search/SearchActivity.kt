@@ -2,7 +2,6 @@ package com.tani.app.view.search
 
 import android.os.Bundle
 import androidx.appcompat.app.ActionBar
-import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.flexbox.FlexDirection
 import com.google.android.flexbox.FlexboxLayoutManager
 import com.tani.app.R
@@ -47,12 +46,10 @@ class SearchActivity : BaseActivity() {
         }
         tagAdapter = TagAdapter { toast(it.tagName) }.apply { setData(data) }
         rvTag.apply {
-            val glm = GridLayoutManager(baseContext, 2)
             val flm = FlexboxLayoutManager(baseContext, FlexDirection.ROW)
             layoutManager = flm
             adapter = tagAdapter
             isNestedScrollingEnabled = false
         }
     }
-
 }

@@ -1,4 +1,4 @@
-package com.tani.app.view.main.home.adapter
+package com.tani.app.view.main.favorite.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,15 +8,15 @@ import com.tani.app.R
 import com.tani.app.model.home.ProductItem
 import kotlinx.android.synthetic.main.items_product.view.*
 
-class ProductAdapter(
+class FavoriteAdapter(
     private val listener: (ProductItem) -> Unit
-) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<FavoriteAdapter.ViewHolder>() {
 
     private var items: MutableList<ProductItem> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v: View =
-            LayoutInflater.from(parent.context).inflate(R.layout.items_product, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.items_product_width, parent, false)
         return ViewHolder(v)
     }
 
