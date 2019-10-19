@@ -48,7 +48,7 @@ class MainActivity : BaseActivity() {
         }
         tlMain?.apply {
             setupWithViewPager(vpMain)
-            setupTablayout(vpMain)
+            setupTablayout(vpMain) {}
             isTabIndicatorFullWidth = false
         }
     }

@@ -9,7 +9,10 @@ import android.text.method.PasswordTransformationMethod
 import android.view.KeyEvent
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
+import android.widget.EditText
+import android.widget.ImageButton
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -167,20 +170,25 @@ private fun getIconsFromResource(context: Context, active: Boolean): TypedArray 
     }
 }
 
-fun TabLayout.setupTablayout(vpPager: ViewPager) {
+fun TabLayout.setupTablayout(vpPager: ViewPager, listener: (Int) -> Unit) {
     for (i in 0 until tabCount) {
         val tab = getTabAt(i)
         tab?.setIcon(getIconsFromResource(context, false).getResourceId(i, -1))
     }
-    setupTablayoutListener(this, vpPager)
+    setupTablayoutListener(this, vpPager, listener)
 }
 
-private fun setupTablayoutListener(tabLayout: TabLayout, vpPager: ViewPager) {
+private fun setupTablayoutListener(
+    tabLayout: TabLayout,
+    vpPager: ViewPager,
+    listener: (Int) -> Unit
+) {
     vpPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
     tabLayout.addOnTabSelectedListener(
         object : TabLayout.ViewPagerOnTabSelectedListener(vpPager) {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 super.onTabSelected(tab)
+                listener(tab.position)
                 tab.setIcon(
                     getIconsFromResource(tab.parent.context, true).getResourceId(
                         tab.position, -1
@@ -190,7 +198,7 @@ private fun setupTablayoutListener(tabLayout: TabLayout, vpPager: ViewPager) {
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
                 super.onTabUnselected(tab)
-                tab!!.setIcon(
+                tab?.setIcon(
                     getIconsFromResource(tab.parent.context, false).getResourceId(
                         tab.position, -1
                     )
@@ -199,9 +207,10 @@ private fun setupTablayoutListener(tabLayout: TabLayout, vpPager: ViewPager) {
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
                 super.onTabReselected(tab)
+                tab?.apply { listener(position) }
             }
         }
     )
-    vpPager.currentItem = 1
-    vpPager.currentItem = 0
+//    vpPager.currentItem = 1
+//    vpPager.currentItem = 0
 }

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp"
+    app:cardPreventCornerOverlap="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvProductImage"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp"
+            app:cardPreventCornerOverlap="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgMenuIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/durian"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+
+        <com.tani.app.base.customview.CustomTextView
+            android:id="@+id/tvProductName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Apel Malang Kg"
+            android:textColor="#424242"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/cvProductImage"
+            app:layout_constraintTop_toTopOf="@id/cvProductImage" />
+
+        <com.tani.app.base.customview.CustomTextView
+            android:id="@+id/tvWeightPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="IDR 420.100/ 1 Kg"
+            android:textColor="#cf3a5c"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/cvProductImage"
+            app:layout_constraintTop_toBottomOf="@id/tvProductName" />
+
+        <com.tani.app.base.customview.CustomTextView
+            android:id="@+id/tvQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center_horizontal"
+            android:text="Qty 1"
+            android:textColor="#868686"
+            android:textSize="8sp"
+            app:layout_constraintStart_toEndOf="@id/cvProductImage"
+            app:layout_constraintTop_toBottomOf="@id/tvWeightPrice" />
+
+        <com.tani.app.base.customview.CustomTextView
+            android:id="@+id/tvInfoWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center_horizontal"
+            android:text="1Kg - IDR 430.100"
+            android:textColor="#868686"
+            android:textSize="8sp"
+            app:layout_constraintStart_toEndOf="@id/cvProductImage"
+            app:layout_constraintTop_toBottomOf="@id/tvQuantity" />
+
+        <com.tani.app.base.customview.CustomTextView
+            android:id="@+id/tvShowProductAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center_horizontal"
+            android:text="Show 1 product again"
+            android:textColor="#868686"
+            android:textSize="8sp"
+            app:layout_constraintStart_toEndOf="@id/cvProductImage"
+            app:layout_constraintTop_toBottomOf="@id/tvInfoWeight" />
+
+        <TextView
+            android:id="@+id/tvDetail"
+            style="@style/selectable_with_ripple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:gravity="end"
+            android:letterSpacing="0.05"
+            android:text="Detail"
+            android:textColor="#83b05d"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvShowProductAgain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvShowProductAgain" />
+
+        <com.tani.app.base.customview.CustomTextView
+            android:id="@+id/tvTotalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="end"
+            android:text="Total : IDR 435.100"
+            android:textColor="#424242"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDetail" />
+
+        <com.tani.app.base.customview.CustomTextView
+            android:id="@+id/tvProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="27dp"
+            android:gravity="center_horizontal"
+            android:text="2 Product"
+            android:textColor="#868686"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvProductImage" />
+
+        <View
+            android:id="@+id/vLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/transparent_gray"
+            app:layout_constraintTop_toBottomOf="@id/tvProduct" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvSubmit"
+            style="@style/selectable_with_ripple"
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="9dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vLine">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.tani.app.base.customview.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_submit"
+                    android:background="@color/colorAccent"
+                    android:fontFamily="@font/os_bold"
+                    android:gravity="center"
+                    android:text="PAY"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <com.tani.app.base.customview.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/dummy_bill_product"
+            android:textColor="#919191"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/cvSubmit"
+            app:layout_constraintEnd_toStartOf="@id/cvSubmit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cvSubmit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

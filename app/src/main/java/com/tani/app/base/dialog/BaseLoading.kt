@@ -5,6 +5,7 @@ import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import com.tani.app.R
 
 class BaseLoading(context: Context) : Dialog(context) {

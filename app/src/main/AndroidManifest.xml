@@ -47,6 +47,7 @@
         <activity
             android:name=".view.main.profile.edit.EditProfileActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name=".view.main.bill.BillFragment" />
     </application>
 
 </manifest>
