@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.ActionBar
 import com.tani.app.R
 import com.tani.app.base.activity.BaseActivity
-import com.tani.app.helper.*
+import com.tani.app.base.extension.*
 import com.tani.app.view.forgot.ForgotPasswordActivity
 import com.tani.app.view.main.MainActivity
 import com.tani.app.view.register.RegisterActivity

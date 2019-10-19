@@ -1,4 +1,4 @@
-package com.tani.app.helper
+package com.tani.app.base.extension
 
 import android.animation.ObjectAnimator
 import android.app.Activity
@@ -29,6 +29,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.core.content.ContextCompat
 import com.google.gson.Gson
+import com.tani.app.helper.Constants
+import com.tani.app.helper.SessionManger
 import java.text.NumberFormat
 import java.text.SimpleDateFormat
 import java.util.*
@@ -38,7 +40,11 @@ fun getAndroidID(context: Context): String {
         if (it) {
             val uuid =
                 Settings.Secure.getString(context.contentResolver, Settings.Secure.ANDROID_ID)
-            SessionManger.putString(context, Constants.UUID, uuid)
+            SessionManger.putString(
+                context,
+                Constants.UUID,
+                uuid
+            )
             Log.d("Utils", "UUID anda $uuid")
             return uuid
         } else {

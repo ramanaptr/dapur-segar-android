@@ -9,8 +9,16 @@ import com.tani.app.model.home.ProductItem
 import kotlinx.android.synthetic.main.items_product.view.*
 
 class FavoriteAdapter(
-    private val listener: (ProductItem) -> Unit
+    private val listener: (String, ProductItem) -> Unit
 ) : RecyclerView.Adapter<FavoriteAdapter.ViewHolder>() {
+
+    companion object {
+        const val LOVE = "love"
+        const val UNLOVE = "unlove"
+        const val SUBMIT = "submit"
+        const val DETAIL = "detail"
+        const val CHOOSE_WEIGHT = "choose_weight"
+    }
 
     private var items: MutableList<ProductItem> = mutableListOf()
 
@@ -47,20 +55,23 @@ class FavoriteAdapter(
         private val etQuantity = itemView.etQuantity
         private val cvSubmit = itemView.cvSubmit
 
-        fun bindItem(data: ProductItem, listener: (ProductItem) -> Unit) {
+        fun bindItem(data: ProductItem, listener: (String, ProductItem) -> Unit) {
             data.apply {
                 ivThumbnail.setImageResource(image)
                 rlFavorite.setOnClickListener {
                     isLove = if (isLove) {
                         ivLove.setImageResource(R.drawable.ic_loved)
+                        listener(LOVE, this)
                         false
                     } else {
                         ivLove.setImageResource(R.drawable.ic_loved_off)
+                        listener(UNLOVE, this)
                         true
                     }
                 }
-                cvSubmit.setOnClickListener { listener(this) }
-                ivThumbnail.setOnClickListener { listener(this) }
+                cvSubmit.setOnClickListener { listener(SUBMIT, this) }
+                ivThumbnail.setOnClickListener { listener(DETAIL, this) }
+                tvWeight.setOnClickListener { listener(CHOOSE_WEIGHT, this) }
             }
         }
     }

@@ -35,7 +35,7 @@
                 android:id="@+id/vCircleEdit"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:background="@drawable/rounded_green_stroke"
+                android:background="@drawable/rounded_green_solid"
                 android:elevation="1dp"
                 app:layout_constraintBottom_toBottomOf="@id/civUserImage"
                 app:layout_constraintEnd_toEndOf="@id/civUserImage" />

@@ -5,16 +5,16 @@ import android.os.Bundle
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.tani.app.R
-import com.tani.app.helper.DialogLoading
-import com.tani.app.helper.changeColorStatusBar
-import com.tani.app.helper.isNetworkAvailable
-import com.tani.app.helper.settingToolbar
+import com.tani.app.base.dialog.BaseLoading
+import com.tani.app.base.extension.changeColorStatusBar
+import com.tani.app.base.extension.isNetworkAvailable
+import com.tani.app.base.extension.settingToolbar
 import kotlinx.android.synthetic.main.default_toolbar.*
 import org.jetbrains.anko.toast
 
 abstract class BaseActivity : AppCompatActivity() {
 
-    private var baseLoading: DialogLoading? = null
+    private var baseLoading: BaseLoading? = null
 
     private fun runPermission() {
 //        runWithPermissions(Manifest.permission.READ_CONTACTS) {}
@@ -43,7 +43,7 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     private fun initDialog() {
-        baseLoading = DialogLoading(this)
+        baseLoading = BaseLoading(this)
     }
 
     private fun networkCheck() {

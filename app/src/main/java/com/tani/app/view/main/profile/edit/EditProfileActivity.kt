@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.ActionBar
 import com.tani.app.R
 import com.tani.app.base.activity.BaseActivity
-import com.tani.app.helper.gone
+import com.tani.app.base.extension.gone
 import kotlinx.android.synthetic.main.home_toolbar.*
 
 /**

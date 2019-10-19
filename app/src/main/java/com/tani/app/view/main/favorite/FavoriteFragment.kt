@@ -4,6 +4,7 @@ import android.app.ActionBar
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
 import com.tani.app.R
+import com.tani.app.base.dialog.showWeightDialog
 import com.tani.app.base.fragment.BaseFragment
 import com.tani.app.model.home.CategoryHome
 import com.tani.app.model.home.ProductItem
@@ -35,7 +36,9 @@ class FavoriteFragment : BaseFragment() {
     }
 
     private fun setupAdapter() {
-        favAdapter = FavoriteAdapter {}.apply { setData(loadData()) }
+        favAdapter = FavoriteAdapter { state, product -> onClickFavorite(state, product) }.apply {
+            setData(loadData())
+        }
         rvFavorites.apply {
             adapter = favAdapter
             layoutManager = GridLayoutManager(context, 2)
@@ -50,5 +53,25 @@ class FavoriteFragment : BaseFragment() {
             categoryHomeDummy.add(CategoryHome("Choice product", products))
         }
         return products
+    }
+
+    private fun onClickFavorite(state: String, product: ProductItem) {
+        when (state) {
+            FavoriteAdapter.LOVE -> {
+            }
+            FavoriteAdapter.UNLOVE -> {
+            }
+            FavoriteAdapter.CHOOSE_WEIGHT -> {
+                val prices = mutableListOf<String>().apply {
+                    add("500 Gm - IDR 240.000")
+                    add("1 Kg - IDR 430.100")
+                }
+                showWeightDialog(prices)
+            }
+            FavoriteAdapter.DETAIL -> {
+            }
+            FavoriteAdapter.SUBMIT -> {
+            }
+        }
     }
 }

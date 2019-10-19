@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import com.tani.app.R
 import com.tani.app.base.activity.BaseActivity
 import com.tani.app.base.adapter.BaseMainPagerAdapter
-import com.tani.app.helper.handleBackFromMain
-import com.tani.app.helper.setupTablayout
+import com.tani.app.base.extension.handleBackFromMain
+import com.tani.app.base.extension.setupTablayout
 import com.tani.app.view.main.bill.BillFragment
 import com.tani.app.view.main.favorite.FavoriteFragment
 import com.tani.app.view.main.home.HomepageFragment

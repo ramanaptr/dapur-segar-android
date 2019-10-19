@@ -4,10 +4,10 @@ import android.os.Bundle
 import androidx.appcompat.app.ActionBar
 import com.tani.app.R
 import com.tani.app.base.activity.BaseActivity
-import com.tani.app.helper.hideError
-import com.tani.app.helper.passwordState
-import com.tani.app.helper.showError
-import com.tani.app.helper.validatePassword
+import com.tani.app.base.extension.hideError
+import com.tani.app.base.extension.passwordState
+import com.tani.app.base.extension.showError
+import com.tani.app.base.extension.validatePassword
 import kotlinx.android.synthetic.main.reset_password_activity.*
 import java.lang.String.format
 

@@ -6,12 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.tani.app.helper.DialogLoading
+import com.tani.app.base.dialog.BaseLoading
 import org.jetbrains.anko.support.v4.act
 
 abstract class BaseFragment : Fragment() {
 
-    var baseLoading: DialogLoading? = null
+    var baseLoading: BaseLoading? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,7 +29,7 @@ abstract class BaseFragment : Fragment() {
     }
 
     private fun initComponent() {
-        context?.apply { baseLoading = DialogLoading(this) }
+        context?.apply { baseLoading = BaseLoading(this) }
     }
 
     protected abstract fun setLayout(): Int
