@@ -69,4 +69,11 @@
     <string name="payment_detail_cancel_order">Cancel Order</string>
     <string name="payment_detail_total_paying_header">Total paying</string>
 
+    <!--Basket-->
+    <string name="basket_title">Basket</string>
+    <string name="basket_alert_header_message">Login or register for check your orders</string>
+    <string name="basket_alert_notice_message">Support farmer, with choose product local with we.</string>
+    <string name="basket_alert_register_button">Register</string>
+    <string name="basket_checkout">Checkout</string>
+
 </resources>

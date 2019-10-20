@@ -105,7 +105,7 @@
             android:layout_marginStart="@dimen/product_item_margin"
             android:layout_marginTop="7dp"
             android:layout_marginEnd="@dimen/product_item_margin"
-            android:background="@color/grey_new"
+            android:background="@color/transparent_gray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvPrice" />
@@ -157,7 +157,7 @@
                 android:paddingStart="@dimen/product_item_margin"
                 android:paddingEnd="@dimen/product_item_margin"
                 android:text="Quantity"
-                android:textColor="@color/grey_new"
+                android:textColor="@color/transparent_gray"
                 android:textSize="10sp"
                 app:layout_constraintEnd_toStartOf="@+id/etQuantity"
                 app:layout_constraintStart_toStartOf="parent"

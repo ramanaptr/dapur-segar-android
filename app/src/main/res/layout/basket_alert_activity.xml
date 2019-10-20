@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream">
+
+    <include
+        layout="@layout/default_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false">
+
+            <RelativeLayout
+                android:id="@+id/rlBasket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="?attr/actionBarSize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivLogoBasket"
+                    android:layout_width="43dp"
+                    android:layout_height="38dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_basket" />
+
+                <com.tani.app.base.customview.CustomTextView
+                    android:id="@+id/tvAlertHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ivLogoBasket"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/basket_alert_header_message"
+                    android:textColor="#646464"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <com.tani.app.base.customview.CustomTextView
+                    android:id="@+id/tvAlertMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvAlertHeader"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:text="@string/basket_alert_notice_message"
+                    android:textColor="#868686"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvAlertMessage"
+                    android:layout_marginTop="24dp"
+                    android:clipToPadding="false"
+                    android:gravity="center_vertical"
+                    android:padding="24dp">
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/button_submit"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_green_light_storke"
+                        android:text="Login"
+                        android:textAllCaps="false"
+                        android:textColor="@color/green_light_v4"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvSubmit"
+                        style="@style/selectable_with_ripple"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/vLine">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.tani.app.base.customview.CustomTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/button_submit"
+                                android:background="@color/colorAccent"
+                                android:fontFamily="@font/os_bold"
+                                android:gravity="center"
+                                android:text="@string/basket_alert_register_button"
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

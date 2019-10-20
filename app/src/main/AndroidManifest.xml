@@ -47,8 +47,19 @@
         <activity
             android:name=".view.main.profile.edit.EditProfileActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
-        <activity android:name=".view.main.bill.BillFragment" />
-        <activity android:name=".view.payment.PaymentDetailActivity" />
+        <activity
+            android:name=".view.main.bill.BillFragment"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".view.payment.PaymentDetailActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".view.basket.BasketAlertActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".view.basket.BasketActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
     </application>
 
 </manifest>

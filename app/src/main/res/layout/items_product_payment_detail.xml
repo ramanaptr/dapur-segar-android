@@ -11,7 +11,7 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clipToPadding="false"
@@ -40,29 +40,42 @@
 
         </androidx.cardview.widget.CardView>
 
-        <TextView
+        <com.tani.app.base.customview.CustomTextView
             android:id="@+id/tvProduct"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_toEndOf="@id/cvProductImage"
             android:text="Apel Malang Kg"
             android:textColor="#424242"
-            android:textSize="10sp" />
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@id/btnDelete"
+            app:layout_constraintStart_toEndOf="@id/cvProductImage"
+            app:layout_constraintTop_toTopOf="@id/cvProductImage" />
 
-        <TextView
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.tani.app.base.customview.CustomTextView
             android:id="@+id/tvWeightPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tvProduct"
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
-            android:layout_toEndOf="@id/cvProductImage"
             android:text="IDR 420.100/ 1 Kg"
             android:textColor="#cf3a5c"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/cvProductImage"
+            app:layout_constraintTop_toBottomOf="@id/tvProduct" />
 
-        <TextView
+        <com.tani.app.base.customview.CustomTextView
             android:id="@+id/tvQuantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -72,9 +85,11 @@
             android:layout_toEndOf="@id/cvProductImage"
             android:text="Qty 1"
             android:textColor="#868686"
-            android:textSize="8sp" />
+            android:textSize="8sp"
+            app:layout_constraintStart_toEndOf="@id/cvProductImage"
+            app:layout_constraintTop_toBottomOf="@id/tvWeightPrice" />
 
-        <TextView
+        <com.tani.app.base.customview.CustomTextView
             android:id="@+id/tvDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -85,8 +100,21 @@
             android:gravity="center_horizontal"
             android:text="1Kg - IDR 430.100"
             android:textColor="#868686"
-            android:textSize="8sp" />
+            android:textSize="8sp"
+            app:layout_constraintStart_toEndOf="@id/cvProductImage"
+            app:layout_constraintTop_toBottomOf="@id/tvQuantity" />
 
-    </RelativeLayout>
+        <com.tani.app.base.customview.CustomTextView
+            android:id="@+id/tvEditDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:text="Edit Detail"
+            android:textColor="#83b05d"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvDetail" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>
