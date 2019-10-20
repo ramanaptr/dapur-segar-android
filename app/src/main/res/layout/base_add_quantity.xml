@@ -23,6 +23,7 @@
         android:layout_width="64dp"
         android:layout_height="32dp"
         android:background="@drawable/square_grey_stroke"
+        android:inputType="number"
         android:text="1"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="@id/tvMinus"

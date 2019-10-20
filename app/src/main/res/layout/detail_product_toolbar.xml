@@ -12,8 +12,7 @@
         android:layout_height="wrap_content"
         android:clipToPadding="false"
         android:fitsSystemWindows="true"
-        app:layout_scrollFlags="scroll|enterAlways|snap"
-        app:titleEnabled="false">
+        app:contentInsetStartWithNavigation="0dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -22,25 +21,17 @@
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="12dp">
 
-            <RelativeLayout
-                android:id="@+id/rlTitle"
+            <id.dapursegar.app.base.customview.CustomTextView
+                android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_collapseMode="parallax"
+                android:layout_marginTop="16dp"
+                android:text="Title"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <id.dapursegar.app.base.customview.CustomTextView
-                    android:id="@+id/tvTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Welcome back, \nuser"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-            </RelativeLayout>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
                 android:id="@+id/btnBasket"
@@ -68,7 +59,7 @@
                 app:layout_constraintStart_toStartOf="@id/btnBasket"
                 app:layout_constraintTop_toTopOf="@id/btnBasket">
 
-                <TextView
+                <id.dapursegar.app.base.customview.CustomTextView
                     android:id="@+id/tvBasket"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -83,40 +74,5 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.appcompat.widget.Toolbar>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvSearch"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="16dp"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="9dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/ivSearch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="11dp"
-                android:src="@drawable/ic_search" />
-
-            <id.dapursegar.app.base.customview.CustomTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="11dp"
-                android:layout_toEndOf="@id/ivSearch"
-                android:text="@string/search_des" />
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
 
 </com.google.android.material.appbar.AppBarLayout>
