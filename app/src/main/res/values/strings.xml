@@ -51,5 +51,22 @@
     <!--Bill-->
     <string name="bill_title">Bill</string>
     <string name="dummy_bill_product">Pay before 06-06-2019 5:05 p.m. through the BCA bank (automatic check)</string>
+    <string name="bill_detail">Detail</string>
+    <string name="bill_pay">PAY</string>
+
+    <!--Payment Detail-->
+    <string name="payment_detail">Payment Detail</string>
+    <string name="payment_detail_not_paid">Not yet paid</string>
+    <string name="payment_detail_not_paid_description">Please Pay before 06-06-2019 5:05 p.m. through the BCA bank (automatic check), if not paying, this orders will be canceled automatic.</string>
+    <string name="payment_detail_product_header">Product Details</string>
+    <string name="image_description_location">Icon location</string>
+    <string name="payment_detail_address_header">Address</string>
+    <string name="payment_detail_dummy_address">Ds, Sente, desa pikat kecamatan dawan, kabupaten klungkung bali., indonesia 80761</string>
+    <string name="payment_detail_bank_name_dummy">Bank BCA</string>
+    <string name="payment_detail_no_orders_header">No. Orders</string>
+    <string name="payment_detail_order_time_header">Order time</string>
+    <string name="payment_detail_copy">Copy</string>
+    <string name="payment_detail_cancel_order">Cancel Order</string>
+    <string name="payment_detail_total_paying_header">Total paying</string>
 
 </resources>

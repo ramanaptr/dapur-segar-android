@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream">
+
+    <include
+        layout="@layout/default_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false">
+
+            <RelativeLayout
+                android:id="@+id/rlNoticeBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/rounded_green_light_solid"
+                android:clipToPadding="false"
+                android:padding="16dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.tani.app.base.customview.CustomTextView
+                    android:id="@+id/tvNotPaid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/payment_detail_not_paid"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <com.tani.app.base.customview.CustomTextView
+                    android:id="@+id/tvNotPaidDes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvNotPaid"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/payment_detail_not_paid_description"
+                    android:textColor="#ffffff"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/vLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@color/transparent_gray"
+                app:layout_constraintTop_toBottomOf="@id/rlNoticeBackground" />
+
+            <com.tani.app.base.customview.CustomTextView
+                android:id="@+id/tvHeaderProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="24dp"
+                android:text="@string/payment_detail_product_header"
+                android:textColor="@color/young_black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/vLine" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:clipToPadding="false"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                app:layout_constraintTop_toBottomOf="@id/tvHeaderProduct" />
+
+            <View
+                android:id="@+id/vLine2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:background="@color/transparent_gray"
+                app:layout_constraintTop_toBottomOf="@+id/rvProducts" />
+
+            <com.tani.app.base.customview.CustomTextView
+                android:id="@+id/tvHeaderAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:text="@string/payment_detail_address_header"
+                android:textColor="#424242"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/vLine2" />
+
+            <ImageView
+                android:id="@+id/ivLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:contentDescription="@string/image_description_location"
+                android:src="@drawable/ic_location"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvHeaderAddress" />
+
+            <com.tani.app.base.customview.CustomTextView
+                android:id="@+id/tvAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="24dp"
+                android:lineSpacingExtra="11sp"
+                android:text="@string/payment_detail_dummy_address"
+                android:textColor="@color/text_view_color_gray"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivLocation"
+                app:layout_constraintTop_toTopOf="@id/ivLocation" />
+
+            <View
+                android:id="@+id/vLine3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@color/transparent_gray"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddress" />
+
+            <com.tani.app.base.customview.CustomTextView
+                android:id="@+id/tvHeaderPaymentMethod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:text="Paying Method"
+                android:textColor="#424242"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/vLine3" />
+
+            <ImageView
+                android:id="@+id/ivCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:contentDescription="@string/image_description_location"
+                android:src="@drawable/ic_cardbank"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvHeaderPaymentMethod" />
+
+            <com.tani.app.base.customview.CustomTextView
+                android:id="@+id/tvBankName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:lineSpacingExtra="11sp"
+                android:text="@string/payment_detail_bank_name_dummy"
+                android:textColor="@color/text_view_color_gray"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@id/tvEdit"
+                app:layout_constraintStart_toEndOf="@id/ivCard"
+                app:layout_constraintTop_toTopOf="@id/ivCard" />
+
+            <com.tani.app.base.customview.CustomTextView
+                android:id="@+id/tvEdit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="24dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:lineSpacingExtra="12sp"
+                android:text="Edit"
+                android:textColor="@color/text_view_color_gray"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivCard" />
+
+            <View
+                android:id="@+id/vLine4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@color/transparent_gray"
+                app:layout_constraintTop_toBottomOf="@+id/tvEdit" />
+
+            <com.tani.app.base.customview.CustomTextView
+                android:id="@+id/tvHeaderOrderNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/payment_detail_no_orders_header"
+                android:textColor="#868686"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vLine4" />
+
+            <com.tani.app.base.customview.CustomTextView
+                android:id="@+id/tvHeaderOrderTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/payment_detail_order_time_header"
+                android:textColor="#868686"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvHeaderOrderNumber" />
+
+            <com.tani.app.base.customview.CustomTextView
+                android:id="@+id/tvOrderNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="323111KJ1121"
+                android:textColor="#424242"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@id/tvCopy"
+                app:layout_constraintTop_toTopOf="@id/tvHeaderOrderNumber" />
+
+            <com.tani.app.base.customview.CustomTextView
+                android:id="@+id/tvCopy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:text="@string/payment_detail_copy"
+                android:textColor="@color/green_light_v4"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvHeaderOrderNumber" />
+
+            <com.tani.app.base.customview.CustomTextView
+                android:id="@+id/tvOrderTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:text="27-06-2019 17:05"
+                android:textColor="#868686"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvHeaderOrderTime" />
+
+            <View
+                android:id="@+id/vLine5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@color/transparent_gray"
+                app:layout_constraintTop_toBottomOf="@+id/tvOrderTime" />
+
+            <com.tani.app.base.customview.CustomTextView
+                android:id="@+id/tvHeaderTotalPaid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:text="@string/payment_detail_total_paying_header"
+                android:textColor="#424242"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/vLine5" />
+
+            <TextView
+                android:id="@+id/tvHeaderTotalProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Total Product"
+                android:textColor="#868686"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvPrices"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvPrices" />
+
+            <TextView
+                android:id="@+id/tvPrices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvHeaderTotalPaid"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:gravity="end"
+                android:text="IDR 435.100"
+                android:textColor="#424242"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvHeaderTotalPaid" />
+
+            <TextView
+                android:id="@+id/tvHeaderShippingCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Shipping costs"
+                android:textColor="#868686"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvShippingCost"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvShippingCost" />
+
+            <TextView
+                android:id="@+id/tvShippingCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPrices"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:gravity="end"
+                android:text="IDR 0"
+                android:textColor="#424242"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPrices" />
+
+            <TextView
+                android:id="@+id/tvHeaderDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:text="Discount"
+                android:textColor="#868686"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvHeaderShippingCost" />
+
+            <TextView
+                android:id="@+id/tvDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPrices"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:gravity="end"
+                android:text="0%"
+                android:textColor="#424242"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvShippingCost" />
+
+            <TextView
+                android:id="@+id/tvHeaderPaymentTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvHeaderDiscount"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="3dp"
+                android:text="Total payment"
+                android:textColor="#424242"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvPaymentTotal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvPaymentTotal" />
+
+            <TextView
+                android:id="@+id/tvPaymentTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPrices"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:gravity="end"
+                android:text="IDR 435.100"
+                android:textColor="#424242"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDiscount" />
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/rounded_grey_stroke"
+                android:text="@string/payment_detail_cancel_order"
+                android:textAllCaps="false"
+                android:textColor="@color/text_view_color_gray"
+                app:layout_constraintTop_toBottomOf="@+id/tvPaymentTotal" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvPay"
+                style="@style/selectable_with_ripple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnCancel">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="57dp"
+                        android:background="@color/colorAccent"
+                        android:fontFamily="@font/os_bold"
+                        android:gravity="center"
+                        android:text="Pay"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

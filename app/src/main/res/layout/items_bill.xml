@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="Apel Malang Kg"
-            android:textColor="#424242"
+            android:textColor="@color/young_black"
             android:textSize="10sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
@@ -57,7 +57,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
             android:text="IDR 420.100/ 1 Kg"
-            android:textColor="#cf3a5c"
+            android:textColor="@color/red"
             android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
@@ -71,7 +71,7 @@
             android:layout_marginTop="4dp"
             android:gravity="center_horizontal"
             android:text="Qty 1"
-            android:textColor="#868686"
+            android:textColor="@color/text_view_color_gray"
             android:textSize="8sp"
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
             app:layout_constraintTop_toBottomOf="@id/tvWeightPrice" />
@@ -84,7 +84,7 @@
             android:layout_marginTop="4dp"
             android:gravity="center_horizontal"
             android:text="1Kg - IDR 430.100"
-            android:textColor="#868686"
+            android:textColor="@color/text_view_color_gray"
             android:textSize="8sp"
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
             app:layout_constraintTop_toBottomOf="@id/tvQuantity" />
@@ -97,7 +97,7 @@
             android:layout_marginTop="4dp"
             android:gravity="center_horizontal"
             android:text="Show 1 product again"
-            android:textColor="#868686"
+            android:textColor="@color/text_view_color_gray"
             android:textSize="8sp"
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
             app:layout_constraintTop_toBottomOf="@id/tvInfoWeight" />
@@ -109,9 +109,8 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:gravity="end"
-            android:letterSpacing="0.05"
-            android:text="Detail"
-            android:textColor="#83b05d"
+            android:text="@string/bill_detail"
+            android:textColor="@color/colorPrimary"
             android:textSize="8sp"
             app:layout_constraintBottom_toBottomOf="@id/tvShowProductAgain"
             app:layout_constraintEnd_toEndOf="parent"
@@ -125,7 +124,7 @@
             android:layout_marginEnd="16dp"
             android:gravity="end"
             android:text="Total : IDR 435.100"
-            android:textColor="#424242"
+            android:textColor="@color/young_black"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvDetail" />
@@ -138,7 +137,7 @@
             android:layout_marginTop="27dp"
             android:gravity="center_horizontal"
             android:text="2 Product"
-            android:textColor="#868686"
+            android:textColor="@color/text_view_color_gray"
             android:textSize="10sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cvProductImage" />
@@ -177,7 +176,7 @@
                     android:background="@color/colorAccent"
                     android:fontFamily="@font/os_bold"
                     android:gravity="center"
-                    android:text="PAY"
+                    android:text="@string/bill_pay"
                     android:textColor="@android:color/white"
                     android:textSize="16sp" />
 
