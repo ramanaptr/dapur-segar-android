@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.tani.app.base.customview.CustomTextView
+            <id.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvEdit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvEdit" />
 
-            <com.tani.app.base.customview.CustomTextView
+            <id.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvUsername"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
                 app:layout_constraintStart_toStartOf="@id/civUserImage"
                 app:layout_constraintTop_toBottomOf="@id/civUserImage" />
 
-            <com.tani.app.base.customview.CustomTextView
+            <id.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvUserId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -95,7 +95,7 @@
                         android:layout_marginBottom="15dp"
                         android:src="@drawable/ic_setting" />
 
-                    <com.tani.app.base.customview.CustomTextView
+                    <id.dapursegar.app.base.customview.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
@@ -105,7 +105,7 @@
                         android:textColor="@color/text_view_color_gray"
                         android:textSize="12sp" />
 
-                    <com.tani.app.base.customview.CustomTextView
+                    <id.dapursegar.app.base.customview.CustomTextView
                         android:layout_width="7.4dp"
                         android:layout_height="12dp"
                         android:layout_alignParentEnd="true"
@@ -141,7 +141,7 @@
                         android:layout_marginBottom="15dp"
                         android:src="@drawable/ic_support" />
 
-                    <com.tani.app.base.customview.CustomTextView
+                    <id.dapursegar.app.base.customview.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
@@ -151,7 +151,7 @@
                         android:textColor="@color/text_view_color_gray"
                         android:textSize="12sp" />
 
-                    <com.tani.app.base.customview.CustomTextView
+                    <id.dapursegar.app.base.customview.CustomTextView
                         android:layout_width="7.4dp"
                         android:layout_height="12dp"
                         android:layout_alignParentEnd="true"
@@ -187,7 +187,7 @@
                         android:layout_marginBottom="15dp"
                         android:src="@drawable/ic_termncondit" />
 
-                    <com.tani.app.base.customview.CustomTextView
+                    <id.dapursegar.app.base.customview.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
@@ -197,7 +197,7 @@
                         android:textColor="@color/text_view_color_gray"
                         android:textSize="12sp" />
 
-                    <com.tani.app.base.customview.CustomTextView
+                    <id.dapursegar.app.base.customview.CustomTextView
                         android:layout_width="7.4dp"
                         android:layout_height="12dp"
                         android:layout_alignParentEnd="true"
@@ -212,7 +212,7 @@
 
             </LinearLayout>
 
-            <com.tani.app.base.customview.CustomTextView
+            <id.dapursegar.app.base.customview.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="32dp"

@@ -43,7 +43,7 @@
 
         </RelativeLayout>
 
-        <com.tani.app.base.customview.CustomTextView
+        <id.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvStoreName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ivThumbnail" />
 
-        <com.tani.app.base.customview.CustomTextView
+        <id.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvProductName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvStoreName" />
 
-        <com.tani.app.base.customview.CustomTextView
+        <id.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvQuantity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -84,7 +84,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvProductName" />
 
-        <com.tani.app.base.customview.CustomTextView
+        <id.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvPrice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -110,7 +110,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvPrice" />
 
-        <com.tani.app.base.customview.CustomTextView
+        <id.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvWeight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -125,7 +125,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/vLine" />
 
-        <com.tani.app.base.customview.CustomTextView
+        <id.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvArrowBottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -147,7 +147,7 @@
             android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@id/tvWeight">
 
-            <com.tani.app.base.customview.CustomTextView
+            <id.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvQuantityTitle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -199,7 +199,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <com.tani.app.base.customview.CustomTextView
+                <id.dapursegar.app.base.customview.CustomTextView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/button_submit"
                     android:background="@color/colorAccent"

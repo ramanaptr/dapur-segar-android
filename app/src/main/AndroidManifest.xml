@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.tani.app">
+    package="id.dapursegar.app">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -16,7 +16,7 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity
-            android:name="com.tani.app.view.login.LoginActivity"
+            android:name="id.dapursegar.app.view.login.LoginActivity"
             android:launchMode="singleTask"
             android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
@@ -29,16 +29,16 @@
             android:name=".base.webview.BaseWebView"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name="com.tani.app.view.register.RegisterActivity"
+            android:name="id.dapursegar.app.view.register.RegisterActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name="com.tani.app.view.forgot.ForgotPasswordActivity"
+            android:name="id.dapursegar.app.view.forgot.ForgotPasswordActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name="com.tani.app.view.forgot.ResetPasswordActivity"
+            android:name="id.dapursegar.app.view.forgot.ResetPasswordActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name="com.tani.app.view.main.MainActivity"
+            android:name="id.dapursegar.app.view.main.MainActivity"
             android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
         <activity
             android:name=".view.search.SearchActivity"

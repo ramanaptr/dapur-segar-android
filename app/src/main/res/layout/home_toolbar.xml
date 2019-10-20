@@ -30,7 +30,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <com.tani.app.base.customview.CustomTextView
+                <id.dapursegar.app.base.customview.CustomTextView
                     android:id="@+id/tvTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -107,7 +107,7 @@
                 android:layout_marginStart="11dp"
                 android:src="@drawable/ic_search" />
 
-            <com.tani.app.base.customview.CustomTextView
+            <id.dapursegar.app.base.customview.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"

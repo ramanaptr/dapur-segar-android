@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.tani.app.base.customview.CustomTextView
+            <id.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -10,7 +10,7 @@
     android:paddingStart="16dp"
     android:paddingEnd="16dp">
 
-    <com.tani.app.base.customview.CustomTextView
+    <id.dapursegar.app.base.customview.CustomTextView
         android:id="@+id/tvProductName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

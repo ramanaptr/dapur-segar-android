@@ -40,7 +40,7 @@
 
         </androidx.cardview.widget.CardView>
 
-        <com.tani.app.base.customview.CustomTextView
+        <id.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvProduct"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.tani.app.base.customview.CustomTextView
+        <id.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvWeightPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
             app:layout_constraintTop_toBottomOf="@id/tvProduct" />
 
-        <com.tani.app.base.customview.CustomTextView
+        <id.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvQuantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -89,7 +89,7 @@
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
             app:layout_constraintTop_toBottomOf="@id/tvWeightPrice" />
 
-        <com.tani.app.base.customview.CustomTextView
+        <id.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -104,7 +104,7 @@
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
             app:layout_constraintTop_toBottomOf="@id/tvQuantity" />
 
-        <com.tani.app.base.customview.CustomTextView
+        <id.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvEditDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

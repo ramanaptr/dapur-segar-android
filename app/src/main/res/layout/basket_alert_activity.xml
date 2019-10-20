@@ -36,7 +36,7 @@
                     android:layout_centerHorizontal="true"
                     android:src="@drawable/ic_basket" />
 
-                <com.tani.app.base.customview.CustomTextView
+                <id.dapursegar.app.base.customview.CustomTextView
                     android:id="@+id/tvAlertHeader"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
-                <com.tani.app.base.customview.CustomTextView
+                <id.dapursegar.app.base.customview.CustomTextView
                     android:id="@+id/tvAlertMessage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -96,7 +96,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
-                            <com.tani.app.base.customview.CustomTextView
+                            <id.dapursegar.app.base.customview.CustomTextView
                                 android:layout_width="match_parent"
                                 android:layout_height="@dimen/button_submit"
                                 android:background="@color/colorAccent"

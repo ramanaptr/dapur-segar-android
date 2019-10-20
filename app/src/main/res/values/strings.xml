@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tani App</string>
+    <string name="app_name">Dapur Segar</string>
     <string name="search_des">search fruit, vegetable, meat ...</string>
     <string name="back_message_on_main">Tekan sekali lagi untuk keluar dari aplikasi</string>
     <string name="pressed_back_message">Press back again to exit</string>

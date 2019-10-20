@@ -1,4 +1,4 @@
-package com.tani.app
+package id.dapursegar.app
 
 import org.junit.Test
 

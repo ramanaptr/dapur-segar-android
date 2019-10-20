@@ -1,4 +1,4 @@
-package com.tani.app
+package id.dapursegar.app
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4
