@@ -58,8 +58,10 @@
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name=".view.basket.BasketActivity"
-            android:exported="true"
             android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".view.editdetail.EditDetailActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

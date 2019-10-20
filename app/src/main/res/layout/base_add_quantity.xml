@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <id.dapursegar.app.base.customview.CustomTextView
+        android:id="@+id/tvMinus"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/rounded_left_grey"
+        android:gravity="center"
+        android:text="@string/ic_minus"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etQuantity"
+        android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:background="@drawable/square_grey_stroke"
+        android:text="1"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@id/tvMinus"
+        app:layout_constraintStart_toEndOf="@id/tvMinus"
+        app:layout_constraintTop_toTopOf="@id/tvMinus" />
+
+    <id.dapursegar.app.base.customview.CustomTextView
+        android:id="@+id/tvPlus"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/rounded_right_grey"
+        android:gravity="center"
+        android:text="@string/ic_plus"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toEndOf="@id/etQuantity"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

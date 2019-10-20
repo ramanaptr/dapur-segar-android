@@ -55,9 +55,10 @@
     <color name="red">#cf3a5c</color>
     <color name="text_view_color_gray">#868686</color>
     <color name="transparent_gray">#14083558</color>
-    <color name="young_black">#424242</color>
 
     <!--App component color-->
     <color name="green_edit_photo">#689f39</color>
     <color name="green_light_v4">#9ec181</color>
+    <color name="text_view_black_light">#424242</color>
+    <color name="gray_for_background">#d8d8d8</color>
 </resources>

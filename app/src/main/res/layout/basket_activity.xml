@@ -64,19 +64,19 @@
                 app:layout_constraintBottom_toTopOf="@id/tvCheckout"
                 app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
+            <id.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvTotalPaid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="24dp"
-                android:layout_marginBottom="16dp"
                 android:gravity="end"
                 android:text="IDR 435.100"
                 android:textColor="#424242"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@id/tvCheckout"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintBottom_toBottomOf="@+id/tvHeaderTotal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvHeaderTotal" />
 
             <id.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvCheckout"

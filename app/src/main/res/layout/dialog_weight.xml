@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Apel Malang"
-        android:textColor="@color/young_black"
+        android:textColor="@color/text_view_black_light"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

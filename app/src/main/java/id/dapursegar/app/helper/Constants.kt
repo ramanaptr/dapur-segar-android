@@ -6,7 +6,7 @@ object Constants {
 
     // File
     const val URI = "URI_TEMP"
-    const val FOLDER = "TaniApp"
+    const val FOLDER = "DapurSegar"
     const val TEMP = "Temporary"
     const val SMALL_SIZE = 500
 }

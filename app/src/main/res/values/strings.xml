@@ -31,6 +31,8 @@
     <!--Text Icon-->
     <string name="ic_arrow_bottom">&#xf35f;</string>
     <string name="ic_sign_right">&#xf125;</string>
+    <string name="ic_minus">&#xf208;</string>
+    <string name="ic_plus">&#xf217;</string>
 
     <!--Message-->
     <string name="invalid_minimal_input">Minimal input is %d</string>
@@ -75,5 +77,6 @@
     <string name="basket_alert_notice_message">Support farmer, with choose product local with we.</string>
     <string name="basket_alert_register_button">Register</string>
     <string name="basket_checkout">Checkout</string>
+    <string name="edit_detail_quantity">Quantity</string>
 
 </resources>
