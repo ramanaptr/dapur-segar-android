@@ -1,6 +1,7 @@
 package id.dapursegar.app.view.search
 
 import android.os.Bundle
+import android.view.inputmethod.EditorInfo
 import androidx.appcompat.app.ActionBar
 import com.google.android.flexbox.FlexDirection
 import com.google.android.flexbox.FlexboxLayoutManager
@@ -9,6 +10,8 @@ import id.dapursegar.app.base.activity.BaseActivity
 import id.dapursegar.app.view.search.adapter.TagAdapter
 import id.dapursegar.app.view.search.model.TagItem
 import kotlinx.android.synthetic.main.search_activity.*
+import kotlinx.android.synthetic.main.search_toolbar.*
+import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 
 class SearchActivity : BaseActivity() {
@@ -23,6 +26,7 @@ class SearchActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?, actionBar: ActionBar?) {
         setupAdapter()
+        action()
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -50,6 +54,17 @@ class SearchActivity : BaseActivity() {
             layoutManager = flm
             adapter = tagAdapter
             isNestedScrollingEnabled = false
+        }
+    }
+
+    private fun action() {
+        etSearchField.setOnEditorActionListener { v, actionId, event ->
+            if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                startActivity<SearchResultActivity>()
+                true
+            } else {
+                false
+            }
         }
     }
 }

@@ -157,7 +157,7 @@
                 android:paddingStart="@dimen/product_item_margin"
                 android:paddingEnd="@dimen/product_item_margin"
                 android:text="Quantity"
-                android:textColor="@color/transparent_gray"
+                android:textColor="@color/text_gray_product"
                 android:textSize="10sp"
                 app:layout_constraintEnd_toStartOf="@+id/etQuantity"
                 app:layout_constraintStart_toStartOf="parent"

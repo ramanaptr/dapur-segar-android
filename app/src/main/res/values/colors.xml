@@ -61,4 +61,5 @@
     <color name="green_light_v4">#9ec181</color>
     <color name="text_view_black_light">#424242</color>
     <color name="gray_for_background">#d8d8d8</color>
+    <color name="text_gray_product">#7a7a7a</color>
 </resources>

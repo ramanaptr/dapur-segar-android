@@ -61,8 +61,14 @@
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name=".view.editdetail.EditDetailActivity"
-            android:exported="true" />
-        <activity android:name=".view.detail.DetailProductActivity" />
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".view.detail.DetailProductActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".view.search.SearchResultActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:exported="true"/>
     </application>
 
 </manifest>

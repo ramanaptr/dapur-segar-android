@@ -39,13 +39,17 @@
                     android:src="@drawable/ic_search" />
 
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/etSearchField"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="11dp"
                     android:layout_toEndOf="@id/ivSearch"
                     android:background="@null"
                     android:hint="@string/search_des"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:maxLines="1"
                     android:textSize="12sp" />
 
             </RelativeLayout>
