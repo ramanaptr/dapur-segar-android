@@ -80,5 +80,6 @@
     <string name="edit_detail_quantity">Quantity</string>
     <string name="detail_product_dummy_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,</string>
     <string name="detail_product_similar_products">Similar products</string>
+    <string name="dialog_filter_header">Filter</string>
 
 </resources>

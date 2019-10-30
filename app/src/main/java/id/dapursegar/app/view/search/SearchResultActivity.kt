@@ -11,9 +11,11 @@ import id.dapursegar.app.base.extension.settingToolbar
 import id.dapursegar.app.model.home.CategoryHome
 import id.dapursegar.app.model.home.ProductItem
 import id.dapursegar.app.view.search.adapter.SearchResultAdapter
+import id.dapursegar.app.view.search.dialog.BSFilter
 import kotlinx.android.synthetic.main.search_result_activity.*
 import kotlinx.android.synthetic.main.search_result_toolbar.*
 import org.jetbrains.anko.startActivity
+import org.jetbrains.anko.toast
 
 class SearchResultActivity : BaseActivity() {
 
@@ -53,7 +55,19 @@ class SearchResultActivity : BaseActivity() {
     }
 
     override fun onClick() {
-
+        val dummyFilter = mutableListOf<String>().apply {
+            add("Most suitable")
+            add("Highes price")
+            add("Lowest price")
+            add("Discount")
+            add("A - Z")
+            add("Z - A")
+        }
+        cvFilter.setOnClickListener {
+            BSFilter(dummyFilter) {
+                tvFilterType.text = it
+            }.show(supportFragmentManager, "BSFilter")
+        }
     }
 
     private fun setupAdapter() {
