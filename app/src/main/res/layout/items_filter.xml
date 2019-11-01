@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <id.dapursegar.app.base.customview.CustomTextView
+    <com.dapursegar.app.base.customview.CustomTextView
         android:id="@+id/tvFilterName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

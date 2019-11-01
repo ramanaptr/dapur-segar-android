@@ -13,6 +13,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="57dp"
         android:fillViewport="true"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
@@ -42,7 +43,7 @@
                 app:piv_unselectedColor="@color/green_light"
                 app:piv_viewPager="@id/vpSlide" />
 
-            <id.dapursegar.app.base.customview.CustomTextView
+            <com.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvHeaderStore"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -56,7 +57,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/piv" />
 
-            <id.dapursegar.app.base.customview.CustomTextView
+            <com.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvQuantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -69,7 +70,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/tvHeaderStore" />
 
-            <id.dapursegar.app.base.customview.CustomTextView
+            <com.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvProductName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -82,7 +83,7 @@
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@+id/tvHeaderStore" />
 
-            <id.dapursegar.app.base.customview.CustomTextView
+            <com.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvWeightPrice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -189,7 +190,9 @@
                 android:id="@+id/vLine2"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
                 android:background="@color/transparent_gray"
                 app:layout_constraintTop_toBottomOf="@id/tvDescription" />
 
@@ -215,23 +218,24 @@
                 android:clipToPadding="false"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
-                app:layout_constraintBottom_toTopOf="@id/tvCheckout"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvHeaderSimilar" />
-
-            <id.dapursegar.app.base.customview.CustomTextView
-                android:id="@+id/tvCheckout"
-                android:layout_width="match_parent"
-                android:layout_height="57dp"
-                android:background="@color/green_edit_photo"
-                android:gravity="center"
-                android:text="Buy"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btnCheckout"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_gravity="bottom"
+        android:background="@color/green_edit_photo"
+        android:gravity="center"
+        android:text="Buy"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

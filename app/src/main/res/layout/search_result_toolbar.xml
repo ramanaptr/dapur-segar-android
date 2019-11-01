@@ -20,7 +20,7 @@
         app:layout_scrollFlags="scroll|enterAlways|snap"
         app:titleEnabled="false">
 
-        <id.dapursegar.app.base.customview.CustomTextView
+        <com.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
                 android:layout_marginStart="11dp"
                 android:src="@drawable/ic_filter" />
 
-            <id.dapursegar.app.base.customview.CustomTextView
+            <com.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvSortBy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
                 android:text="Sort by : "
                 android:textStyle="bold" />
 
-            <id.dapursegar.app.base.customview.CustomTextView
+            <com.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvFilterType"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

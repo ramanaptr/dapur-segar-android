@@ -45,7 +45,7 @@
 
             </androidx.cardview.widget.CardView>
 
-            <id.dapursegar.app.base.customview.CustomTextView
+            <com.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvProduct"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
                 app:layout_constraintStart_toEndOf="@id/cvProductImage"
                 app:layout_constraintTop_toTopOf="@id/cvProductImage" />
 
-            <id.dapursegar.app.base.customview.CustomTextView
+            <com.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvWeightPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
                 app:layout_constraintStart_toEndOf="@id/cvProductImage"
                 app:layout_constraintTop_toBottomOf="@id/tvProduct" />
 
-            <id.dapursegar.app.base.customview.CustomTextView
+            <com.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvQuantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
                 app:layout_constraintStart_toEndOf="@id/cvProductImage"
                 app:layout_constraintTop_toBottomOf="@id/tvWeightPrice" />
 
-            <id.dapursegar.app.base.customview.CustomTextView
+            <com.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvHeaderQuantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -126,7 +126,7 @@
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent">
 
-                <id.dapursegar.app.base.customview.CustomTextView
+                <com.dapursegar.app.base.customview.CustomTextView
                     android:id="@+id/tvCancel"
                     android:layout_width="match_parent"
                     android:layout_height="57dp"
@@ -138,7 +138,7 @@
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
-                <id.dapursegar.app.base.customview.CustomTextView
+                <com.dapursegar.app.base.customview.CustomTextView
                     android:id="@+id/tvCheckout"
                     android:layout_width="match_parent"
                     android:layout_height="57dp"

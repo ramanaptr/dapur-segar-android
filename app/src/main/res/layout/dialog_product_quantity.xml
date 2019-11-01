@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvProductImage"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="4dp"
+                app:cardPreventCornerOverlap="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgMenuIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/durian"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.cardview.widget.CardView>
+
+            <com.dapursegar.app.base.customview.CustomTextView
+                android:id="@+id/tvProduct"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Apel Malang Kg"
+                android:textColor="#424242"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toStartOf="@id/btnClose"
+                app:layout_constraintStart_toEndOf="@id/cvProductImage"
+                app:layout_constraintTop_toTopOf="@id/cvProductImage" />
+
+            <ImageButton
+                android:id="@+id/btnClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_close"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/cvProductImage" />
+
+            <com.dapursegar.app.base.customview.CustomTextView
+                android:id="@+id/tvWeightPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvProduct"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="IDR 420.100/ 1 Kg"
+                android:textColor="#cf3a5c"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/cvProductImage"
+                app:layout_constraintTop_toBottomOf="@id/tvProduct" />
+
+            <com.dapursegar.app.base.customview.CustomTextView
+                android:id="@+id/tvQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvWeightPrice"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@id/cvProductImage"
+                android:text="Leftovers 10"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="8sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/cvProductImage"
+                app:layout_constraintTop_toBottomOf="@id/tvWeightPrice" />
+
+            <com.dapursegar.app.base.customview.CustomTextView
+                android:id="@+id/tvHeaderQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/edit_detail_quantity"
+                android:textColor="@color/text_view_black_light"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvProductImage" />
+
+            <include
+                android:id="@+id/baseQuantity"
+                layout="@layout/base_add_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintBottom_toBottomOf="@id/tvHeaderQuantity"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvHeaderQuantity" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProductOrder"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="24dp"
+                android:clipToPadding="false"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                app:layout_constraintTop_toBottomOf="@id/baseQuantity" />
+
+            <LinearLayout
+                android:id="@+id/llOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <Button
+                    android:id="@+id/btnAddBasket"
+                    android:layout_width="0dp"
+                    android:layout_height="57dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_weight="1"
+                    android:background="@color/green_edit_photo"
+                    android:gravity="center"
+                    android:text="Add to Basket"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

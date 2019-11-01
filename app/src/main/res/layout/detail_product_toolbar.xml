@@ -8,6 +8,7 @@
     app:elevation="0dp">
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clipToPadding="false"
@@ -21,7 +22,7 @@
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="12dp">
 
-            <id.dapursegar.app.base.customview.CustomTextView
+            <com.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -59,7 +60,7 @@
                 app:layout_constraintStart_toStartOf="@id/btnBasket"
                 app:layout_constraintTop_toTopOf="@id/btnBasket">
 
-                <id.dapursegar.app.base.customview.CustomTextView
+                <com.dapursegar.app.base.customview.CustomTextView
                     android:id="@+id/tvBasket"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

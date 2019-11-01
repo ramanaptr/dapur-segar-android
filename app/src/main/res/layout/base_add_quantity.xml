@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:background="@color/transparent">
 
-    <id.dapursegar.app.base.customview.CustomTextView
+    <com.dapursegar.app.base.customview.CustomTextView
         android:id="@+id/tvMinus"
         android:layout_width="32dp"
         android:layout_height="32dp"
@@ -30,7 +30,7 @@
         app:layout_constraintStart_toEndOf="@id/tvMinus"
         app:layout_constraintTop_toTopOf="@id/tvMinus" />
 
-    <id.dapursegar.app.base.customview.CustomTextView
+    <com.dapursegar.app.base.customview.CustomTextView
         android:id="@+id/tvPlus"
         android:layout_width="32dp"
         android:layout_height="32dp"

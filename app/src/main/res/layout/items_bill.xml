@@ -38,7 +38,7 @@
 
         </androidx.cardview.widget.CardView>
 
-        <id.dapursegar.app.base.customview.CustomTextView
+        <com.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvProductName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
             app:layout_constraintTop_toTopOf="@id/cvProductImage" />
 
-        <id.dapursegar.app.base.customview.CustomTextView
+        <com.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvWeightPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
             app:layout_constraintTop_toBottomOf="@id/tvProductName" />
 
-        <id.dapursegar.app.base.customview.CustomTextView
+        <com.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvQuantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -76,7 +76,7 @@
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
             app:layout_constraintTop_toBottomOf="@id/tvWeightPrice" />
 
-        <id.dapursegar.app.base.customview.CustomTextView
+        <com.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvInfoWeight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -89,7 +89,7 @@
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
             app:layout_constraintTop_toBottomOf="@id/tvQuantity" />
 
-        <id.dapursegar.app.base.customview.CustomTextView
+        <com.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvShowProductAgain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -116,7 +116,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/tvShowProductAgain" />
 
-        <id.dapursegar.app.base.customview.CustomTextView
+        <com.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvTotalPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -129,7 +129,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvDetail" />
 
-        <id.dapursegar.app.base.customview.CustomTextView
+        <com.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvProduct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -170,7 +170,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <id.dapursegar.app.base.customview.CustomTextView
+                <com.dapursegar.app.base.customview.CustomTextView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/button_submit"
                     android:background="@color/colorAccent"
@@ -184,7 +184,7 @@
 
         </androidx.cardview.widget.CardView>
 
-        <id.dapursegar.app.base.customview.CustomTextView
+        <com.dapursegar.app.base.customview.CustomTextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"

@@ -15,7 +15,7 @@
         android:layout_marginEnd="6dp"
         app:contentInsetStartWithNavigation="0dp">
 
-        <id.dapursegar.app.base.customview.CustomTextView
+        <com.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

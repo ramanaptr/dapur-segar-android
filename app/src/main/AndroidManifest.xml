@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="id.dapursegar.app">
+    package="com.dapursegar.app">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -16,7 +16,7 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity
-            android:name="id.dapursegar.app.view.login.LoginActivity"
+            android:name="com.dapursegar.app.view.login.LoginActivity"
             android:launchMode="singleTask"
             android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
@@ -26,47 +26,47 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".base.webview.BaseWebView"
+            android:name="com.dapursegar.app.base.webview.BaseWebView"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name="id.dapursegar.app.view.register.RegisterActivity"
+            android:name="com.dapursegar.app.view.register.RegisterActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name="id.dapursegar.app.view.forgot.ForgotPasswordActivity"
+            android:name="com.dapursegar.app.view.forgot.ForgotPasswordActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name="id.dapursegar.app.view.forgot.ResetPasswordActivity"
+            android:name="com.dapursegar.app.view.forgot.ResetPasswordActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name="id.dapursegar.app.view.main.MainActivity"
+            android:name="com.dapursegar.app.view.main.MainActivity"
             android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
         <activity
-            android:name=".view.search.SearchActivity"
+            android:name="com.dapursegar.app.view.search.SearchActivity"
             android:launchMode="singleTask"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".view.main.profile.edit.EditProfileActivity"
+            android:name="com.dapursegar.app.view.main.profile.edit.EditProfileActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".view.main.bill.BillFragment"
+            android:name="com.dapursegar.app.view.main.bill.BillFragment"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".view.payment.PaymentDetailActivity"
+            android:name="com.dapursegar.app.view.payment.PaymentDetailActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".view.basket.BasketAlertActivity"
+            android:name="com.dapursegar.app.view.basket.BasketAlertActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".view.basket.BasketActivity"
+            android:name="com.dapursegar.app.view.basket.BasketActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".view.editdetail.EditDetailActivity"
+            android:name="com.dapursegar.app.view.editdetail.EditDetailActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".view.detail.DetailProductActivity"
+            android:name="com.dapursegar.app.view.detail.DetailProductActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".view.search.SearchResultActivity"
+            android:name="com.dapursegar.app.view.search.SearchResultActivity"
             android:windowSoftInputMode="stateHidden|adjustResize"
             android:exported="true"/>
     </application>

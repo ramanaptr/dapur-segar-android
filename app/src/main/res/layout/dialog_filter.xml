@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:padding="24dp">
 
-    <id.dapursegar.app.base.customview.CustomTextView
+    <com.dapursegar.app.base.customview.CustomTextView
         android:id="@+id/tvFilter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
