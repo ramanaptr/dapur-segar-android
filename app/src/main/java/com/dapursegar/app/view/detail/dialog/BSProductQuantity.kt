@@ -35,7 +35,6 @@ class BSProductQuantity(
 
     private fun onClick() {
         btnClose.setOnClickListener { dismiss() }
-        btnAddBasket.setOnClickListener { dismiss() }
     }
 
     private fun setupAdapter() {

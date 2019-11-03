@@ -1,6 +1,7 @@
 package com.dapursegar.app.base.extension
 
 import android.animation.ObjectAnimator
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.DatePickerDialog
 import android.content.ClipData
@@ -28,30 +29,35 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.core.content.ContextCompat
-import com.google.gson.Gson
 import com.dapursegar.app.helper.Constants
 import com.dapursegar.app.helper.SessionManger
+import com.google.gson.Gson
 import java.text.NumberFormat
 import java.text.SimpleDateFormat
 import java.util.*
 
+@SuppressLint("HardwareIds")
 fun getAndroidID(context: Context): String {
-    SessionManger.getUUID(context).isEmpty().let {
-        if (it) {
-            val uuid =
-                Settings.Secure.getString(context.contentResolver, Settings.Secure.ANDROID_ID)
+    context.apply {
+        if (getSavedAndroidID().isEmpty()) {
+            val androidID = Settings.Secure.getString(
+                context.contentResolver,
+                Settings.Secure.ANDROID_ID
+            )
             SessionManger.putString(
                 context,
                 Constants.UUID,
-                uuid
+                androidID
             )
-            Log.d("Utils", "UUID anda $uuid")
-            return uuid
+            saveAndroidID(androidID)
+            Log.d("Utils", "Android ID anda $androidID")
+            return androidID
         } else {
-            Log.d("Utils", "UUID anda " + SessionManger.getUUID(context))
+            val androidID = getSavedAndroidID()
+            Log.d("Utils", "Android ID anda $androidID")
+            return androidID
         }
     }
-    return ""
 }
 
 private var passwordVisible = false
@@ -174,19 +180,18 @@ fun formatDateFromString(date: String): String {
     }
 }
 
-fun copyText(act: Activity, text: String) {
-    val clipboard = act.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager?
-    val clip = ClipData.newPlainText(text, text)
+fun AppCompatActivity.copyText(copyText: String) {
+    val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager?
+    val clip = ClipData.newPlainText(copyText, copyText)
     clipboard?.setPrimaryClip(clip)
 }
 
-fun showDatePicker(
-    act: Activity,
+fun AppCompatActivity.showDatePicker(
     calendar: Calendar,
     listener: DatePickerDialog.OnDateSetListener
 ) {
     DatePickerDialog(
-        act,
+        this,
         listener,
         calendar.get(Calendar.YEAR),
         calendar.get(Calendar.MONTH),
@@ -225,20 +230,20 @@ fun AppCompatActivity.changeColorStatusBar(color: Int) {
     }
 }
 
-fun <T> convertMutibleMapToObject(data: MutableMap<String, String>, clazz: Class<T>): Any? {
+fun <T> convertMutableMapToObject(data: MutableMap<String, String>, clazz: Class<T>): Any? {
     val gson = Gson()
     val jsonFromMap = gson.toJson(data)
     return gson.fromJson(jsonFromMap, clazz::class.java)
 }
 
-fun htmlColorText(target: TextView?, htmlString: String) {
+fun TextView.htmlColorText(htmlString: String) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-        target?.setText(
+        setText(
             Html.fromHtml(htmlString, Html.FROM_HTML_MODE_LEGACY),
             TextView.BufferType.SPANNABLE
         )
     } else {
-        target?.setText(Html.fromHtml(htmlString), TextView.BufferType.SPANNABLE)
+        setText(Html.fromHtml(htmlString), TextView.BufferType.SPANNABLE)
     }
 }
 

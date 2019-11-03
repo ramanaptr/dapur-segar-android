@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Dapur Segar Generator</string>
+    <string name="key">ZGFwdXJzZWdhci5pZA==</string>
+    <string name="salt">bHV0ZXJyYW1hYnVhdGRhcHVyc2VnYXI=</string>
+</resources>

@@ -49,20 +49,4 @@ object SessionManger {
     fun clear(context: Context, key: String) {
         getPref(context).edit().remove(key).apply()
     }
-
-    /**
-     * This is for new object key server API_SERVICE!
-     * */
-
-    fun getApiService(context: Context): String {
-        return getPref(context).getString(Constants.CUSTOM_API, "http://192.168.1.1")!!
-    }
-
-    /**
-     *  This is for authentication request
-     * */
-
-    fun getUUID(context: Context?): String {
-        return getPref(context).getString(Constants.UUID, "")!!
-    }
 }
