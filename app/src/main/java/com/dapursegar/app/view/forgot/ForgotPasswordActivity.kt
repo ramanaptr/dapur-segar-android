@@ -11,7 +11,7 @@ import org.jetbrains.anko.startActivity
  * Created by Ramana on 21-Sep-19.
  */
 
-class ForgotPasswordActivity : BaseActivity() {
+class ForgotPasswordActivity : BaseActivity<ForgotPasswordViewModel>() {
 
     override fun statusBarColor(): Int = R.color.white
 

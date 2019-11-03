@@ -18,7 +18,7 @@ import org.jetbrains.anko.support.v4.startActivity
  * Created by Ramana on 19-Oct-19.
  */
 
-class FavoriteFragment : BaseFragment() {
+class FavoriteFragment : BaseFragment<FavoriteViewModel>() {
 
     private var favAdapter: FavoriteAdapter? = null
 

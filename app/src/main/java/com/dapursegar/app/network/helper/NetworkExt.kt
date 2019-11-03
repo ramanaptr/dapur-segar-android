@@ -1,4 +1,4 @@
-package com.ramana.movierm.network.helper
+package com.dapursegar.app.network.helper
 
 import okhttp3.ResponseBody
 import retrofit2.Call

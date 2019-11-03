@@ -2,7 +2,6 @@ package com.dapursegar.app.network
 
 import com.dapursegar.app.BuildConfig
 import com.dapursegar.app.network.helper.getData
-import com.ramana.movierm.network.APIService
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

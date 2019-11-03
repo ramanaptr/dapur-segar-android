@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.detail_product_toolbar.*
  * Created by Ramana on 20-Oct-19.
  */
 
-class DetailProductActivity : BaseActivity() {
+class DetailProductActivity : BaseActivity<DetailProductViewModel>() {
 
     override fun statusBarColor(): Int = R.color.white
 

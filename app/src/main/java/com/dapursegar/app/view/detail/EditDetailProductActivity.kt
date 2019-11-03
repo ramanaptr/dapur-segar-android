@@ -1,4 +1,4 @@
-package com.dapursegar.app.view.editdetail
+package com.dapursegar.app.view.detail
 
 import android.os.Bundle
 import androidx.appcompat.app.ActionBar
@@ -9,7 +9,7 @@ import com.dapursegar.app.base.activity.BaseActivity
  * Created by Ramana on 20-Oct-19.
  */
  
-class EditDetailActivity : BaseActivity() {
+class EditDetailProductActivity : BaseActivity<EditDetailProductViewModel>() {
 
     override fun statusBarColor(): Int = R.color.white
 

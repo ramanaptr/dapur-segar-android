@@ -15,7 +15,7 @@ import java.lang.String.format
  * Created by Ramana on 21-Sep-19.
  */
 
-class ResetPasswordActivity : BaseActivity() {
+class ResetPasswordActivity : BaseActivity<ResetPasswordViewModel>() {
 
     override fun statusBarColor(): Int = R.color.white
 

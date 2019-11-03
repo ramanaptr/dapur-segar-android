@@ -9,7 +9,7 @@ import com.dapursegar.app.base.activity.BaseActivity
  * Created by Ramana on 20-Oct-19.
  */
  
-class PaymentDetailActivity : BaseActivity(){
+class PaymentDetailActivity : BaseActivity<PaymentDetailViewModel>(){
 
     override fun statusBarColor(): Int = R.color.white
 

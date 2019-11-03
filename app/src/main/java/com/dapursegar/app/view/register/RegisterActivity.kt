@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.register_activity.*
  * Created by Ramana on 21-Sep-19.
  */
 
-class RegisterActivity : BaseActivity() {
+class RegisterActivity : BaseActivity<RegisterViewModel>() {
 
     override fun statusBarColor(): Int = R.color.white
 

@@ -4,17 +4,27 @@ import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModel
 import com.dapursegar.app.R
-import com.dapursegar.app.base.dialog.BaseLoading
 import com.dapursegar.app.base.extension.changeColorStatusBar
 import com.dapursegar.app.base.extension.isNetworkAvailable
 import com.dapursegar.app.base.extension.settingToolbar
 import kotlinx.android.synthetic.main.default_toolbar.*
 import org.jetbrains.anko.toast
+import org.koin.androidx.viewmodel.ext.android.getViewModel
+import java.lang.reflect.ParameterizedType
+import kotlin.reflect.KClass
 
-abstract class BaseActivity : AppCompatActivity() {
+abstract class BaseActivity<T : ViewModel> : AppCompatActivity() {
 
-    private var baseLoading: BaseLoading? = null
+    val viewModel: T by lazy { getViewModel(viewModelClass()) }
+
+    @Suppress("UNCHECKED_CAST")
+    private fun viewModelClass(): KClass<T> {
+        return ((javaClass.genericSuperclass as ParameterizedType)
+            .actualTypeArguments[0] as Class<T>)
+            .kotlin
+    }
 
     private fun runPermission() {
 //        runWithPermissions(Manifest.permission.READ_CONTACTS) {}
@@ -26,7 +36,6 @@ abstract class BaseActivity : AppCompatActivity() {
         setContentView(setLayout())
         onCreate(savedInstanceState, settingToolbar(tvTitle, setTitle(), toolbar))
         onClick()
-        initDialog()
         screenStatus()
         networkCheck()
     }
@@ -40,10 +49,6 @@ abstract class BaseActivity : AppCompatActivity() {
     private fun screenStatus() {
         changeColorStatusBar(statusBarColor())
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
-    }
-
-    private fun initDialog() {
-        baseLoading = BaseLoading(this)
     }
 
     private fun networkCheck() {

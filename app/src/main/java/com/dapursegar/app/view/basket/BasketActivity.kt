@@ -9,7 +9,7 @@ import com.dapursegar.app.base.activity.BaseActivity
  * Created by Ramana on 20-Oct-19.
  */
 
-class BasketActivity : BaseActivity() {
+class BasketActivity : BaseActivity<BasketViewModel>() {
 
     override fun statusBarColor(): Int = R.color.white
 

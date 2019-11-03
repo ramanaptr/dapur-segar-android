@@ -6,12 +6,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModel
 import com.dapursegar.app.base.dialog.BaseLoading
 import org.jetbrains.anko.support.v4.act
+import org.koin.androidx.viewmodel.ext.android.getViewModel
+import java.lang.reflect.ParameterizedType
+import kotlin.reflect.KClass
 
-abstract class BaseFragment : Fragment() {
+abstract class BaseFragment<T: ViewModel> : Fragment() {
 
-    var baseLoading: BaseLoading? = null
+    val viewModel: T by lazy { getViewModel(viewModelClass()) }
+
+    @Suppress("UNCHECKED_CAST")
+    private fun viewModelClass(): KClass<T> {
+        return ((javaClass.genericSuperclass as ParameterizedType)
+            .actualTypeArguments[0] as Class<T>)
+            .kotlin
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -24,12 +35,7 @@ abstract class BaseFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         onCreate(savedInstanceState, act.actionBar)
-        initComponent()
         onClick()
-    }
-
-    private fun initComponent() {
-        context?.apply { baseLoading = BaseLoading(this) }
     }
 
     protected abstract fun setLayout(): Int

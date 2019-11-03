@@ -2,32 +2,31 @@ package com.dapursegar.app.base.webview
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
 import com.dapursegar.app.R
 import com.dapursegar.app.base.activity.BaseActivity
+import com.dapursegar.app.base.extension.changeColorStatusBar
 import com.dapursegar.app.base.extension.gone
+import com.dapursegar.app.base.extension.settingToolbar
+import kotlinx.android.synthetic.main.default_toolbar.*
 import kotlinx.android.synthetic.main.default_web_view.*
 
-class BaseWebView : BaseActivity() {
+class BaseWebView : AppCompatActivity() {
 
     companion object {
         const val OPEN_URL = "open_url"
     }
 
-    override fun statusBarColor(): Int = R.color.white
-
-    override fun setTitle(): String = "Syarat & Ketentuan"
-
-    override fun setLayout(): Int = R.layout.default_web_view
-
-    override fun onCreate(savedInstanceState: Bundle?, actionBar: ActionBar?) {
+    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
+        super.onCreate(savedInstanceState, persistentState)
+        setContentView(R.layout.default_web_view)
+        settingToolbar(tvTitle, "Syarat & Ketentuan", toolbar)
+        changeColorStatusBar(R.color.white)
         onLoadweb()
-    }
-
-    override fun onClick() {
-
     }
 
     @SuppressLint("SetJavaScriptEnabled")

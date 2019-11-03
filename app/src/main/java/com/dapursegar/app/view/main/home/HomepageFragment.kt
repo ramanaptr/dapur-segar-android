@@ -21,7 +21,7 @@ import org.jetbrains.anko.*
 import org.jetbrains.anko.support.v4.startActivity
 import org.jetbrains.anko.support.v4.toast
 
-class HomepageFragment : BaseFragment() {
+class HomepageFragment : BaseFragment<HomepageViewModel>() {
 
     private var bannersAdapter: BannersAdapter? = null
     private var menuAdapter: MenuAdapter? = null

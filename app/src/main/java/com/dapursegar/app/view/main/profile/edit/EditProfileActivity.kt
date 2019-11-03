@@ -5,13 +5,13 @@ import androidx.appcompat.app.ActionBar
 import com.dapursegar.app.R
 import com.dapursegar.app.base.activity.BaseActivity
 import com.dapursegar.app.base.extension.gone
-import kotlinx.android.synthetic.main.home_toolbar.*
+import kotlinx.android.synthetic.main.default_toolbar.*
 
 /**
  * Created by Ramana on 15-Oct-19.
  */
 
-class EditProfileActivity : BaseActivity() {
+class EditProfileActivity : BaseActivity<EditProfileViewModel>() {
 
     override fun statusBarColor(): Int = R.color.white
 

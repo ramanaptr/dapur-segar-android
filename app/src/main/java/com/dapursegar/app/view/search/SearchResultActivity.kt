@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.search_result_activity.*
 import kotlinx.android.synthetic.main.search_result_toolbar.*
 import org.jetbrains.anko.startActivity
 
-class SearchResultActivity : BaseActivity() {
+class SearchResultActivity : BaseActivity<SearchResultViewModel>() {
 
     private var searchResultAdapter: SearchResultAdapter? = null
     private val categoryHomeDummy = mutableListOf<CategoryHome>()

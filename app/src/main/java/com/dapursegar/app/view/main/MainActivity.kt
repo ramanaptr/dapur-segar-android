@@ -20,7 +20,7 @@ import kotlinx.android.synthetic.main.main_activity.*
  * Created by Ramana on 22-Sep-19.
  */
 
-class MainActivity : BaseActivity() {
+class MainActivity : BaseActivity<MainViewModel>() {
 
     override fun statusBarColor(): Int = R.color.white
 

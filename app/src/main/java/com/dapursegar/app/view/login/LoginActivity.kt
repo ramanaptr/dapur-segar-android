@@ -17,7 +17,7 @@ import java.lang.String.format
  * Created by Ramana on 21-Sep-19.
  */
 
-class LoginActivity : BaseActivity() {
+class LoginActivity : BaseActivity<LoginViewModel>() {
 
     private lateinit var password: String
     private lateinit var username: String
@@ -37,12 +37,14 @@ class LoginActivity : BaseActivity() {
         tvForgot.setOnClickListener { startActivity<ForgotPasswordActivity>() }
         tvRegister.setOnClickListener { startActivity<RegisterActivity>() }
         btnEye.setOnClickListener { btnEye.passwordState(etPassword) }
-        cvSubmit.setOnClickListener { toast("${isValidateForm()} ") }
+        cvSubmit.setOnClickListener {
+            toast("${isValidateForm()} ")
+        }
     }
 
     private fun isValidateForm(): Boolean {
-        val username = etUsername.text.toString().trim()
-        val password = etPassword.text.toString().trim()
+        username = etUsername.text.toString().trim()
+        password = etPassword.text.toString().trim()
 
         if (username.isEmpty()) return tilUsername.showError(getString(R.string.empty_username))
         else tilUsername.hideError()

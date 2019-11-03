@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.search_toolbar.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 
-class SearchActivity : BaseActivity() {
+class SearchActivity : BaseActivity<SearchViewModel>() {
 
     private var tagAdapter: TagAdapter? = null
 

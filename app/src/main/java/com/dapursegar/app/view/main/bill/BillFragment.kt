@@ -9,7 +9,7 @@ import com.dapursegar.app.view.main.bill.adapter.BillAdapter
 import kotlinx.android.synthetic.main.bill_fragment.*
 import kotlinx.android.synthetic.main.bill_toolbar.*
 
-class BillFragment : BaseFragment() {
+class BillFragment : BaseFragment<BillViewModel>() {
 
     private var billAdapter: BillAdapter? = null
 

@@ -46,13 +46,11 @@ fun TextInputLayout.isNotEmpty(target: AppCompatEditText, msg: String): EditText
 }
 
 fun TextInputLayout.showError(msg: String): Boolean {
-//    enableError()
     error = msg
     return false
 }
 
 fun TextInputLayout.hideError(): Boolean {
-//    disableError()
     error = null
     return true
 }
