@@ -38,7 +38,7 @@ class LoginActivity : BaseActivity<LoginViewModel>() {
         tvRegister.setOnClickListener { startActivity<RegisterActivity>() }
         btnEye.setOnClickListener { btnEye.passwordState(etPassword) }
         cvSubmit.setOnClickListener {
-            toast("${isValidateForm()} ")
+             toast("${isValidateForm()} ")
         }
     }
 

@@ -9,6 +9,7 @@ import com.dapursegar.app.R
 import com.dapursegar.app.base.extension.changeColorStatusBar
 import com.dapursegar.app.base.extension.isNetworkAvailable
 import com.dapursegar.app.base.extension.settingToolbar
+import io.reactivex.disposables.CompositeDisposable
 import kotlinx.android.synthetic.main.default_toolbar.*
 import org.jetbrains.anko.toast
 import org.koin.androidx.viewmodel.ext.android.getViewModel
@@ -18,6 +19,7 @@ import kotlin.reflect.KClass
 abstract class BaseActivity<T : ViewModel> : AppCompatActivity() {
 
     val viewModel: T by lazy { getViewModel(viewModelClass()) }
+    val disposable: CompositeDisposable by lazy { CompositeDisposable() }
 
     @Suppress("UNCHECKED_CAST")
     private fun viewModelClass(): KClass<T> {
@@ -38,6 +40,12 @@ abstract class BaseActivity<T : ViewModel> : AppCompatActivity() {
         onClick()
         screenStatus()
         networkCheck()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        disposable.clear()
+        disposable.dispose()
     }
 
     override fun onResume() {

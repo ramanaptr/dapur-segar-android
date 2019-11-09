@@ -1,18 +1,21 @@
 package com.dapursegar.app.network
 
-import okhttp3.ResponseBody
+import com.dapursegar.app.base.network.BaseResult
+import com.dapursegar.app.network.response.register.RegisterData
+import com.dapursegar.app.network.response.register.RegisterError
 import retrofit2.Call
-import retrofit2.http.GET
-import retrofit2.http.Query
+import retrofit2.http.FieldMap
+import retrofit2.http.FormUrlEncoded
+import retrofit2.http.POST
 import retrofit2.http.Url
 
 interface APIService {
 
-    @GET
-    fun getMovie(
+    @FormUrlEncoded
+    @POST
+    fun registerUser(
         @Url url: String,
-        @Query("api_key") apiKey: String,
-        @Query("language") language: String
-    ): Call<ResponseBody>
+        @FieldMap map: Map<String, Any>
+    ): Call<BaseResult<RegisterData, RegisterError>>
 
 }

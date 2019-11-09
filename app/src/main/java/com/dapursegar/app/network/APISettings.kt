@@ -27,6 +27,4 @@ private fun domain(): String {
     else getData(BuildConfig.API_PRODUCTION)
 }
 
-/**
- * Endpoint
- * */
+val loginUserEndpoint by lazy { "${domain()}/users/v100/register" }

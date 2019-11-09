@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun encryptedResult(): String {
-        val domain = AesCbcWithIntegrity.encrypt("http://dapursegar.id", key)
+        val domain = AesCbcWithIntegrity.encrypt("http://api.zeroxense.com", key)
 
         var encryptedResult = "\n\nEncrypted String: "
         encryptedResult += "\n domain: $domain"
