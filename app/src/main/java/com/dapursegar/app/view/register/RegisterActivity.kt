@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.ActionBar
 import com.dapursegar.app.R
 import com.dapursegar.app.base.activity.BaseActivity
-import com.dapursegar.app.base.extension.subscribeMainThread
+import com.dapursegar.app.base.extension.getBaseResult
 import kotlinx.android.synthetic.main.register_activity.*
 import org.jetbrains.anko.toast
 
@@ -38,7 +38,7 @@ class RegisterActivity : BaseActivity<RegisterViewModel>() {
         payloadRequest["customer_id"] = "2"
 
         disposable.add(
-            viewModel.registerUser(payloadRequest).subscribeMainThread(loading, {
+            viewModel.registerUser(payloadRequest).getBaseResult(loading, {
                 toast(error.user)
             }, {
                 message?.apply { toast(this) }

@@ -13,7 +13,28 @@ import io.reactivex.schedulers.Schedulers
  * Created by Ramana on 09-Nov-19.
  */
 
-internal fun <D, E> Flowable<BaseResult<D, E>>.subscribeMainThread(
+internal fun <T> Flowable<T>.getData(
+    loading: BaseLoading,
+    success: T.() -> Unit,
+    exception: Throwable.() -> Unit
+): Disposable {
+    loading.show()
+    return subscribeOn(Schedulers.io())
+        .observeOn(AndroidSchedulers.mainThread())
+        .subscribe(
+            {
+                loading.dismiss()
+                it.apply { success(this) }
+            },
+            {
+                loading.dismiss()
+                it.printStackTrace()
+                it.apply { exception(this) }
+            }
+        )
+}
+
+internal fun <D, E> Flowable<BaseResult<D, E>>.getBaseResult(
     success: BaseResult<D, E>.() -> Unit,
     exception: Throwable.() -> Unit
 ): Disposable {
@@ -28,7 +49,7 @@ internal fun <D, E> Flowable<BaseResult<D, E>>.subscribeMainThread(
         )
 }
 
-internal fun <D, E> Flowable<BaseResult<D, E>>.subscribeMainThread(
+internal fun <D, E> Flowable<BaseResult<D, E>>.getBaseResult(
     loading: BaseLoading,
     success: BaseResult<D, E>.() -> Unit,
     exception: Throwable.() -> Unit
