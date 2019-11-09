@@ -6,7 +6,7 @@
     android:background="@color/cream">
 
     <include
-        layout="@layout/default_toolbar"
+        layout="@layout/toolbar_default"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -66,7 +66,7 @@
                     android:layout_marginTop="24dp"
                     android:clipToPadding="false"
                     android:gravity="center_vertical"
-                    android:padding="24dp">
+                    android:padding="@dimen/default_padding">
 
                     <Button
                         android:layout_width="0dp"
@@ -80,7 +80,7 @@
                         android:textStyle="bold" />
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cvSubmit"
+                        android:id="@+id/cvLogin"
                         style="@style/selectable_with_ripple"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"

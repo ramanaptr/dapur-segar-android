@@ -25,7 +25,7 @@ class ForgotPasswordActivity : BaseActivity<ForgotPasswordViewModel>() {
 
     override fun onClick() {
         tvSkip.setOnClickListener { finish() }
-        cvSubmit.setOnClickListener {
+        cvLogin.setOnClickListener {
             startActivity<ResetPasswordActivity>()
         }
     }

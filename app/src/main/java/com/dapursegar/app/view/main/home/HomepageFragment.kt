@@ -15,7 +15,7 @@ import com.dapursegar.app.view.detail.DetailProductActivity
 import com.dapursegar.app.view.main.home.adapter.CategoryAdapter
 import com.dapursegar.app.view.main.home.adapter.MenuAdapter
 import com.dapursegar.app.view.search.SearchActivity
-import kotlinx.android.synthetic.main.home_toolbar.*
+import kotlinx.android.synthetic.main.toolbar_home.*
 import kotlinx.android.synthetic.main.homepage_fragment.*
 import org.jetbrains.anko.*
 import org.jetbrains.anko.support.v4.startActivity

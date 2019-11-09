@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Dapur Segar</string>
-    <string name="search_des">search fruit, vegetable, meat ...</string>
+    <string name="search_des">Cari buah, sayur, daging ...</string>
     <string name="back_message_on_main">Tekan sekali lagi untuk keluar dari aplikasi</string>
     <string name="pressed_back_message">Press back again to exit</string>
     <string name="default_error_message">Sorry, There is something problem</string>
@@ -27,6 +27,7 @@
         <item>@drawable/ic_profile_off</item>
     </integer-array>
 
+    <string name="stripe">-</string>
 
     <!--Text Icon-->
     <string name="ic_arrow_bottom">&#xf35f;</string>
@@ -35,51 +36,75 @@
     <string name="ic_plus">&#xf217;</string>
 
     <!--Message-->
-    <string name="invalid_minimal_input">Minimal input is %d</string>
-    <string name="invalid_email">Invalid Email</string>
-    <string name="empty_password">Password can\'t be empty</string>
-    <string name="empty_username">Username can\'t be empty</string>
-    <string name="empty_repassword">Re Password can\'t be empty</string>
+    <string name="invalid_minimal_input">Minimal %d</string>
+    <string name="invalid_email">Email tidak valid</string>
+    <string name="empty_username">Username tidak boleh kosong</string>
+    <string name="empty_password">Password tidak boleh kosong</string>
+    <string name="empty_repassword">Password ulang tidak boleh kosong</string>
 
     <!--Profile-->
-    <string name="profile_text_setting">Setting</string>
-    <string name="profile_text_support">Support</string>
+    <string name="profile_text_setting">Pengaturan</string>
+    <string name="profile_text_support">Bantuan</string>
     <string name="profile_text_terms_conditions"><![CDATA[Terms & Conditions]]></string>
-    <string name="profile_text_edit">Edit</string>
+    <string name="profile_text_edit">Ubah</string>
 
     <!--Favorite-->
-    <string name="favorite_title">Favorite</string>
+    <string name="favorite_title">Favorit</string>
 
     <!--Bill-->
-    <string name="bill_title">Bill</string>
-    <string name="dummy_bill_product">Pay before 06-06-2019 5:05 p.m. through the BCA bank (automatic check)</string>
+    <string name="bill_title">Tagihan</string>
+    <string name="dummy_bill_product">Pay before 06–06–2019 5:05 p.m. through the BCA bank (automatic check)</string>
     <string name="bill_detail">Detail</string>
-    <string name="bill_pay">PAY</string>
+    <string name="bill_pay">Pembayaran</string>
 
     <!--Payment Detail-->
-    <string name="payment_detail">Payment Detail</string>
-    <string name="payment_detail_not_paid">Not yet paid</string>
-    <string name="payment_detail_not_paid_description">Please Pay before 06-06-2019 5:05 p.m. through the BCA bank (automatic check), if not paying, this orders will be canceled automatic.</string>
-    <string name="payment_detail_product_header">Product Details</string>
+    <string name="payment_detail">Detail Pembayaran</string>
+    <string name="payment_detail_not_paid">Belum terbayar</string>
+    <string name="payment_detail_not_paid_description">Silakan Bayar sebelum 06–06-2019 5:05 p.m. melalui bank BCA (cek otomatis), jika tidak membayar, pesanan ini akan dibatalkan secara otomatis.</string>
+    <string name="payment_detail_product_header">Detil Produk</string>
     <string name="image_description_location">Icon location</string>
-    <string name="payment_detail_address_header">Address</string>
+    <string name="payment_detail_address_header">Alamat</string>
     <string name="payment_detail_dummy_address">Ds, Sente, desa pikat kecamatan dawan, kabupaten klungkung bali., indonesia 80761</string>
     <string name="payment_detail_bank_name_dummy">Bank BCA</string>
-    <string name="payment_detail_no_orders_header">No. Orders</string>
-    <string name="payment_detail_order_time_header">Order time</string>
+    <string name="payment_detail_no_orders_header">No. Pesanan</string>
+    <string name="payment_detail_order_time_header">Waktu pesanan</string>
     <string name="payment_detail_copy">Copy</string>
-    <string name="payment_detail_cancel_order">Cancel Order</string>
+    <string name="payment_detail_cancel_order">Batal Pesanan</string>
     <string name="payment_detail_total_paying_header">Total paying</string>
 
     <!--Basket-->
     <string name="basket_title">Basket</string>
     <string name="basket_alert_header_message">Login or register for check your orders</string>
     <string name="basket_alert_notice_message">Support farmer, with choose product local with we.</string>
-    <string name="basket_alert_register_button">Register</string>
-    <string name="basket_checkout">Checkout</string>
+    <string name="basket_alert_register_button">Daftar</string>
     <string name="edit_detail_quantity">Quantity</string>
+    <string name="basket_buy">Beli</string>
+    <string name="basket_total">Total</string>
+
     <string name="detail_product_dummy_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,</string>
-    <string name="detail_product_similar_products">Similar products</string>
+    <string name="detail_product_similar_products">Produk yang terkait</string>
     <string name="dialog_filter_header">Filter</string>
+    <string name="detail_product_buy">Beli</string>
+    <string name="loading_message">Mohon Tunggu</string>
+    <string name="edit_profile_save">Simpan</string>
+    <string name="edit_profile_info_verification">Status Verifikasi</string>
+    <string name="edit_profile_email">Email</string>
+    <string name="edit_profile_account_status">Status Akun</string>
+    <string name="forgot_password_back">Kembali</string>
+    <string name="login_login_with">Atau login dengan</string>
+    <string name="login_hint_username">Username</string>
+    <string name="login_hint_password">Password</string>
+    <string name="login_fogot_password">Lupa password ?</string>
+    <string name="login_no_account">Tidak punya akun? </string>
+    <string name="login_daftar">Daftar</string>
+    <string name="login_login_button">Masuk</string>
+    <string name="skip_text">Lewati</string>
+    <string name="login_welcome_back">Welcome Back!</string>
+    <string name="payment_detail_total_payment">Total Pembayaran</string>
+    <string name="register_login">Masuk</string>
+    <string name="register_account_is_exist">Sudah mempunyai akun?</string>
+    <string name="register_register_title">Daftar</string>
+    <string name="reset_password_back">Kembali</string>
+    <string name="items_product_edit_detail">Ubah Detail</string>
 
 </resources>

@@ -20,7 +20,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="@dimen/default_padding_end"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
                 android:focusable="true"
@@ -83,8 +83,8 @@
                     style="@style/selectable_with_ripple"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingStart="40dp"
-                    android:paddingEnd="40dp">
+                    android:paddingStart="@dimen/default_padding_start"
+                    android:paddingEnd="@dimen/default_padding_end">
 
                     <ImageView
                         android:id="@+id/ivSetting"
@@ -129,8 +129,8 @@
                     style="@style/selectable_with_ripple"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingStart="40dp"
-                    android:paddingEnd="40dp">
+                    android:paddingStart="@dimen/default_padding_start"
+                    android:paddingEnd="@dimen/default_padding_end">
 
                     <ImageView
                         android:id="@+id/ivSupport"
@@ -175,8 +175,8 @@
                     style="@style/selectable_with_ripple"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingStart="40dp"
-                    android:paddingEnd="40dp">
+                    android:paddingStart="@dimen/default_padding_start"
+                    android:paddingEnd="@dimen/default_padding_end">
 
                     <ImageView
                         android:id="@+id/ivTerms"

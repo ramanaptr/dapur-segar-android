@@ -13,7 +13,7 @@ import com.dapursegar.app.model.home.ProductItem
 import com.dapursegar.app.view.search.adapter.SearchResultAdapter
 import com.dapursegar.app.view.search.dialog.BSFilter
 import kotlinx.android.synthetic.main.search_result_activity.*
-import kotlinx.android.synthetic.main.search_result_toolbar.*
+import kotlinx.android.synthetic.main.toolbar_search_result.*
 import org.jetbrains.anko.startActivity
 
 class SearchResultActivity : BaseActivity<SearchResultViewModel>() {

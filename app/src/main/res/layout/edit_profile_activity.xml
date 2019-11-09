@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/cream">
 
-    <include layout="@layout/default_toolbar" />
+    <include layout="@layout/toolbar_default" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -63,8 +63,8 @@
                     style="@style/LoginTextInputLayoutStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
+                    android:layout_marginStart="@dimen/default_margin_start"
+                    android:layout_marginEnd="@dimen/default_margin_end"
                     app:layout_constraintTop_toBottomOf="@id/tvOr">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -81,9 +81,9 @@
                     style="@style/LoginTextInputLayoutStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
+                    android:layout_marginStart="@dimen/default_margin_start"
                     android:layout_marginTop="16dp"
-                    android:layout_marginEnd="24dp"
+                    android:layout_marginEnd="@dimen/default_margin_end"
                     app:layout_constraintTop_toBottomOf="@id/tvOr">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -100,9 +100,9 @@
                     style="@style/LoginTextInputLayoutStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
+                    android:layout_marginStart="@dimen/default_margin_start"
                     android:layout_marginTop="16dp"
-                    android:layout_marginEnd="24dp"
+                    android:layout_marginEnd="@dimen/default_margin_end"
                     app:layout_constraintTop_toBottomOf="@id/tvOr">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -120,9 +120,9 @@
                 android:id="@+id/vLine"
                 android:layout_width="match_parent"
                 android:layout_height="0.6dp"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="30dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:background="@color/transparent_gray"
                 app:layout_constraintTop_toBottomOf="@id/llEditProfile" />
 
@@ -130,9 +130,9 @@
                 android:id="@+id/tvVerifiedInfo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="32dp"
-                android:text="Verified Info"
+                android:text="@string/edit_profile_info_verification"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/vLine" />
@@ -143,7 +143,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="16dp"
-                android:text="Email"
+                android:text="@string/edit_profile_email"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvVerifiedInfo" />
@@ -153,7 +153,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="16dp"
-                android:text="Verified Info"
+                android:text="@string/edit_profile_account_status"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvVerified" />
@@ -188,33 +188,29 @@
                 app:layout_constraintTop_toBottomOf="@id/tvVerifiedStatus" />
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cvSubmit"
+                android:id="@+id/cvLogin"
                 style="@style/selectable_with_ripple"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:layout_marginBottom="22dp"
                 app:cardCornerRadius="4dp"
                 app:cardElevation="9dp"
                 app:layout_constraintBottom_toBottomOf="parent">
 
-                <RelativeLayout
+                <Button
+                    android:id="@+id/btnSave"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/button_submit"
-                        android:background="@color/colorAccent"
-                        android:fontFamily="@font/os_bold"
-                        android:gravity="center"
-                        android:text="SAVE"
-                        android:textColor="@android:color/white"
-                        android:textSize="16sp" />
-
-                </RelativeLayout>
+                    android:layout_height="@dimen/button_submit"
+                    android:background="@color/colorAccent"
+                    android:fontFamily="@font/os_bold"
+                    android:gravity="center"
+                    android:text="@string/edit_profile_save"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
 
             </androidx.cardview.widget.CardView>
 

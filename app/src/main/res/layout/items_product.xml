@@ -182,7 +182,7 @@
         </LinearLayout>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cvSubmit"
+            android:id="@+id/cvLogin"
             style="@style/selectable_with_ripple"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

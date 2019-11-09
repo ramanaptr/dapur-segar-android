@@ -12,7 +12,7 @@ import com.dapursegar.app.base.activity.BaseActivity
 import com.dapursegar.app.base.extension.changeColorStatusBar
 import com.dapursegar.app.base.extension.gone
 import com.dapursegar.app.base.extension.settingToolbar
-import kotlinx.android.synthetic.main.default_toolbar.*
+import kotlinx.android.synthetic.main.toolbar_default.*
 import kotlinx.android.synthetic.main.default_web_view.*
 
 class BaseWebView : AppCompatActivity() {

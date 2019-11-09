@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cream">
@@ -47,60 +48,60 @@
                 android:id="@+id/tvHeaderStore"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="8dp"
                 android:lineSpacingExtra="0sp"
-                android:text="SomerVille"
                 android:textColor="@color/colorPrimary"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toStartOf="@+id/tvQuantity"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/piv" />
+                app:layout_constraintTop_toBottomOf="@id/piv"
+                tools:text="SomerVille" />
 
             <com.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvQuantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:gravity="end"
-                android:text="Leftovers 10"
                 android:textColor="#698451"
                 android:textSize="10sp"
                 app:layout_constraintBottom_toBottomOf="@+id/tvHeaderStore"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tvHeaderStore" />
+                app:layout_constraintTop_toTopOf="@+id/tvHeaderStore"
+                tools:text="Leftovers 10" />
 
             <com.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvProductName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
-                android:text="Apel Malang Kg"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:textColor="#424242"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@+id/tvHeaderStore" />
+                app:layout_constraintTop_toBottomOf="@+id/tvHeaderStore"
+                tools:text="Apel Malang Kg" />
 
             <com.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvWeightPrice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
-                android:text="IDR 420.100/ 1 Kg"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:textColor="#cf3a5c"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@+id/tvProductName" />
+                app:layout_constraintTop_toBottomOf="@+id/tvProductName"
+                tools:text="IDR 420.100/ 1 Kg" />
 
             <ImageView
                 android:id="@+id/ivMotorcycle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="8dp"
                 android:src="@drawable/ic_motor"
                 app:layout_constraintStart_toStartOf="parent"
@@ -111,18 +112,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Express : By Today 10:00 AM"
                 android:textColor="#424242"
                 android:textSize="10sp"
                 app:layout_constraintBottom_toBottomOf="@+id/ivMotorcycle"
                 app:layout_constraintStart_toEndOf="@+id/ivMotorcycle"
-                app:layout_constraintTop_toTopOf="@+id/ivMotorcycle" />
+                app:layout_constraintTop_toTopOf="@+id/ivMotorcycle"
+                tools:text="Express : By Today 10:00 AM" />
 
             <ImageView
                 android:id="@+id/ivCourierPacket"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="8dp"
                 android:src="@drawable/ic_mobil"
                 app:layout_constraintStart_toStartOf="parent"
@@ -133,19 +134,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Standard : Today Evening"
                 android:textColor="#424242"
                 android:textSize="10sp"
                 app:layout_constraintBottom_toBottomOf="@+id/ivCourierPacket"
                 app:layout_constraintStart_toEndOf="@+id/ivCourierPacket"
-                app:layout_constraintTop_toTopOf="@+id/ivCourierPacket" />
+                app:layout_constraintTop_toTopOf="@+id/ivCourierPacket"
+                tools:text="Standard : Today Evening" />
 
             <ImageButton
                 android:id="@+id/btnLove"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:src="@drawable/ic_big_love"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -155,9 +156,9 @@
                 android:id="@+id/vLine"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:background="@color/transparent_gray"
                 app:layout_constraintTop_toBottomOf="@id/tvCourierPacketInfo" />
 
@@ -165,34 +166,34 @@
                 android:id="@+id/tvHeaderDescritption"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp"
-                android:text="Description"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:textColor="#424242"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/vLine" />
+                app:layout_constraintTop_toBottomOf="@id/vLine"
+                tools:text="Description" />
 
             <TextView
                 android:id="@+id/tvDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
-                android:text="@string/detail_product_dummy_text"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:textColor="#424242"
                 android:textSize="12sp"
-                app:layout_constraintTop_toBottomOf="@+id/tvHeaderDescritption" />
+                app:layout_constraintTop_toBottomOf="@+id/tvHeaderDescritption"
+                tools:text="@string/detail_product_dummy_text" />
 
             <View
                 android:id="@+id/vLine2"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:background="@color/transparent_gray"
                 app:layout_constraintTop_toBottomOf="@id/tvDescription" />
 
@@ -200,14 +201,14 @@
                 android:id="@+id/tvHeaderSimilar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp"
-                android:text="@string/detail_product_similar_products"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@+id/vLine2" />
+                app:layout_constraintTop_toBottomOf="@+id/vLine2"
+                tools:text="@string/detail_product_similar_products" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvSimilarProduct"
@@ -232,7 +233,8 @@
         android:layout_gravity="bottom"
         android:background="@color/green_edit_photo"
         android:gravity="center"
-        android:text="Buy"
+        android:text="@string/detail_product_buy"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"

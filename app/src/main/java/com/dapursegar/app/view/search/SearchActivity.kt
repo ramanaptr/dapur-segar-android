@@ -10,7 +10,7 @@ import com.dapursegar.app.base.activity.BaseActivity
 import com.dapursegar.app.view.search.adapter.TagAdapter
 import com.dapursegar.app.view.search.model.TagItem
 import kotlinx.android.synthetic.main.search_activity.*
-import kotlinx.android.synthetic.main.search_toolbar.*
+import kotlinx.android.synthetic.main.toolbar_search.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 

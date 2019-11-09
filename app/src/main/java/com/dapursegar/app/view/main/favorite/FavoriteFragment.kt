@@ -11,7 +11,7 @@ import com.dapursegar.app.model.home.ProductItem
 import com.dapursegar.app.view.main.favorite.adapter.FavoriteAdapter
 import com.dapursegar.app.view.search.SearchActivity
 import kotlinx.android.synthetic.main.favorite_activity.*
-import kotlinx.android.synthetic.main.favorite_toolbar.*
+import kotlinx.android.synthetic.main.toolbar_favorite.*
 import org.jetbrains.anko.support.v4.startActivity
 
 /**

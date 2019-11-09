@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cream">
 
     <include
-        layout="@layout/default_toolbar"
+        layout="@layout/toolbar_default"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -25,14 +26,14 @@
                 android:id="@+id/tvTotalOrder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_end"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
-                android:text="Total Orders (2 item)"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:textColor="#868686"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Total Orders (2 item)" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvProductOrder"
@@ -40,8 +41,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:clipToPadding="false"
-                android:paddingStart="24dp"
-                android:paddingEnd="24dp"
+                android:paddingStart="@dimen/default_padding_start"
+                android:paddingEnd="@dimen/default_padding_end"
                 app:layout_constraintTop_toBottomOf="@id/tvTotalOrder" />
 
             <View
@@ -56,9 +57,9 @@
                 android:id="@+id/tvHeaderTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginBottom="16dp"
-                android:text="Total"
+                android:text="@string/basket_total"
                 android:textColor="#646464"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toTopOf="@id/tvCheckout"
@@ -68,23 +69,25 @@
                 android:id="@+id/tvTotalPaid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:gravity="end"
-                android:text="IDR 435.100"
+                android:text="@string/stripe"
                 android:textColor="#424242"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/tvHeaderTotal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tvHeaderTotal" />
+                app:layout_constraintTop_toTopOf="@+id/tvHeaderTotal"
+                tools:text="IDR 435.100" />
 
-            <com.dapursegar.app.base.customview.CustomTextView
+            <Button
                 android:id="@+id/tvCheckout"
                 android:layout_width="match_parent"
                 android:layout_height="57dp"
                 android:background="@color/green_edit_photo"
                 android:gravity="center"
-                android:text="Checkout"
+                android:text="@string/basket_buy"
+                android:textAllCaps="false"
                 android:textColor="#ffffff"
                 android:textSize="18sp"
                 android:textStyle="bold"

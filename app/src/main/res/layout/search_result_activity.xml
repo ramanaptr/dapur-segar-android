@@ -6,7 +6,7 @@
     android:background="@color/cream">
 
     <include
-        layout="@layout/search_result_toolbar"
+        layout="@layout/toolbar_search_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

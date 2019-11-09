@@ -31,7 +31,7 @@ class ResetPasswordActivity : BaseActivity<ResetPasswordViewModel>() {
         tvSkip.setOnClickListener { finish() }
         btnEye.setOnClickListener { btnEye.passwordState(etPassword) }
         btnReEye.setOnClickListener { btnReEye.passwordState(etRePassword) }
-        cvSubmit.setOnClickListener { validateForm() }
+        cvLogin.setOnClickListener { validateForm() }
     }
 
     private fun validateForm(): Boolean {

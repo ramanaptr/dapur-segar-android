@@ -6,7 +6,7 @@
     android:background="@color/cream">
 
     <include
-        layout="@layout/bill_toolbar"
+        layout="@layout/toolbar_bill"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

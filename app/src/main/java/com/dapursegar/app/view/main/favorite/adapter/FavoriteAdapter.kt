@@ -53,7 +53,7 @@ class FavoriteAdapter(
         private val tvPrice = itemView.tvPrice
         private val tvWeight = itemView.tvWeight
         private val etQuantity = itemView.etQuantity
-        private val cvSubmit = itemView.cvSubmit
+        private val cvSubmit = itemView.cvLogin
 
         fun bindItem(data: ProductItem, listener: (String, ProductItem) -> Unit) {
             data.apply {

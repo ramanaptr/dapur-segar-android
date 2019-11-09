@@ -7,7 +7,7 @@ import com.dapursegar.app.R
 import com.dapursegar.app.base.fragment.BaseFragment
 import com.dapursegar.app.view.main.bill.adapter.BillAdapter
 import kotlinx.android.synthetic.main.bill_fragment.*
-import kotlinx.android.synthetic.main.bill_toolbar.*
+import kotlinx.android.synthetic.main.toolbar_bill.*
 
 class BillFragment : BaseFragment<BillViewModel>() {
 

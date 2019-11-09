@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cream">
 
     <include
-        layout="@layout/default_toolbar"
+        layout="@layout/toolbar_default"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -25,8 +26,8 @@
                 android:id="@+id/rlNoticeBackground"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:background="@drawable/rounded_green_light_solid"
                 android:clipToPadding="false"
                 android:padding="16dp"
@@ -57,9 +58,9 @@
                 android:id="@+id/vLine"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:background="@color/transparent_gray"
                 app:layout_constraintTop_toBottomOf="@id/rlNoticeBackground" />
 
@@ -67,9 +68,9 @@
                 android:id="@+id/tvHeaderProduct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="21dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:text="@string/payment_detail_product_header"
                 android:textColor="@color/text_view_black_light"
                 android:textSize="14sp"
@@ -82,17 +83,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:clipToPadding="false"
-                android:paddingStart="24dp"
-                android:paddingEnd="24dp"
+                android:paddingStart="@dimen/default_padding_start"
+                android:paddingEnd="@dimen/default_padding_end"
                 app:layout_constraintTop_toBottomOf="@id/tvHeaderProduct" />
 
             <View
                 android:id="@+id/vLine2"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:background="@color/transparent_gray"
                 app:layout_constraintTop_toBottomOf="@+id/rvProducts" />
 
@@ -100,9 +101,9 @@
                 android:id="@+id/tvHeaderAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:text="@string/payment_detail_address_header"
                 android:textColor="#424242"
                 android:textSize="14sp"
@@ -113,7 +114,7 @@
                 android:id="@+id/ivLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="24dp"
                 android:contentDescription="@string/image_description_location"
                 android:src="@drawable/ic_location"
@@ -125,22 +126,22 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:lineSpacingExtra="11sp"
-                android:text="@string/payment_detail_dummy_address"
                 android:textColor="@color/text_view_color_gray"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/ivLocation"
-                app:layout_constraintTop_toTopOf="@id/ivLocation" />
+                app:layout_constraintTop_toTopOf="@id/ivLocation"
+                tools:text="@string/payment_detail_dummy_address" />
 
             <View
                 android:id="@+id/vLine3"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:background="@color/transparent_gray"
                 app:layout_constraintTop_toBottomOf="@+id/tvAddress" />
 
@@ -148,9 +149,9 @@
                 android:id="@+id/tvHeaderPaymentMethod"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:text="Paying Method"
                 android:textColor="#424242"
                 android:textSize="14sp"
@@ -161,7 +162,7 @@
                 android:id="@+id/ivCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="24dp"
                 android:contentDescription="@string/image_description_location"
                 android:src="@drawable/ic_cardbank"
@@ -187,7 +188,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:lineSpacingExtra="12sp"
                 android:text="Edit"
@@ -200,9 +201,9 @@
                 android:id="@+id/vLine4"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:background="@color/transparent_gray"
                 app:layout_constraintTop_toBottomOf="@+id/tvEdit" />
 
@@ -210,7 +211,7 @@
                 android:id="@+id/tvHeaderOrderNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="24dp"
                 android:text="@string/payment_detail_no_orders_header"
                 android:textColor="#868686"
@@ -222,7 +223,7 @@
                 android:id="@+id/tvHeaderOrderTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="8dp"
                 android:text="@string/payment_detail_order_time_header"
                 android:textColor="#868686"
@@ -235,17 +236,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:text="323111KJ1121"
                 android:textColor="#424242"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toStartOf="@id/tvCopy"
-                app:layout_constraintTop_toTopOf="@id/tvHeaderOrderNumber" />
+                app:layout_constraintTop_toTopOf="@id/tvHeaderOrderNumber"
+                tools:text="323111KJ1121" />
 
             <com.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvCopy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:text="@string/payment_detail_copy"
                 android:textColor="@color/green_light_v4"
@@ -258,20 +259,20 @@
                 android:id="@+id/tvOrderTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="24dp"
-                android:text="27-06-2019 17:05"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:textColor="#868686"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/tvHeaderOrderTime" />
+                app:layout_constraintTop_toTopOf="@id/tvHeaderOrderTime"
+                tools:text="27-06-2019 17:05" />
 
             <View
                 android:id="@+id/vLine5"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:background="@color/transparent_gray"
                 app:layout_constraintTop_toBottomOf="@+id/tvOrderTime" />
 
@@ -279,8 +280,8 @@
                 android:id="@+id/tvHeaderTotalPaid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:text="@string/payment_detail_total_paying_header"
                 android:textColor="#424242"
                 android:textSize="14sp"
@@ -291,7 +292,7 @@
                 android:id="@+id/tvHeaderTotalProduct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:text="Total Product"
                 android:textColor="#868686"
                 android:textSize="12sp"
@@ -306,19 +307,19 @@
                 android:layout_below="@id/tvHeaderTotalPaid"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:gravity="end"
-                android:text="IDR 435.100"
                 android:textColor="#424242"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvHeaderTotalPaid" />
+                app:layout_constraintTop_toBottomOf="@id/tvHeaderTotalPaid"
+                tools:text="IDR 435.100" />
 
             <TextView
                 android:id="@+id/tvHeaderShippingCost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:text="Shipping costs"
                 android:textColor="#868686"
                 android:textSize="12sp"
@@ -332,7 +333,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tvPrices"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:gravity="end"
                 android:text="IDR 0"
                 android:textColor="#424242"
@@ -344,7 +345,7 @@
                 android:id="@+id/tvHeaderDiscount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="8dp"
                 android:text="Discount"
                 android:textColor="#868686"
@@ -358,22 +359,22 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tvPrices"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:gravity="end"
-                android:text="0%"
                 android:textColor="#424242"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvShippingCost" />
+                app:layout_constraintTop_toBottomOf="@id/tvShippingCost"
+                tools:text="0%" />
 
             <TextView
                 android:id="@+id/tvHeaderPaymentTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tvHeaderDiscount"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginBottom="3dp"
-                android:text="Total payment"
+                android:text="@string/payment_detail_total_payment"
                 android:textColor="#424242"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/tvPaymentTotal"
@@ -386,21 +387,21 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tvPrices"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:gravity="end"
-                android:text="IDR 435.100"
                 android:textColor="#424242"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvDiscount" />
+                app:layout_constraintTop_toBottomOf="@id/tvDiscount"
+                tools:text="IDR 435.100" />
 
             <Button
                 android:id="@+id/btnCancel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="@dimen/default_margin_end"
                 android:background="@drawable/rounded_grey_stroke"
                 android:text="@string/payment_detail_cancel_order"
                 android:textAllCaps="false"
@@ -418,21 +419,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnCancel">
 
-                <RelativeLayout
+                <Button
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="57dp"
-                        android:background="@color/colorAccent"
-                        android:fontFamily="@font/os_bold"
-                        android:gravity="center"
-                        android:text="Pay"
-                        android:textColor="@android:color/white"
-                        android:textSize="16sp" />
-
-                </RelativeLayout>
+                    android:layout_height="57dp"
+                    android:background="@color/colorAccent"
+                    android:fontFamily="@font/os_bold"
+                    android:gravity="center"
+                    android:text="Pay"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
 
             </androidx.cardview.widget.CardView>
 

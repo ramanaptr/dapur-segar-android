@@ -6,7 +6,7 @@
     android:background="@color/cream">
 
     <include
-        layout="@layout/search_toolbar"
+        layout="@layout/toolbar_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -24,9 +24,9 @@
                 android:id="@+id/tvCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="23dp"
-                android:paddingEnd="23dp"
-                android:text="Search by category"
+                android:paddingStart="@dimen/default_margin_start"
+                android:paddingEnd="@dimen/default_margin_end"
+                android:text="Cari berdasarkan kategori"
                 android:textColor="#868686"
                 android:textSize="12sp"
                 app:layout_constraintTop_toTopOf="parent" />

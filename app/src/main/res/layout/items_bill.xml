@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:clipToPadding="false"
     android:foreground="?attr/selectableItemBackground"
     app:cardCornerRadius="4dp"
@@ -45,7 +46,7 @@
             android:layout_marginStart="16dp"
             android:text="Apel Malang Kg"
             android:textColor="@color/text_view_black_light"
-            android:textSize="10sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
             app:layout_constraintTop_toTopOf="@id/cvProductImage" />
@@ -56,9 +57,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
-            android:text="IDR 420.100/ 1 Kg"
+            tools:text="IDR 420.100/ 1 Kg"
             android:textColor="@color/red"
-            android:textSize="12sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
             app:layout_constraintTop_toBottomOf="@id/tvProductName" />
@@ -70,9 +71,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
             android:gravity="center_horizontal"
-            android:text="Qty 1"
+            tools:text="Qty 1"
             android:textColor="@color/text_view_color_gray"
-            android:textSize="8sp"
+            android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
             app:layout_constraintTop_toBottomOf="@id/tvWeightPrice" />
 
@@ -83,9 +84,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
             android:gravity="center_horizontal"
-            android:text="1Kg - IDR 430.100"
+            tools:text="1Kg - IDR 430.100"
             android:textColor="@color/text_view_color_gray"
-            android:textSize="8sp"
+            android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
             app:layout_constraintTop_toBottomOf="@id/tvQuantity" />
 
@@ -96,9 +97,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
             android:gravity="center_horizontal"
-            android:text="Show 1 product again"
+            tools:text="Show 1 product again"
             android:textColor="@color/text_view_color_gray"
-            android:textSize="8sp"
+            android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
             app:layout_constraintTop_toBottomOf="@id/tvInfoWeight" />
 
@@ -111,7 +112,7 @@
             android:gravity="end"
             android:text="@string/bill_detail"
             android:textColor="@color/colorPrimary"
-            android:textSize="8sp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@id/tvShowProductAgain"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/tvShowProductAgain" />
@@ -123,37 +124,36 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:gravity="end"
-            android:text="Total : IDR 435.100"
             android:textColor="@color/text_view_black_light"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvDetail" />
+            app:layout_constraintTop_toBottomOf="@id/tvDetail"
+            tools:text="Total : IDR 435.100" />
 
         <com.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvProduct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="27dp"
             android:gravity="center_horizontal"
-            android:text="2 Product"
             android:textColor="@color/text_view_color_gray"
-            android:textSize="10sp"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTotalPrice"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cvProductImage" />
+            app:layout_constraintTop_toTopOf="@+id/tvTotalPrice"
+            tools:text="2 Product" />
 
         <View
             android:id="@+id/vLine"
             android:layout_width="match_parent"
             android:layout_height="0.6dp"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="15dp"
-            android:layout_marginEnd="16dp"
             android:background="@color/transparent_gray"
-            app:layout_constraintTop_toBottomOf="@id/tvProduct" />
+            app:layout_constraintTop_toBottomOf="@+id/tvTotalPrice"
+            tools:layout_editor_absoluteX="16dp" />
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cvSubmit"
+            android:id="@+id/cvLogin"
             style="@style/selectable_with_ripple"
             android:layout_width="136dp"
             android:layout_height="wrap_content"
@@ -191,11 +191,11 @@
             android:layout_marginEnd="8dp"
             android:text="@string/dummy_bill_product"
             android:textColor="#919191"
-            android:textSize="10sp"
-            app:layout_constraintBottom_toBottomOf="@+id/cvSubmit"
-            app:layout_constraintEnd_toStartOf="@id/cvSubmit"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/cvLogin"
+            app:layout_constraintEnd_toStartOf="@id/cvLogin"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/cvSubmit" />
+            app:layout_constraintTop_toTopOf="@id/cvLogin" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

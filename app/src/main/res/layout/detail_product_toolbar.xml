@@ -18,8 +18,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginStart="@dimen/default_margin_start"
+            android:layout_marginEnd="@dimen/default_margin_end"
             android:layout_marginBottom="12dp">
 
             <com.dapursegar.app.base.customview.CustomTextView

@@ -11,7 +11,7 @@ import com.dapursegar.app.base.extension.changeColorStatusBar
 import com.dapursegar.app.base.extension.isNetworkAvailable
 import com.dapursegar.app.base.extension.settingToolbar
 import io.reactivex.disposables.CompositeDisposable
-import kotlinx.android.synthetic.main.default_toolbar.*
+import kotlinx.android.synthetic.main.toolbar_default.*
 import org.jetbrains.anko.toast
 import org.koin.androidx.viewmodel.ext.android.getViewModel
 import java.lang.reflect.ParameterizedType
