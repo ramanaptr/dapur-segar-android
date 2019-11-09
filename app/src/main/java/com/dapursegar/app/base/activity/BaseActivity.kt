@@ -6,6 +6,7 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModel
 import com.dapursegar.app.R
+import com.dapursegar.app.base.dialog.BaseLoading
 import com.dapursegar.app.base.extension.changeColorStatusBar
 import com.dapursegar.app.base.extension.isNetworkAvailable
 import com.dapursegar.app.base.extension.settingToolbar
@@ -20,6 +21,7 @@ abstract class BaseActivity<T : ViewModel> : AppCompatActivity() {
 
     val viewModel: T by lazy { getViewModel(viewModelClass()) }
     val disposable: CompositeDisposable by lazy { CompositeDisposable() }
+    val loading: BaseLoading by lazy { BaseLoading(this) }
 
     @Suppress("UNCHECKED_CAST")
     private fun viewModelClass(): KClass<T> {

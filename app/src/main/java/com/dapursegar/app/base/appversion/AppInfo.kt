@@ -1,4 +1,4 @@
-package com.fastaloka.app.base.appversion
+package com.dapursegar.app.base.appversion
 
 import android.app.Activity
 import android.content.pm.PackageManager

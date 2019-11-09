@@ -38,7 +38,7 @@ class RegisterActivity : BaseActivity<RegisterViewModel>() {
         payloadRequest["customer_id"] = "2"
 
         disposable.add(
-            viewModel.registerUser(payloadRequest).subscribeMainThread({
+            viewModel.registerUser(payloadRequest).subscribeMainThread(loading, {
                 toast(error.user)
             }, {
                 message?.apply { toast(this) }

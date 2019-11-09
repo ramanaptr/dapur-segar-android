@@ -15,7 +15,7 @@ interface APIService {
     @POST
     fun registerUser(
         @Url url: String,
-        @FieldMap map: Map<String, Any>
+        @FieldMap map: Map<String, String>
     ): Call<BaseResult<RegisterData, RegisterError>>
 
 }
