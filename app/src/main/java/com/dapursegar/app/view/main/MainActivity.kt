@@ -14,7 +14,7 @@ import com.dapursegar.app.view.main.bill.BillFragment
 import com.dapursegar.app.view.main.favorite.FavoriteFragment
 import com.dapursegar.app.view.main.home.HomepageFragment
 import com.dapursegar.app.view.main.profile.ProfileFragment
-import kotlinx.android.synthetic.main.main_activity.*
+import kotlinx.android.synthetic.main.activity_main.*
 
 /**
  * Created by Ramana on 22-Sep-19.
@@ -26,7 +26,7 @@ class MainActivity : BaseActivity<MainViewModel>() {
 
     override fun setTitle(): String = "Login"
 
-    override fun setLayout(): Int = R.layout.main_activity
+    override fun setLayout(): Int = R.layout.activity_main
 
     override fun onCreate(savedInstanceState: Bundle?, actionBar: ActionBar?) {
         initComponent()

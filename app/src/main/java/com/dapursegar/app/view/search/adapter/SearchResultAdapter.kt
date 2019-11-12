@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.dapursegar.app.R
 import com.dapursegar.app.model.home.ProductItem
-import kotlinx.android.synthetic.main.items_product.view.*
+import kotlinx.android.synthetic.main.items_product_vertical.view.*
 
 class SearchResultAdapter(
     private val listener: (String, ProductItem) -> Unit
@@ -24,7 +24,8 @@ class SearchResultAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v: View =
-            LayoutInflater.from(parent.context).inflate(R.layout.items_product_width, parent, false)
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.items_product_vertical, parent, false)
         return ViewHolder(v)
     }
 
@@ -53,7 +54,7 @@ class SearchResultAdapter(
         private val tvPrice = itemView.tvPrice
         private val tvWeight = itemView.tvWeight
         private val etQuantity = itemView.etQuantity
-        private val cvSubmit = itemView.cvLogin
+        private val btnAdd = itemView.btnAdd
 
         fun bindItem(data: ProductItem, listener: (String, ProductItem) -> Unit) {
             data.apply {
@@ -69,7 +70,7 @@ class SearchResultAdapter(
                         true
                     }
                 }
-                cvSubmit.setOnClickListener { listener(SUBMIT, this) }
+                btnAdd.setOnClickListener { listener(SUBMIT, this) }
                 ivThumbnail.setOnClickListener { listener(DETAIL, this) }
                 tvWeight.setOnClickListener { listener(CHOOSE_WEIGHT, this) }
             }

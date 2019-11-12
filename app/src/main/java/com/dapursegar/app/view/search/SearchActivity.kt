@@ -9,7 +9,7 @@ import com.dapursegar.app.R
 import com.dapursegar.app.base.activity.BaseActivity
 import com.dapursegar.app.view.search.adapter.TagAdapter
 import com.dapursegar.app.view.search.model.TagItem
-import kotlinx.android.synthetic.main.search_activity.*
+import kotlinx.android.synthetic.main.activity_search.*
 import kotlinx.android.synthetic.main.toolbar_search.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
@@ -22,7 +22,7 @@ class SearchActivity : BaseActivity<SearchViewModel>() {
 
     override fun setTitle(): String = "Search"
 
-    override fun setLayout(): Int = R.layout.search_activity
+    override fun setLayout(): Int = R.layout.activity_search
 
     override fun onCreate(savedInstanceState: Bundle?, actionBar: ActionBar?) {
         setupAdapter()

@@ -35,6 +35,9 @@
     <string name="ic_minus">&#xf208;</string>
     <string name="ic_plus">&#xf217;</string>
 
+    <!--Global-->
+    <string name="global_back">Kembali</string>
+
     <!--Message-->
     <string name="invalid_minimal_input">Minimal %d</string>
     <string name="invalid_email">Email tidak valid</string>
@@ -90,7 +93,6 @@
     <string name="edit_profile_info_verification">Status Verifikasi</string>
     <string name="edit_profile_email">Email</string>
     <string name="edit_profile_account_status">Status Akun</string>
-    <string name="forgot_password_back">Kembali</string>
     <string name="login_login_with">Atau login dengan</string>
     <string name="login_hint_username">Username</string>
     <string name="login_hint_password">Password</string>
@@ -104,7 +106,7 @@
     <string name="register_login">Masuk</string>
     <string name="register_account_is_exist">Sudah mempunyai akun?</string>
     <string name="register_register_title">Daftar</string>
-    <string name="reset_password_back">Kembali</string>
     <string name="items_product_edit_detail">Ubah Detail</string>
+    <string name="items_category_more">Lihat Semua</string>
 
 </resources>

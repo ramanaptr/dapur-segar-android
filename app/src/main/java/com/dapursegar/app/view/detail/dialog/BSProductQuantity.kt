@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.dapursegar.app.R
 import com.dapursegar.app.base.dialog.WeightAdapter
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import kotlinx.android.synthetic.main.default_add_quantity.*
 import kotlinx.android.synthetic.main.dialog_product_quantity.*
 
 class BSProductQuantity(
@@ -16,6 +17,7 @@ class BSProductQuantity(
 ) : BottomSheetDialogFragment() {
 
     private var weightAdapter: WeightAdapter? = null
+    private var quantity = 1
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,11 +37,20 @@ class BSProductQuantity(
 
     private fun onClick() {
         btnClose.setOnClickListener { dismiss() }
+        btnAddCart.setOnClickListener { dismiss() }
+        tvMinus.setOnClickListener {
+            quantity--
+            etQuantity.setText(quantity.toString())
+        }
+        tvPlus.setOnClickListener {
+            quantity++
+            etQuantity.setText(quantity.toString())
+        }
     }
 
     private fun setupAdapter() {
         weightAdapter = WeightAdapter {
-            listener(it)
+
         }.apply { setData(data) }
         rvProductOrder.apply {
             adapter = weightAdapter

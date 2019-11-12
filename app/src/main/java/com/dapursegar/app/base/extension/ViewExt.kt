@@ -15,11 +15,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatTextView
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
 import androidx.viewpager.widget.ViewPager
+import com.dapursegar.app.R
 import com.google.android.material.internal.CheckableImageButton
 import com.google.android.material.tabs.TabLayout
-import com.dapursegar.app.R
 import org.jetbrains.anko.toast
 import java.util.*
 
@@ -213,4 +215,8 @@ private fun setupTablayoutListener(
     )
 //    vpPager.currentItem = 1
 //    vpPager.currentItem = 0
+}
+
+fun AppCompatTextView.colorText(color: Int) {
+    setTextColor(ContextCompat.getColor(context, color))
 }

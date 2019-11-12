@@ -6,17 +6,26 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.dapursegar.app.R
 import com.dapursegar.app.model.home.ProductItem
-import kotlinx.android.synthetic.main.items_product.view.*
+import kotlinx.android.synthetic.main.items_product_horizontal.view.*
 
 class ProductAdapter(
-    private val listener: (ProductItem) -> Unit
+    private val listener: ProductItem.(String) -> Unit
 ) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
+
+    companion object {
+        const val CART = "CART"
+        const val DETAIL = "DETAIL"
+        const val SPINNER = "SPINNER"
+        const val LOVED = "LOVED"
+        const val UNLOVED = "UNLOVED"
+    }
 
     private var items: MutableList<ProductItem> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v: View =
-            LayoutInflater.from(parent.context).inflate(R.layout.items_product, parent, false)
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.items_product_horizontal, parent, false)
         return ViewHolder(v)
     }
 
@@ -44,23 +53,25 @@ class ProductAdapter(
         private val tvQuantity = itemView.tvQuantity
         private val tvPrice = itemView.tvPrice
         private val tvWeight = itemView.tvWeight
-        private val etQuantity = itemView.etQuantity
-        private val cvSubmit = itemView.cvLogin
+        private val btnAdd = itemView.btnAdd
 
-        fun bindItem(data: ProductItem, listener: (ProductItem) -> Unit) {
+        fun bindItem(data: ProductItem, listener: ProductItem.(String) -> Unit) {
             data.apply {
                 ivThumbnail.setImageResource(image)
                 rlFavorite.setOnClickListener {
                     isLove = if (isLove) {
                         ivLove.setImageResource(R.drawable.ic_loved)
+                        listener(this, LOVED)
                         false
                     } else {
                         ivLove.setImageResource(R.drawable.ic_love)
+                        listener(this, UNLOVED)
                         true
                     }
                 }
-                cvSubmit.setOnClickListener { listener(this) }
-                ivThumbnail.setOnClickListener { listener(this) }
+                itemView.setOnClickListener { listener(this, DETAIL) }
+                tvWeight.setOnClickListener { listener(this, SPINNER) }
+                btnAdd.setOnClickListener { listener(this, CART) }
             }
         }
     }

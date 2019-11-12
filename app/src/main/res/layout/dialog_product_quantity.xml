@@ -99,7 +99,7 @@
 
         <include
             android:id="@+id/baseQuantity"
-            layout="@layout/base_add_quantity"
+            layout="@layout/default_add_quantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/default_margin_end"
@@ -111,9 +111,10 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="24dp"
+        android:layout_weight="1"
         android:fillViewport="true">
 
         <androidx.recyclerview.widget.RecyclerView
@@ -126,5 +127,17 @@
             app:layout_constraintTop_toBottomOf="@id/baseQuantity" />
 
     </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btnAddCart"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccent"
+        android:fontFamily="@font/os_bold"
+        android:gravity="center"
+        android:text="+ Keranjang"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
 
 </LinearLayout>

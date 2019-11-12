@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="145dp"
+    android:layout_width="150dp"
     android:layout_height="wrap_content"
     android:layout_marginStart="8dp"
     android:layout_marginEnd="8dp"
     android:background="@color/white"
     android:foreground="?attr/selectableItemBackground"
-    app:cardCornerRadius="4dp"
-    app:cardElevation="5dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
     app:cardPreventCornerOverlap="false">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -52,7 +52,8 @@
             android:paddingEnd="@dimen/product_item_margin"
             android:text="Store Name"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="8sp"
+            android:textSize="11sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ivThumbnail" />
@@ -65,7 +66,8 @@
             android:paddingEnd="@dimen/product_item_margin"
             android:text="Product Name"
             android:textColor="@color/black"
-            android:textSize="10sp"
+            android:textSize="14sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvStoreName" />
@@ -79,7 +81,7 @@
             android:paddingEnd="@dimen/product_item_margin"
             android:text="Leftovers 10"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="8sp"
+            android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvProductName" />
@@ -92,52 +94,46 @@
             android:paddingEnd="@dimen/product_item_margin"
             android:text="IDR 42.100 / 1 kg"
             android:textColor="@color/red"
-            android:textSize="10sp"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvQuantity" />
 
-        <View
-            android:id="@+id/vLine"
-            android:layout_width="match_parent"
-            android:layout_height="0.8dp"
-            android:layout_marginStart="@dimen/product_item_margin"
-            android:layout_marginTop="7dp"
-            android:layout_marginEnd="@dimen/product_item_margin"
-            android:background="@color/transparent_gray"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvPrice" />
-
         <com.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvWeight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/product_item_margin"
+            android:layout_marginTop="@dimen/product_item_margin"
+            android:layout_marginEnd="@dimen/product_item_margin"
+            android:background="@drawable/rounded_green_light_storke"
+            android:foreground="?attr/selectableItemBackground"
             android:paddingStart="@dimen/product_item_margin"
-            android:paddingTop="11dp"
+            android:paddingTop="@dimen/product_item_margin"
             android:paddingEnd="@dimen/product_item_margin"
+            android:paddingBottom="@dimen/product_item_margin"
             android:text="1 Kg"
+            android:textAlignment="textStart"
             android:textColor="@color/black"
-            android:textSize="10sp"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/vLine" />
+            app:layout_constraintTop_toBottomOf="@+id/tvPrice" />
 
         <com.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvArrowBottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingStart="@dimen/product_item_margin"
-            android:paddingTop="11dp"
-            android:paddingEnd="@dimen/product_item_margin"
+            android:layout_marginEnd="@dimen/product_item_margin"
             android:text="@string/ic_arrow_bottom"
             android:textColor="@color/black"
-            android:textSize="12sp"
+            android:textSize="14sp"
             android:textStyle="italic"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/vLine" />
+            app:layout_constraintBottom_toBottomOf="@+id/tvWeight"
+            app:layout_constraintEnd_toEndOf="@+id/tvWeight"
+            app:layout_constraintTop_toTopOf="@+id/tvWeight" />
 
         <LinearLayout
             android:id="@+id/llQuantity"
@@ -145,6 +141,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:orientation="horizontal"
+            android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@id/tvWeight">
 
             <com.dapursegar.app.base.customview.CustomTextView
@@ -182,33 +179,30 @@
         </LinearLayout>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cvLogin"
+            android:id="@+id/cvProduct"
             style="@style/selectable_with_ripple"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/product_item_margin"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/product_item_margin"
             android:layout_marginEnd="@dimen/product_item_margin"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="@dimen/product_item_margin"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/llQuantity">
 
-            <RelativeLayout
+            <Button
+                android:id="@+id/btnAdd"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <com.dapursegar.app.base.customview.CustomTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/button_submit"
-                    android:background="@color/colorAccent"
-                    android:gravity="center"
-                    android:text="Add"
-                    android:textColor="@android:color/white"
-                    android:textSize="16sp" />
-
-            </RelativeLayout>
+                android:layout_height="35dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="+ Keranjang"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
 

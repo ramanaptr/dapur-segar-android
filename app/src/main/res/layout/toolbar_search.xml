@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:clipToPadding="false"
         android:fitsSystemWindows="true"
+        app:contentInsetStartWithNavigation="0dp"
         app:titleEnabled="false">
 
         <androidx.cardview.widget.CardView
@@ -21,7 +22,7 @@
             android:layout_height="40dp"
             android:layout_gravity="center_vertical"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginEnd="@dimen/default_margin_end"
             android:layout_marginBottom="16dp"
             app:cardCornerRadius="4dp"
             app:cardElevation="9dp">

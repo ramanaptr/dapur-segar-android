@@ -15,7 +15,7 @@ class BasketAlertActivity : BaseActivity<BasketAlertViewModel>() {
 
     override fun setTitle(): String = getString(R.string.basket_title)
 
-    override fun setLayout(): Int = R.layout.basket_alert_activity
+    override fun setLayout(): Int = R.layout.activity_basket_alert
 
     override fun onCreate(savedInstanceState: Bundle?, actionBar: ActionBar?) {
         initComponent()

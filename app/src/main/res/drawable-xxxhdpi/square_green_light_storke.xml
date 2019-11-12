@@ -3,4 +3,5 @@
     <stroke
         android:width="1dp"
         android:color="@color/green_edit_photo" />
+    <corners android:radius="4dp" />
 </shape>

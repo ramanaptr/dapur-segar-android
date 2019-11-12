@@ -6,7 +6,7 @@
     android:background="@color/cream">
 
     <include
-        layout="@layout/toolbar_favorite"
+        layout="@layout/toolbar_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -20,23 +20,30 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvFavorites"
+            <com.dapursegar.app.base.customview.CustomTextView
+                android:id="@+id/tvCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:clipToPadding="false"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
+                android:paddingStart="@dimen/default_margin_start"
+                android:paddingEnd="@dimen/default_margin_end"
+                android:text="Cari berdasarkan kategori"
+                android:textColor="#868686"
+                android:textSize="12sp"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTag"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:clipToPadding="false"
+                android:paddingStart="@dimen/default_padding_start"
+                android:paddingEnd="@dimen/default_padding_end"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCategory" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
-
-    <!--    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
-    <!--        android:id="@+id/srlHome"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent" />-->
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

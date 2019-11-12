@@ -3,9 +3,12 @@ package com.dapursegar.app.base.dialog
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.dapursegar.app.R
+import com.dapursegar.app.base.extension.colorText
 import kotlinx.android.synthetic.main.items_weight_list.view.*
+import org.jetbrains.anko.textColor
 
 class WeightAdapter(
     private val listener: (String) -> Unit
@@ -43,7 +46,9 @@ class WeightAdapter(
             data.apply {
                 tvWeightPrice.text = data
                 rlWeight.setOnClickListener {
-                    rlWeight.setBackgroundResource(R.drawable.rounded_green_solid)
+                    tvWeightPrice.colorText(R.color.white)
+                    ivCheck.setImageResource(R.drawable.ic_checked)
+                    rlWeight.setBackgroundResource(R.drawable.square_green_light_solid)
                     listener(data)
                 }
             }

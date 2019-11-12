@@ -6,18 +6,21 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dapursegar.app.R
 import com.dapursegar.app.base.adapter.BannersAdapter
+import com.dapursegar.app.base.dialog.showWeightDialog
 import com.dapursegar.app.base.fragment.BaseFragment
 import com.dapursegar.app.helper.TimerHelper
 import com.dapursegar.app.model.home.CategoryHome
 import com.dapursegar.app.model.home.MenuHome
 import com.dapursegar.app.model.home.ProductItem
 import com.dapursegar.app.view.detail.DetailProductActivity
+import com.dapursegar.app.view.detail.dialog.BSProductQuantity
 import com.dapursegar.app.view.main.home.adapter.CategoryAdapter
 import com.dapursegar.app.view.main.home.adapter.MenuAdapter
+import com.dapursegar.app.view.main.home.adapter.ProductAdapter
 import com.dapursegar.app.view.search.SearchActivity
+import kotlinx.android.synthetic.main.fragment_homepage.*
 import kotlinx.android.synthetic.main.toolbar_home.*
-import kotlinx.android.synthetic.main.homepage_fragment.*
-import org.jetbrains.anko.*
+import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.support.v4.startActivity
 import org.jetbrains.anko.support.v4.toast
 
@@ -32,7 +35,7 @@ class HomepageFragment : BaseFragment<HomepageViewModel>() {
     }
     private val categoryHomeDummy = mutableListOf<CategoryHome>()
 
-    override fun setLayout(): Int = R.layout.homepage_fragment
+    override fun setLayout(): Int = R.layout.fragment_homepage
 
     override fun onCreate(savedInstanceState: Bundle?, actionBar: ActionBar?) {
         loadData()
@@ -68,7 +71,7 @@ class HomepageFragment : BaseFragment<HomepageViewModel>() {
             isNestedScrollingEnabled = false
             layoutManager = GridLayoutManager(this.context, 3)
         }
-        categoryAdapter = CategoryAdapter({ onClickMore(it) }, { onClickCategory(it) })
+        categoryAdapter = CategoryAdapter({ onClickMore(it) }, { onClickProduct(this, it) })
         rvCategory.apply {
             adapter = categoryAdapter
             isNestedScrollingEnabled = false
@@ -81,10 +84,37 @@ class HomepageFragment : BaseFragment<HomepageViewModel>() {
         toast(data.categoryName)
     }
 
-    private fun onClickCategory(data: ProductItem) {
+    private fun onClickProduct(data: ProductItem, state: String) {
         data.apply {
-            toast("Adding $name")
-            startActivity<DetailProductActivity>()
+            when (state) {
+                ProductAdapter.CART -> {
+                    val prices = mutableListOf<String>().apply {
+                        add("500 Gm - IDR 40.000")
+                        add("1 Kg - IDR 130.100")
+                        add("2 Kg - IDR 230.100")
+                        add("3 Kg - IDR 340.000")
+                    }
+                    BSProductQuantity(prices) {
+                        toast(it)
+                    }.show(childFragmentManager, "BSProductQuantity")
+                }
+                ProductAdapter.DETAIL -> {
+                    startActivity<DetailProductActivity>()
+                }
+                ProductAdapter.SPINNER -> {
+                    val prices = mutableListOf<String>().apply {
+                        add("500 Gm - IDR 240.000")
+                        add("1 Kg - IDR 430.100")
+                    }
+                    showWeightDialog(prices)
+                }
+                ProductAdapter.LOVED -> {
+                    toast("Produk telah di favorit")
+                }
+                ProductAdapter.UNLOVED -> {
+                    toast("Favorit telah di hapus")
+                }
+            }
         }
     }
 

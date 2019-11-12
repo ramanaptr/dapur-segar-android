@@ -17,7 +17,7 @@ class EditProfileActivity : BaseActivity<EditProfileViewModel>() {
 
     override fun setTitle(): String = "Edit Profile"
 
-    override fun setLayout(): Int = R.layout.edit_profile_activity
+    override fun setLayout(): Int = R.layout.activity_edit_profile
 
     override fun onCreate(savedInstanceState: Bundle?, actionBar: ActionBar?) {
         initComponents()

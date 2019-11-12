@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.ActionBar
 import com.dapursegar.app.R
 import com.dapursegar.app.base.activity.BaseActivity
-import kotlinx.android.synthetic.main.forgot_password_activity.*
+import kotlinx.android.synthetic.main.activity_forgot_password.*
 import org.jetbrains.anko.startActivity
 
 /**
@@ -17,7 +17,7 @@ class ForgotPasswordActivity : BaseActivity<ForgotPasswordViewModel>() {
 
     override fun setTitle(): String = "Login"
 
-    override fun setLayout(): Int = R.layout.forgot_password_activity
+    override fun setLayout(): Int = R.layout.activity_forgot_password
 
     override fun onCreate(savedInstanceState: Bundle?, actionBar: ActionBar?) {
         initComponent()
@@ -25,7 +25,7 @@ class ForgotPasswordActivity : BaseActivity<ForgotPasswordViewModel>() {
 
     override fun onClick() {
         tvSkip.setOnClickListener { finish() }
-        cvLogin.setOnClickListener {
+        btnSend.setOnClickListener {
             startActivity<ResetPasswordActivity>()
         }
     }

@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.dapursegar.app.R
 import com.dapursegar.app.model.home.ProductItem
-import kotlinx.android.synthetic.main.items_product.view.*
+import kotlinx.android.synthetic.main.items_product_horizontal.view.*
 
 class BillAdapter(
     private val listener: (ProductItem) -> Unit

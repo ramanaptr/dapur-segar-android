@@ -6,7 +6,7 @@ import com.dapursegar.app.R
 import com.dapursegar.app.base.activity.BaseActivity
 import com.dapursegar.app.base.extension.settingToolbar
 import com.dapursegar.app.view.detail.dialog.BSProductQuantity
-import kotlinx.android.synthetic.main.detail_product_activity.*
+import kotlinx.android.synthetic.main.activity_detail_product.*
 import kotlinx.android.synthetic.main.detail_product_toolbar.*
 
 /**
@@ -19,7 +19,7 @@ class DetailProductActivity : BaseActivity<DetailProductViewModel>() {
 
     override fun setTitle(): String = "Dummy Apel Malang"
 
-    override fun setLayout(): Int = R.layout.detail_product_activity
+    override fun setLayout(): Int = R.layout.activity_detail_product
 
     override fun onCreate(savedInstanceState: Bundle?, actionBar: ActionBar?) {
         settingToolbar(tvTitle, "Dummy Apel Malang", toolbar)
@@ -32,34 +32,6 @@ class DetailProductActivity : BaseActivity<DetailProductViewModel>() {
     }
 
     override fun onClick() {
-        val prices = mutableListOf<String>().apply {
-            add("500 Gm - IDR 240.000")
-            add("1 Kg - IDR 430.100")
-            add("2 Kg - IDR 530.100")
-            add("500 Gm - IDR 240.000")
-            add("1 Kg - IDR 430.100")
-            add("2 Kg - IDR 530.100")
-            add("500 Gm - IDR 240.000")
-            add("1 Kg - IDR 430.100")
-            add("2 Kg - IDR 530.100")
-            add("500 Gm - IDR 240.000")
-            add("1 Kg - IDR 430.100")
-            add("2 Kg - IDR 530.100")
-            add("500 Gm - IDR 240.000")
-            add("1 Kg - IDR 430.100")
-            add("2 Kg - IDR 530.100")
-            add("500 Gm - IDR 240.000")
-            add("1 Kg - IDR 430.100")
-            add("2 Kg - IDR 530.100")
-            add("500 Gm - IDR 240.000")
-            add("1 Kg - IDR 430.100")
-            add("2 Kg - IDR 530.100")
-        }
-        btnCheckout.setOnClickListener {
-            BSProductQuantity(prices){
-
-            }.show(supportFragmentManager, "BSProductQuantity")
-        }
     }
 
     private fun initComponent() {

@@ -100,7 +100,7 @@
 
             <include
                 android:id="@+id/baseQuantity"
-                layout="@layout/base_add_quantity"
+                layout="@layout/default_add_quantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/default_margin_end"

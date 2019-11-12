@@ -10,7 +10,7 @@ import com.dapursegar.app.model.home.CategoryHome
 import com.dapursegar.app.model.home.ProductItem
 import com.dapursegar.app.view.main.favorite.adapter.FavoriteAdapter
 import com.dapursegar.app.view.search.SearchActivity
-import kotlinx.android.synthetic.main.favorite_activity.*
+import kotlinx.android.synthetic.main.fragment_favorite.*
 import kotlinx.android.synthetic.main.toolbar_favorite.*
 import org.jetbrains.anko.support.v4.startActivity
 
@@ -20,11 +20,11 @@ import org.jetbrains.anko.support.v4.startActivity
 
 class FavoriteFragment : BaseFragment<FavoriteViewModel>() {
 
-    private var favAdapter: FavoriteAdapter? = null
+    private var favoriteAdapter: FavoriteAdapter? = null
 
     private val categoryHomeDummy = mutableListOf<CategoryHome>()
 
-    override fun setLayout(): Int = R.layout.favorite_activity
+    override fun setLayout(): Int = R.layout.fragment_favorite
 
     override fun onCreate(savedInstanceState: Bundle?, actionBar: ActionBar?) {
         tvTitle.text = getString(R.string.favorite_title)
@@ -36,11 +36,11 @@ class FavoriteFragment : BaseFragment<FavoriteViewModel>() {
     }
 
     private fun setupAdapter() {
-        favAdapter = FavoriteAdapter { state, product -> onClickFavorite(state, product) }.apply {
+        favoriteAdapter = FavoriteAdapter { state, product -> onClickFavorite(state, product) }.apply {
             setData(loadData())
         }
         rvFavorites.apply {
-            adapter = favAdapter
+            adapter = favoriteAdapter
             layoutManager = GridLayoutManager(context, 2)
             isNestedScrollingEnabled = false
         }

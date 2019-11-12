@@ -8,7 +8,7 @@ import com.dapursegar.app.base.extension.hideError
 import com.dapursegar.app.base.extension.passwordState
 import com.dapursegar.app.base.extension.showError
 import com.dapursegar.app.base.extension.validatePassword
-import kotlinx.android.synthetic.main.reset_password_activity.*
+import kotlinx.android.synthetic.main.activity_reset_password.*
 import java.lang.String.format
 
 /**
@@ -21,7 +21,7 @@ class ResetPasswordActivity : BaseActivity<ResetPasswordViewModel>() {
 
     override fun setTitle(): String = "Login"
 
-    override fun setLayout(): Int = R.layout.reset_password_activity
+    override fun setLayout(): Int = R.layout.activity_reset_password
 
     override fun onCreate(savedInstanceState: Bundle?, actionBar: ActionBar?) {
         initComponent()

@@ -5,7 +5,7 @@ import androidx.appcompat.app.ActionBar
 import com.dapursegar.app.R
 import com.dapursegar.app.base.activity.BaseActivity
 import com.dapursegar.app.base.extension.getBaseResult
-import kotlinx.android.synthetic.main.register_activity.*
+import kotlinx.android.synthetic.main.activity_register.*
 import org.jetbrains.anko.toast
 
 /**
@@ -18,7 +18,7 @@ class RegisterActivity : BaseActivity<RegisterViewModel>() {
 
     override fun setTitle(): String = "Login"
 
-    override fun setLayout(): Int = R.layout.register_activity
+    override fun setLayout(): Int = R.layout.activity_register
 
     override fun onCreate(savedInstanceState: Bundle?, actionBar: ActionBar?) {
         initComponent()

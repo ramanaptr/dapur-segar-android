@@ -15,7 +15,7 @@ class EditDetailProductActivity : BaseActivity<EditDetailProductViewModel>() {
 
     override fun setTitle(): String = getString(R.string.basket_title)
 
-    override fun setLayout(): Int = R.layout.edit_detail_activity
+    override fun setLayout(): Int = R.layout.activity_edit_detail
 
     override fun onCreate(savedInstanceState: Bundle?, actionBar: ActionBar?) {
         initComponent()

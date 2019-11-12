@@ -6,7 +6,7 @@
     android:background="@color/cream">
 
     <include
-        layout="@layout/toolbar_search"
+        layout="@layout/toolbar_favorite"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -20,27 +20,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.dapursegar.app.base.customview.CustomTextView
-                android:id="@+id/tvCategory"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFavorites"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="@dimen/default_margin_start"
-                android:paddingEnd="@dimen/default_margin_end"
-                android:text="Cari berdasarkan kategori"
-                android:textColor="#868686"
-                android:textSize="12sp"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvTag"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
                 android:clipToPadding="false"
-                android:paddingStart="23dp"
-                android:paddingEnd="23dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvCategory" />
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

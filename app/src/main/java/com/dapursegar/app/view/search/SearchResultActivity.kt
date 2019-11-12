@@ -12,7 +12,7 @@ import com.dapursegar.app.model.home.CategoryHome
 import com.dapursegar.app.model.home.ProductItem
 import com.dapursegar.app.view.search.adapter.SearchResultAdapter
 import com.dapursegar.app.view.search.dialog.BSFilter
-import kotlinx.android.synthetic.main.search_result_activity.*
+import kotlinx.android.synthetic.main.activity_search_result.*
 import kotlinx.android.synthetic.main.toolbar_search_result.*
 import org.jetbrains.anko.startActivity
 
@@ -25,7 +25,7 @@ class SearchResultActivity : BaseActivity<SearchResultViewModel>() {
 
     override fun setTitle(): String = "apel"
 
-    override fun setLayout(): Int = R.layout.search_result_activity
+    override fun setLayout(): Int = R.layout.activity_search_result
 
     override fun onCreate(savedInstanceState: Bundle?, actionBar: ActionBar?) {
         settingToolbar(tvTitle, "apel", toolbar)

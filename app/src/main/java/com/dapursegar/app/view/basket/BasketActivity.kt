@@ -15,7 +15,7 @@ class BasketActivity : BaseActivity<BasketViewModel>() {
 
     override fun setTitle(): String = getString(R.string.basket_title)
 
-    override fun setLayout(): Int = R.layout.basket_activity
+    override fun setLayout(): Int = R.layout.activity_basket
 
     override fun onCreate(savedInstanceState: Bundle?, actionBar: ActionBar?) {
         initComponent()

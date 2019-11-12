@@ -8,7 +8,7 @@ import com.dapursegar.app.base.extension.*
 import com.dapursegar.app.view.forgot.ForgotPasswordActivity
 import com.dapursegar.app.view.main.MainActivity
 import com.dapursegar.app.view.register.RegisterActivity
-import kotlinx.android.synthetic.main.login_activity.*
+import kotlinx.android.synthetic.main.activity_login.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 import java.lang.String.format
@@ -26,7 +26,7 @@ class LoginActivity : BaseActivity<LoginViewModel>() {
 
     override fun setTitle(): String = "Login"
 
-    override fun setLayout(): Int = R.layout.login_activity
+    override fun setLayout(): Int = R.layout.activity_login
 
     override fun onCreate(savedInstanceState: Bundle?, actionBar: ActionBar?) {
         initComponent()

@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.items_category.view.*
 
 class CategoryAdapter(
     private val moreListener: (CategoryHome) -> Unit,
-    private val listener: (ProductItem) -> Unit
+    private val listener: ProductItem.(String) -> Unit
 ) : RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
 
     private var items: MutableList<CategoryHome> = mutableListOf()
@@ -45,13 +45,15 @@ class CategoryAdapter(
         fun bindItem(
             data: CategoryHome,
             moreListener: (CategoryHome) -> Unit,
-            listener: (ProductItem) -> Unit
+            listener: ProductItem.(String) -> Unit
         ) {
             data.apply {
                 tvCategory.text = categoryName
                 tvMore.setOnClickListener { moreListener(data) }
                 rvProduct.apply {
-                    adapter = ProductAdapter { listener(it) }.apply { setData(products) }
+                    adapter = ProductAdapter { state ->
+                        listener(this, state)
+                    }.apply { setData(products) }
                     isNestedScrollingEnabled = false
                     layoutManager = LinearLayoutManager(
                         this.context,
