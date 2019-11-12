@@ -101,13 +101,6 @@ class HomepageFragment : BaseFragment<HomepageViewModel>() {
                 ProductAdapter.DETAIL -> {
                     startActivity<DetailProductActivity>()
                 }
-                ProductAdapter.SPINNER -> {
-                    val prices = mutableListOf<String>().apply {
-                        add("500 Gm - IDR 240.000")
-                        add("1 Kg - IDR 430.100")
-                    }
-                    showWeightDialog(prices)
-                }
                 ProductAdapter.LOVED -> {
                     toast("Produk telah di favorit")
                 }

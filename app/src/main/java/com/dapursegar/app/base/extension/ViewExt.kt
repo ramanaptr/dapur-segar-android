@@ -15,6 +15,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatEditText
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
@@ -59,15 +60,31 @@ fun gone(vararg views: View): List<View> {
 }
 
 fun View.show() {
-    this.visibility = View.INVISIBLE
+    this.visibility = View.VISIBLE
 }
 
 fun View.hide() {
-    this.visibility = View.VISIBLE
+    this.visibility = View.INVISIBLE
 }
 
 fun View.gone() {
     this.visibility = View.GONE
+}
+
+fun View.disable() {
+    isEnabled = false
+}
+
+fun View.enable() {
+    isEnabled = true
+}
+
+fun EditText.disableEdit() {
+    isFocusable = false
+}
+
+fun EditText.enableEdit() {
+    isFocusable = true
 }
 
 fun handleDoubleClick(vararg views: View): List<View> {

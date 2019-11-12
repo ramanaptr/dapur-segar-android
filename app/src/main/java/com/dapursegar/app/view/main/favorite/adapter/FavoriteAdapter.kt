@@ -13,11 +13,11 @@ class FavoriteAdapter(
 ) : RecyclerView.Adapter<FavoriteAdapter.ViewHolder>() {
 
     companion object {
-        const val LOVE = "LOVE"
-        const val UNLOVE = "UNLOVE"
-        const val SUBMIT = "SUBMIT"
+        const val CART = "CART"
         const val DETAIL = "DETAIL"
-        const val CHOOSE_WEIGHT = "CHOOSE_WEIGHT"
+        const val SPINNER = "SPINNER"
+        const val LOVED = "LOVED"
+        const val UNLOVED = "UNLOVED"
     }
 
     private var items: MutableList<ProductItem> = mutableListOf()
@@ -62,17 +62,17 @@ class FavoriteAdapter(
                 rlFavorite.setOnClickListener {
                     isLove = if (isLove) {
                         ivLove.setImageResource(R.drawable.ic_loved)
-                        listener(LOVE, this)
+                        listener(LOVED, this)
                         false
                     } else {
                         ivLove.setImageResource(R.drawable.ic_love)
-                        listener(UNLOVE, this)
+                        listener(UNLOVED, this)
                         true
                     }
                 }
-                btnAdd.setOnClickListener { listener(SUBMIT, this) }
+                btnAdd.setOnClickListener { listener(CART, this) }
                 ivThumbnail.setOnClickListener { listener(DETAIL, this) }
-                tvWeight.setOnClickListener { listener(CHOOSE_WEIGHT, this) }
+                // tvWeight.setOnClickListener { listener(SPINNER, this) }
             }
         }
     }

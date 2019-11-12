@@ -70,8 +70,8 @@ class ProductAdapter(
                     }
                 }
                 itemView.setOnClickListener { listener(this, DETAIL) }
-                tvWeight.setOnClickListener { listener(this, SPINNER) }
                 btnAdd.setOnClickListener { listener(this, CART) }
+                // tvWeight.setOnClickListener { listener(this, SPINNER) }
             }
         }
     }

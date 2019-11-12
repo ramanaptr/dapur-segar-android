@@ -80,7 +80,7 @@
     <string name="basket_alert_header_message">Login or register for check your orders</string>
     <string name="basket_alert_notice_message">Support farmer, with choose product local with we.</string>
     <string name="basket_alert_register_button">Daftar</string>
-    <string name="edit_detail_quantity">Quantity</string>
+    <string name="edit_detail_quantity">Kelipatan</string>
     <string name="basket_buy">Beli</string>
     <string name="basket_total">Total</string>
 
