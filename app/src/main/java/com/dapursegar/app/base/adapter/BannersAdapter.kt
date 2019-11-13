@@ -12,7 +12,12 @@ import com.dapursegar.app.base.extension.load
  * Created by Ramana on 22-Sep-19.
  */
 
-class BannersAdapter : PagerAdapter() {
+class BannersAdapter(private val state: String) : PagerAdapter() {
+
+    companion object {
+        const val PROMO = "PROMO"
+        const val PRODUCT = "PRODUCT"
+    }
 
     private var banners = mutableListOf<Int>()
 
@@ -23,8 +28,19 @@ class BannersAdapter : PagerAdapter() {
     }
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
-        val view = LayoutInflater.from(container.context)
-            .inflate(R.layout.default_banner, container, false)
+        val view = when (state) {
+            PROMO -> {
+                LayoutInflater.from(container.context)
+                    .inflate(R.layout.default_banner, container, false)
+            }
+            PRODUCT -> {
+                LayoutInflater.from(container.context)
+                    .inflate(R.layout.banner_product, container, false)
+            }
+            else -> {
+                throw IllegalArgumentException("No state detected")
+            }
+        }
         val ivSlider = view.findViewById<ImageView>(R.id.ivSlider)
         ivSlider.load(banners[position])
         container.addView(view)

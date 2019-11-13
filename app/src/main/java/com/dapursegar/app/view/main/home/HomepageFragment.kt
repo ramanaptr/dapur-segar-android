@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dapursegar.app.R
 import com.dapursegar.app.base.adapter.BannersAdapter
-import com.dapursegar.app.base.dialog.showWeightDialog
 import com.dapursegar.app.base.fragment.BaseFragment
 import com.dapursegar.app.helper.TimerHelper
 import com.dapursegar.app.model.home.CategoryHome
@@ -56,14 +55,14 @@ class HomepageFragment : BaseFragment<HomepageViewModel>() {
 
     private fun setupAdapter() {
         vpSlide.apply {
-            bannersAdapter = BannersAdapter().apply { setBanners(bannersDummy) }
+            bannersAdapter = BannersAdapter(BannersAdapter.PROMO).apply { setBanners(bannersDummy) }
             adapter = bannersAdapter
             pageMargin = 20
             TimerHelper.autoSlide(this, bannersDummy.size, 10)
-        }
-        piv.apply {
-            radius = 4
-            padding = 8
+            piv.apply {
+                radius = 4
+                padding = 8
+            }
         }
         rvMenus.apply {
             menuAdapter = MenuAdapter { onClickMenu(it) }.apply { setData(MenuHome.getMenus()) }

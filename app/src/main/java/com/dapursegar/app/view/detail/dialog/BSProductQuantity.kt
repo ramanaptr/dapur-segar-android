@@ -48,12 +48,12 @@ class BSProductQuantity(
         tvMinus.setOnClickListener {
             quantity--
             etQuantity.setText(quantity.toString())
-            tvWeightPrice.text = "IDR 420.100/ 1 Kg x $quantity"
+            tvWeightPrice.text = "IDR 420.100/ 1 Kg (${quantity}x)"
         }
         tvPlus.setOnClickListener {
             quantity++
             etQuantity.setText(quantity.toString())
-            tvWeightPrice.text = "IDR 420.100/ 1 Kg x $quantity"
+            tvWeightPrice.text = "IDR 420.100/ 1 Kg (${quantity}x)"
         }
         imgMenuIcon.setOnClickListener { startActivity<DetailProductActivity>() }
     }

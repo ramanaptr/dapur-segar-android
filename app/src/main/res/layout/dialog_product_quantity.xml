@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tvProduct"
             android:layout_marginStart="16dp"
-            android:text="IDR 420.100/ 1 Kg x 1"
+            android:text="IDR 420.100/ 1 Kg (1x)"
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintBottom_toTopOf="@+id/tvTotalPrice"
