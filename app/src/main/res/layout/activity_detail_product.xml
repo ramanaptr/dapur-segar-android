@@ -59,6 +59,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/piv" />
 
+            <ImageButton
+                android:id="@+id/btnLove"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_big_love"
+                app:layout_constraintBottom_toBottomOf="@+id/tvHeaderStore"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvHeaderStore" />
+
             <com.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvProductName"
                 android:layout_width="match_parent"
@@ -131,7 +142,6 @@
                 app:layout_constraintTop_toTopOf="@+id/ivCourierPacket"
                 tools:text="Standard : Today Evening" />
 
-
             <com.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvHeaderQuantity"
                 android:layout_width="wrap_content"
@@ -168,16 +178,15 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvQuantity" />
 
-            <ImageButton
-                android:id="@+id/btnLove"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginEnd="@dimen/default_margin_end"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@drawable/ic_big_love"
-                app:layout_constraintBottom_toBottomOf="@+id/tvHeaderStore"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tvHeaderStore" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProductOrder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="24dp"
+                android:clipToPadding="false"
+                android:paddingStart="@dimen/default_padding_start"
+                android:paddingEnd="@dimen/default_padding_end"
+                app:layout_constraintTop_toBottomOf="@id/baseQuantity" />
 
             <View
                 android:id="@+id/vLine"
@@ -185,7 +194,7 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="24dp"
                 android:background="@color/transparent_gray"
-                app:layout_constraintTop_toBottomOf="@+id/baseQuantity"
+                app:layout_constraintTop_toBottomOf="@+id/rvProductOrder"
                 attrs:layout_editor_absoluteX="16dp" />
 
             <TextView
