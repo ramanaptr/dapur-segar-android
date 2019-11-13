@@ -242,7 +242,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
-                android:layout_marginBottom="24dp"
                 android:clipToPadding="false"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
