@@ -133,7 +133,7 @@
         android:fillViewport="true">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvProductCart"
+            android:id="@+id/rvChoosePackage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"

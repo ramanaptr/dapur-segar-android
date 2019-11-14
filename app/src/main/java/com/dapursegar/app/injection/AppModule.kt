@@ -4,8 +4,8 @@ import com.dapursegar.app.view.cart.CartRepository
 import com.dapursegar.app.view.cart.CartViewModel
 import com.dapursegar.app.view.detail.DetailProductRepository
 import com.dapursegar.app.view.detail.DetailProductViewModel
-import com.dapursegar.app.view.detail.EditDetailProductRepository
-import com.dapursegar.app.view.detail.EditDetailProductViewModel
+import com.dapursegar.app.view.detail.EditProductCartRepository
+import com.dapursegar.app.view.detail.EditProductCartViewModel
 import com.dapursegar.app.view.forgot.ForgotPasswordRepository
 import com.dapursegar.app.view.forgot.ForgotPasswordViewModel
 import com.dapursegar.app.view.forgot.ResetPasswordRepository
@@ -114,8 +114,8 @@ private val detailProductModule = module {
 }
 
 private val editDetailProductModule = module {
-    single { EditDetailProductRepository() }
-    viewModel { EditDetailProductViewModel(get()) }
+    single { EditProductCartRepository() }
+    viewModel { EditProductCartViewModel(get()) }
 }
 
 private val paymentModule = module {

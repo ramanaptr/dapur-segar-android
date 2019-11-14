@@ -113,7 +113,7 @@ class DetailProductActivity : BaseActivity<DetailProductViewModel>() {
             isNestedScrollingEnabled = false
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         }
-        rvProductCart.apply {
+        rvChoosePackage.apply {
             weightAdapter = WeightAdapter { viewState(true) }
             adapter = weightAdapter
             isNestedScrollingEnabled = false

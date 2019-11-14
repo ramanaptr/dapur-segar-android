@@ -62,7 +62,7 @@ class BSProductQuantity(
         weightAdapter = WeightAdapter {
             viewState(true)
         }.apply { setData(data) }
-        rvProductCart.apply {
+        rvChoosePackage.apply {
             adapter = weightAdapter
             isNestedScrollingEnabled = false
             layoutManager = LinearLayoutManager(context)

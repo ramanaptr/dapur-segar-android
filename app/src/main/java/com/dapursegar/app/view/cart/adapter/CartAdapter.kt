@@ -13,8 +13,8 @@ class CartAdapter(
 ) : RecyclerView.Adapter<CartAdapter.ViewHolder>() {
 
     companion object {
-        private const val DELETE = "DELETE"
-        private const val EDIT_DETAIL = "EDIT_DETAIL"
+        const val DELETE = "DELETE"
+        const val EDIT_DETAIL = "EDIT_DETAIL"
     }
 
     private var items: MutableList<ProductItem> = mutableListOf()

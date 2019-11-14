@@ -1,5 +1,5 @@
 package com.dapursegar.app.view.detail
 
-class EditDetailProductRepository {
+class EditProductCartRepository {
 
 }

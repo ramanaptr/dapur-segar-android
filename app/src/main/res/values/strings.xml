@@ -82,7 +82,7 @@
     <string name="cart_alert_register_button">Daftar</string>
     <string name="cart_buy">Beli</string>
     <string name="cart_total">Total Harga</string>
-    <string name="edit_detail_quantity">Kelipatan</string>
+    <string name="edit_detail_quantity">Jumlah</string>
 
     <string name="detail_product_dummy_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,</string>
     <string name="detail_product_similar_products">Produk yang terkait</string>

@@ -179,7 +179,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvQuantity" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvProductCart"
+                android:id="@+id/rvChoosePackage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="24dp"
@@ -194,7 +194,7 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="24dp"
                 android:background="@color/transparent_gray"
-                app:layout_constraintTop_toBottomOf="@+id/rvProductCart"
+                app:layout_constraintTop_toBottomOf="@+id/rvChoosePackage"
                 attrs:layout_editor_absoluteX="16dp" />
 
             <TextView

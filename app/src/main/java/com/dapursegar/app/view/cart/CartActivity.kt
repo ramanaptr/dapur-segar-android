@@ -7,7 +7,10 @@ import com.dapursegar.app.R
 import com.dapursegar.app.base.activity.BaseActivity
 import com.dapursegar.app.model.home.ProductItem
 import com.dapursegar.app.view.cart.adapter.CartAdapter
+import com.dapursegar.app.view.detail.EditProductCartActivity
 import kotlinx.android.synthetic.main.activity_cart.*
+import org.jetbrains.anko.startActivity
+import org.jetbrains.anko.toast
 
 /**
  * Created by Ramana on 20-Oct-19.
@@ -43,7 +46,7 @@ class CartActivity : BaseActivity<CartViewModel>() {
     }
 
     private fun setupAdapter() {
-        rvProductCart.apply {
+        rvChoosePackage.apply {
             cartAdapter = CartAdapter { onClickProduct(this, it) }
             adapter = cartAdapter
             isNestedScrollingEnabled = false
@@ -51,11 +54,18 @@ class CartActivity : BaseActivity<CartViewModel>() {
         }
     }
 
-    private fun onClickProduct(productItem: ProductItem, it: String) {
-
+    private fun onClickProduct(productItem: ProductItem, state: String) {
+        when (state) {
+            CartAdapter.EDIT_DETAIL -> {
+                startActivity<EditProductCartActivity>()
+            }
+            CartAdapter.DELETE -> {
+                toast("Deleted from cart")
+            }
+        }
     }
 
-    fun loadDummyData() {
+    private fun loadDummyData() {
         for (i in 1..5) {
             cartData.add(ProductItem())
         }

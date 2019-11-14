@@ -84,7 +84,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
             android:layout_toEndOf="@id/cvProductImage"
-            android:text="Qty 1"
+            android:text="Jumlah 1"
             android:textColor="#868686"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@id/cvProductImage"

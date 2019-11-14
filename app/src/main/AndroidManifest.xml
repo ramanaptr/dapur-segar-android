@@ -62,7 +62,7 @@
             android:name="com.dapursegar.app.view.cart.CartActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name="com.dapursegar.app.view.detail.EditDetailProductActivity"
+            android:name="com.dapursegar.app.view.detail.EditProductCartActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name="com.dapursegar.app.view.detail.DetailProductActivity"
