@@ -3,5 +3,5 @@
     <corners
         android:bottomRightRadius="4dp"
         android:topRightRadius="4dp" />
-    <solid android:color="@color/green_edit_photo" />
+    <solid android:color="@color/green_button" />
 </shape>

@@ -43,17 +43,17 @@
             </RelativeLayout>
 
             <ImageButton
-                android:id="@+id/btnBasket"
+                android:id="@+id/btnCart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="19dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@drawable/ic_basket"
+                android:src="@drawable/ic_cart"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <RelativeLayout
-                android:id="@+id/rlBasket"
+                android:id="@+id/rlCart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
@@ -63,13 +63,13 @@
                 android:paddingTop="1dp"
                 android:paddingEnd="5dp"
                 android:paddingBottom="1dp"
-                app:layout_constraintBottom_toBottomOf="@id/btnBasket"
-                app:layout_constraintEnd_toEndOf="@id/btnBasket"
-                app:layout_constraintStart_toStartOf="@id/btnBasket"
-                app:layout_constraintTop_toTopOf="@id/btnBasket">
+                app:layout_constraintBottom_toBottomOf="@id/btnCart"
+                app:layout_constraintEnd_toEndOf="@id/btnCart"
+                app:layout_constraintStart_toStartOf="@id/btnCart"
+                app:layout_constraintTop_toTopOf="@id/btnCart">
 
                 <TextView
-                    android:id="@+id/tvBasket"
+                    android:id="@+id/tvCartTotal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"

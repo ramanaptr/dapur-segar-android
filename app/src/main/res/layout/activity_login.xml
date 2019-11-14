@@ -57,6 +57,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvWelcome">
 
                 <Button
+                    android:id="@+id/btnFacebookLogin"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/button_submit"
                     android:background="@color/facebook_blue"

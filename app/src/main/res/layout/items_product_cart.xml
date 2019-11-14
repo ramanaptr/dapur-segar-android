@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="16dp"
@@ -46,13 +45,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:text="Durian Segar"
             android:textColor="#424242"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@id/btnDelete"
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
-            app:layout_constraintTop_toTopOf="@id/cvProductImage"
-            tools:text="Apel Malang Kg" />
+            app:layout_constraintTop_toTopOf="@id/cvProductImage" />
 
         <ImageButton
             android:id="@+id/btnDelete"
@@ -70,12 +69,12 @@
             android:layout_below="@id/tvProduct"
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
+            android:text="IDR 420.100/ 1 Kg"
             android:textColor="#cf3a5c"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
-            app:layout_constraintTop_toBottomOf="@id/tvProduct"
-            tools:text="IDR 420.100/ 1 Kg" />
+            app:layout_constraintTop_toBottomOf="@id/tvProduct" />
 
         <com.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvQuantity"
@@ -85,11 +84,11 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
             android:layout_toEndOf="@id/cvProductImage"
+            android:text="Qty 1"
             android:textColor="#868686"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
-            app:layout_constraintTop_toBottomOf="@id/tvWeightPrice"
-            tools:text="Qty 1" />
+            app:layout_constraintTop_toBottomOf="@id/tvWeightPrice" />
 
         <com.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvDetail"
@@ -100,11 +99,11 @@
             android:layout_marginTop="4dp"
             android:layout_toEndOf="@id/cvProductImage"
             android:gravity="center_horizontal"
+            android:text="1Kg - IDR 430.100"
             android:textColor="#868686"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
-            app:layout_constraintTop_toBottomOf="@id/tvQuantity"
-            tools:text="1Kg - IDR 430.100" />
+            app:layout_constraintTop_toBottomOf="@id/tvQuantity" />
 
         <com.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvEditDetail"

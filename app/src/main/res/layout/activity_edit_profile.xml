@@ -166,7 +166,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="40dp"
                 android:text="Verified"
-                android:textColor="@color/green_edit_photo"
+                android:textColor="@color/green_button"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvVerifiedInfo" />

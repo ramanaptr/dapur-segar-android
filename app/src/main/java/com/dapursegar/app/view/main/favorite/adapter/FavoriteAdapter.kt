@@ -65,7 +65,7 @@ class FavoriteAdapter(
                         listener(LOVED, this)
                         false
                     } else {
-                        ivLove.setImageResource(R.drawable.ic_love)
+                        ivLove.setImageResource(R.drawable.ic_unloved)
                         listener(UNLOVED, this)
                         true
                     }

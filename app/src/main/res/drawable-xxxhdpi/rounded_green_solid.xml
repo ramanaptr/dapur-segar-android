@@ -4,5 +4,5 @@
         android:width="2dp"
         android:color="@color/white" />
     <corners android:radius="20dp" />
-    <solid android:color="@color/green_edit_photo" />
+    <solid android:color="@color/green_button" />
 </shape>

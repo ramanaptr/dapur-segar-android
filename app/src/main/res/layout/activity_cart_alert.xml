@@ -22,7 +22,7 @@
             android:clipToPadding="false">
 
             <RelativeLayout
-                android:id="@+id/rlBasket"
+                android:id="@+id/rlCart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="?attr/actionBarSize"
@@ -30,20 +30,20 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/ivLogoBasket"
+                    android:id="@+id/ivLogoCart"
                     android:layout_width="43dp"
                     android:layout_height="38dp"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/ic_basket" />
+                    android:src="@drawable/ic_cart" />
 
                 <com.dapursegar.app.base.customview.CustomTextView
                     android:id="@+id/tvAlertHeader"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/ivLogoBasket"
+                    android:layout_below="@id/ivLogoCart"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="8dp"
-                    android:text="@string/basket_alert_header_message"
+                    android:text="@string/cart_alert_header_message"
                     android:textColor="#646464"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -55,7 +55,7 @@
                     android:layout_below="@id/tvAlertHeader"
                     android:layout_centerHorizontal="true"
                     android:gravity="center_horizontal"
-                    android:text="@string/basket_alert_notice_message"
+                    android:text="@string/cart_alert_notice_message"
                     android:textColor="#868686"
                     android:textSize="12sp" />
 
@@ -102,7 +102,7 @@
                                 android:background="@color/colorAccent"
                                 android:fontFamily="@font/os_bold"
                                 android:gravity="center"
-                                android:text="@string/basket_alert_register_button"
+                                android:text="@string/cart_alert_register_button"
                                 android:textColor="@android:color/white"
                                 android:textSize="16sp" />
 

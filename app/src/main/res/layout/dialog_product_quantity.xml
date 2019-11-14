@@ -39,7 +39,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="Apel Malang Kg"
+            android:text="Durian Segar"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -92,7 +92,7 @@
             android:layout_below="@id/tvWeightPrice"
             android:layout_marginBottom="8dp"
             android:layout_toEndOf="@id/cvProductImage"
-            android:text="Tersisa 10"
+            android:text="Tersisa 10Kg"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="12sp"
             android:textStyle="bold"
@@ -133,7 +133,7 @@
         android:fillViewport="true">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvProductOrder"
+            android:id="@+id/rvProductCart"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"

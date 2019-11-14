@@ -5,13 +5,11 @@ import android.os.Bundle
 import android.os.PersistableBundle
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.dapursegar.app.R
-import com.dapursegar.app.base.activity.BaseActivity
 import com.dapursegar.app.base.extension.changeColorStatusBar
 import com.dapursegar.app.base.extension.gone
-import com.dapursegar.app.base.extension.settingToolbar
+import com.dapursegar.app.base.extension.setupToolbar
 import kotlinx.android.synthetic.main.toolbar_default.*
 import kotlinx.android.synthetic.main.default_web_view.*
 
@@ -24,7 +22,7 @@ class BaseWebView : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
         setContentView(R.layout.default_web_view)
-        settingToolbar(tvTitle, "Syarat & Ketentuan", toolbar)
+        setupToolbar(tvTitle, "Syarat & Ketentuan", toolbar)
         changeColorStatusBar(R.color.white)
         onLoadweb()
     }

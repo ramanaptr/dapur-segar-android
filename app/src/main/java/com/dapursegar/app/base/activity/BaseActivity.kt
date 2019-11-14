@@ -9,7 +9,7 @@ import com.dapursegar.app.R
 import com.dapursegar.app.base.dialog.BaseLoading
 import com.dapursegar.app.base.extension.changeColorStatusBar
 import com.dapursegar.app.base.extension.isNetworkAvailable
-import com.dapursegar.app.base.extension.settingToolbar
+import com.dapursegar.app.base.extension.setupToolbar
 import io.reactivex.disposables.CompositeDisposable
 import kotlinx.android.synthetic.main.toolbar_default.*
 import org.jetbrains.anko.toast
@@ -38,7 +38,7 @@ abstract class BaseActivity<T : ViewModel> : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(setLayout())
-        onCreate(savedInstanceState, settingToolbar(tvTitle, setTitle(), toolbar))
+        onCreate(savedInstanceState, setupToolbar(tvTitle, setTitle(), toolbar))
         onClick()
         screenStatus()
         networkCheck()

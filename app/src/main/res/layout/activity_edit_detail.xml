@@ -50,7 +50,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Apel Malang Kg"
+                android:text="Durian Segar"
                 android:textColor="#424242"
                 android:textSize="10sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -79,7 +79,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="4dp"
                 android:layout_toEndOf="@id/cvProductImage"
-                android:text="Leftovers 10"
+                android:text="Tersisa 10Kg"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="8sp"
                 android:textStyle="bold"
@@ -109,7 +109,7 @@
                 app:layout_constraintTop_toTopOf="@id/tvHeaderQuantity" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvProductOrder"
+                android:id="@+id/rvProductCart"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="24dp"
@@ -134,7 +134,7 @@
                     android:background="@drawable/square_green_light_storke"
                     android:gravity="center"
                     android:text="Cancel"
-                    android:textColor="@color/green_edit_photo"
+                    android:textColor="@color/green_button"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -143,7 +143,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="57dp"
                     android:layout_weight="1"
-                    android:background="@color/green_edit_photo"
+                    android:background="@color/green_button"
                     android:gravity="center"
                     android:text="Save"
                     android:textColor="@color/white"

@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_margin="8dp"
-                android:src="@drawable/ic_love" />
+                android:src="@drawable/ic_unloved" />
 
         </RelativeLayout>
 
@@ -52,7 +52,7 @@
             android:layout_marginTop="4dp"
             android:paddingStart="@dimen/product_item_margin"
             android:paddingEnd="@dimen/product_item_margin"
-            android:text="Store Name"
+            android:text="Durian Jakarta"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="11sp"
             android:textStyle="bold"
@@ -66,7 +66,7 @@
             android:layout_height="wrap_content"
             android:paddingStart="@dimen/product_item_margin"
             android:paddingEnd="@dimen/product_item_margin"
-            android:text="Product Name"
+            android:text="Durian Mantap"
             android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold"
@@ -81,7 +81,7 @@
             android:layout_marginTop="4dp"
             android:paddingStart="@dimen/product_item_margin"
             android:paddingEnd="@dimen/product_item_margin"
-            android:text="Leftovers 10"
+            android:text="Tersisa 10Kg"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"

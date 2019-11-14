@@ -65,7 +65,7 @@ class SearchResultAdapter(
                         listener(LOVE, this)
                         false
                     } else {
-                        ivLove.setImageResource(R.drawable.ic_love)
+                        ivLove.setImageResource(R.drawable.ic_unloved)
                         listener(UNLOVE, this)
                         true
                     }

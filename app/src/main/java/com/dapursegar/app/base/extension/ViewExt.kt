@@ -99,7 +99,7 @@ fun handleDoubleClick(vararg views: View): List<View> {
     return viewList
 }
 
-fun AppCompatActivity.settingToolbar(
+fun AppCompatActivity.setupToolbar(
     tvTitle: TextView?,
     title: String,
     toolbar: Toolbar?

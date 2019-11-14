@@ -13,7 +13,7 @@ class EditDetailProductActivity : BaseActivity<EditDetailProductViewModel>() {
 
     override fun statusBarColor(): Int = R.color.white
 
-    override fun setTitle(): String = getString(R.string.basket_title)
+    override fun setTitle(): String = getString(R.string.cart_title)
 
     override fun setLayout(): Int = R.layout.activity_edit_detail
 

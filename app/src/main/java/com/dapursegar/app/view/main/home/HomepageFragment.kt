@@ -11,6 +11,7 @@ import com.dapursegar.app.helper.TimerHelper
 import com.dapursegar.app.model.home.CategoryHome
 import com.dapursegar.app.model.home.MenuHome
 import com.dapursegar.app.model.home.ProductItem
+import com.dapursegar.app.view.cart.CartActivity
 import com.dapursegar.app.view.detail.DetailProductActivity
 import com.dapursegar.app.view.detail.dialog.BSProductQuantity
 import com.dapursegar.app.view.main.home.adapter.CategoryAdapter
@@ -50,7 +51,8 @@ class HomepageFragment : BaseFragment<HomepageViewModel>() {
     }
 
     override fun onClick() {
-        cvSearch.setOnClickListener { context?.startActivity<SearchActivity>() }
+        cvSearch.setOnClickListener { startActivity<SearchActivity>() }
+        btnCart.setOnClickListener { startActivity<CartActivity>() }
     }
 
     private fun setupAdapter() {

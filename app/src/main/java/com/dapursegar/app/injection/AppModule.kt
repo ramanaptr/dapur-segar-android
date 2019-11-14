@@ -1,7 +1,7 @@
 package com.dapursegar.app.injection
 
-import com.dapursegar.app.view.basket.BasketRepository
-import com.dapursegar.app.view.basket.BasketViewModel
+import com.dapursegar.app.view.cart.CartRepository
+import com.dapursegar.app.view.cart.CartViewModel
 import com.dapursegar.app.view.detail.DetailProductRepository
 import com.dapursegar.app.view.detail.DetailProductViewModel
 import com.dapursegar.app.view.detail.EditDetailProductRepository
@@ -49,7 +49,7 @@ internal fun getAllModules(): MutableList<Module> {
     modules.add(favoriteModule)
     modules.add(profileModule)
     modules.add(editProfileModule)
-    modules.add(basketModule)
+    modules.add(cartModule)
     modules.add(detailProductModule)
     modules.add(editDetailProductModule)
     modules.add(paymentModule)
@@ -103,9 +103,9 @@ private val editProfileModule = module {
     viewModel { EditProfileViewModel(get()) }
 }
 
-private val basketModule = module {
-    single { BasketRepository() }
-    viewModel { BasketViewModel(get()) }
+private val cartModule = module {
+    single { CartRepository() }
+    viewModel { CartViewModel(get()) }
 }
 
 private val detailProductModule = module {

@@ -7,8 +7,9 @@ import com.dapursegar.app.R
 import com.dapursegar.app.base.activity.BaseActivity
 import com.dapursegar.app.base.adapter.BannersAdapter
 import com.dapursegar.app.base.dialog.WeightAdapter
-import com.dapursegar.app.base.extension.settingToolbar
+import com.dapursegar.app.base.extension.setupToolbar
 import com.dapursegar.app.model.home.ProductItem
+import com.dapursegar.app.view.cart.CartActivity
 import com.dapursegar.app.view.detail.dialog.BSProductQuantity
 import com.dapursegar.app.view.main.home.adapter.ProductAdapter
 import kotlinx.android.synthetic.main.activity_detail_product.*
@@ -24,6 +25,7 @@ import org.jetbrains.anko.toast
 class DetailProductActivity : BaseActivity<DetailProductViewModel>() {
 
     private var quantity = 1
+    private var favorite = true
     private var bannersAdapter: BannersAdapter? = null
     private var productAdapter: ProductAdapter? = null
     private var weightAdapter: WeightAdapter? = null
@@ -34,12 +36,12 @@ class DetailProductActivity : BaseActivity<DetailProductViewModel>() {
 
     override fun statusBarColor(): Int = R.color.white
 
-    override fun setTitle(): String = "Dummy Apel Malang"
+    override fun setTitle(): String = "Durian Segar"
 
     override fun setLayout(): Int = R.layout.activity_detail_product
 
     override fun onCreate(savedInstanceState: Bundle?, actionBar: ActionBar?) {
-        settingToolbar(tvTitle, "Dummy Apel Malang", toolbar)
+        setupToolbar(tvTitle, "Durian Segar", toolbar)
         initComponent()
         setupAdapter()
         loadData()
@@ -69,6 +71,16 @@ class DetailProductActivity : BaseActivity<DetailProductViewModel>() {
     }
 
     override fun onClick() {
+        btnAddCart.setOnClickListener { startActivity<CartActivity>() }
+        btnLove.setOnClickListener {
+            favorite = if (favorite) {
+                btnLove.setImageResource(R.drawable.ic_loved)
+                false
+            } else {
+                btnLove.setImageResource(R.drawable.ic_unloved)
+                true
+            }
+        }
         tvPlus.setBackgroundResource(R.drawable.rounded_right_green)
         tvMinus.setOnClickListener {
             quantity--
@@ -101,7 +113,7 @@ class DetailProductActivity : BaseActivity<DetailProductViewModel>() {
             isNestedScrollingEnabled = false
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         }
-        rvProductOrder.apply {
+        rvProductCart.apply {
             weightAdapter = WeightAdapter { viewState(true) }
             adapter = weightAdapter
             isNestedScrollingEnabled = false

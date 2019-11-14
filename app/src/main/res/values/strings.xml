@@ -75,19 +75,19 @@
     <string name="payment_detail_cancel_order">Batal Pesanan</string>
     <string name="payment_detail_total_paying_header">Total paying</string>
 
-    <!--Basket-->
-    <string name="basket_title">Basket</string>
-    <string name="basket_alert_header_message">Login or register for check your orders</string>
-    <string name="basket_alert_notice_message">Support farmer, with choose product local with we.</string>
-    <string name="basket_alert_register_button">Daftar</string>
+    <!--Cart-->
+    <string name="cart_title">Keranjang</string>
+    <string name="cart_alert_header_message">Masuk atau daftar untuk melanjutkan pesanan Anda</string>
+    <string name="cart_alert_notice_message">Dukung petani, dengan memilih produk lokal bersama kami.</string>
+    <string name="cart_alert_register_button">Daftar</string>
+    <string name="cart_buy">Beli</string>
+    <string name="cart_total">Total Harga</string>
     <string name="edit_detail_quantity">Kelipatan</string>
-    <string name="basket_buy">Beli</string>
-    <string name="basket_total">Total</string>
 
     <string name="detail_product_dummy_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,</string>
     <string name="detail_product_similar_products">Produk yang terkait</string>
     <string name="dialog_filter_header">Filter</string>
-    <string name="detail_product_buy">Beli</string>
+    <string name="detail_product_buy">+ Keranjang</string>
     <string name="loading_message">Mohon Tunggu</string>
     <string name="edit_profile_save">Simpan</string>
     <string name="edit_profile_info_verification">Status Verifikasi</string>
@@ -96,12 +96,12 @@
     <string name="login_login_with">Atau login dengan</string>
     <string name="login_hint_username">Username</string>
     <string name="login_hint_password">Password</string>
-    <string name="login_fogot_password">Lupa password ?</string>
-    <string name="login_no_account">Tidak punya akun? </string>
+    <string name="login_fogot_password">Lupa password?</string>
+    <string name="login_no_account">Tidak punya akun?</string>
     <string name="login_daftar">Daftar</string>
     <string name="login_login_button">Masuk</string>
     <string name="skip_text">Lewati</string>
-    <string name="login_welcome_back">Welcome Back!</string>
+    <string name="login_welcome_back">Selamat Datang!</string>
     <string name="payment_detail_total_payment">Total Pembayaran</string>
     <string name="register_login">Masuk</string>
     <string name="register_account_is_exist">Sudah mempunyai akun?</string>

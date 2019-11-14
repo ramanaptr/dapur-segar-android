@@ -7,7 +7,7 @@ import androidx.appcompat.app.ActionBar
 import androidx.recyclerview.widget.GridLayoutManager
 import com.dapursegar.app.R
 import com.dapursegar.app.base.activity.BaseActivity
-import com.dapursegar.app.base.extension.settingToolbar
+import com.dapursegar.app.base.extension.setupToolbar
 import com.dapursegar.app.model.home.CategoryHome
 import com.dapursegar.app.model.home.ProductItem
 import com.dapursegar.app.view.search.adapter.SearchResultAdapter
@@ -28,7 +28,7 @@ class SearchResultActivity : BaseActivity<SearchResultViewModel>() {
     override fun setLayout(): Int = R.layout.activity_search_result
 
     override fun onCreate(savedInstanceState: Bundle?, actionBar: ActionBar?) {
-        settingToolbar(tvTitle, "apel", toolbar)
+        setupToolbar(tvTitle, "apel", toolbar)
         setupAdapter()
         loadData()
     }

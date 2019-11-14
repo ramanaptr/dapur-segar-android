@@ -425,7 +425,7 @@
                     android:background="@color/colorAccent"
                     android:fontFamily="@font/os_bold"
                     android:gravity="center"
-                    android:text="Pay"
+                    android:text="Bayar"
                     android:textAllCaps="false"
                     android:textColor="@android:color/white"
                     android:textSize="16sp" />

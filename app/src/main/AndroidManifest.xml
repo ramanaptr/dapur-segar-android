@@ -56,10 +56,10 @@
             android:name="com.dapursegar.app.view.payment.PaymentDetailActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name="com.dapursegar.app.view.basket.BasketAlertActivity"
+            android:name="com.dapursegar.app.view.cart.CartAlertActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name="com.dapursegar.app.view.basket.BasketActivity"
+            android:name="com.dapursegar.app.view.cart.CartActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name="com.dapursegar.app.view.detail.EditDetailProductActivity"
