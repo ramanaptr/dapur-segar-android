@@ -46,8 +46,8 @@ class BillAdapter(
 
         fun bindItem(data: ProductItem, listener: ProductItem.(String) -> Unit) {
             data.apply {
-                ivProduct.setOnClickListener { listener(this, PAY) }
-                btnPay.setOnClickListener { listener(this, DETAIL) }
+                ivProduct.setOnClickListener { listener(this, DETAIL) }
+                btnPay.setOnClickListener { listener(this, PAY) }
             }
         }
     }
