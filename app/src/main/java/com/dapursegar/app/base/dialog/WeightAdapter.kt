@@ -30,8 +30,8 @@ class WeightAdapter(
         holder.bindItem(items[position], listener)
     }
 
-    fun setData(menus: MutableList<String>) {
-        this.items = menus
+    fun setData(items: MutableList<String>) {
+        this.items = items
         notifyDataSetChanged()
     }
 

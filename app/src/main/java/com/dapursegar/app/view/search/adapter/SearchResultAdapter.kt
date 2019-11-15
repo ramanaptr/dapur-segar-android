@@ -37,8 +37,8 @@ class SearchResultAdapter(
         holder.bindItem(items[position], listener)
     }
 
-    fun setData(menus: MutableList<ProductItem>) {
-        this.items = menus
+    fun setData(items: MutableList<ProductItem>) {
+        this.items = items
         notifyDataSetChanged()
     }
 

@@ -69,6 +69,7 @@
                     android:padding="@dimen/default_padding">
 
                     <Button
+                        android:id="@+id/btnLogin"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/button_submit"
                         android:layout_weight="1"
@@ -92,21 +93,17 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/vLine">
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <com.dapursegar.app.base.customview.CustomTextView
+                            <Button
+                                android:id="@+id/btnRegister"
                                 android:layout_width="match_parent"
                                 android:layout_height="@dimen/button_submit"
                                 android:background="@color/colorAccent"
                                 android:fontFamily="@font/os_bold"
                                 android:gravity="center"
+                                android:textAllCaps="false"
                                 android:text="@string/cart_alert_register_button"
                                 android:textColor="@android:color/white"
                                 android:textSize="16sp" />
-
-                        </RelativeLayout>
 
                     </androidx.cardview.widget.CardView>
 

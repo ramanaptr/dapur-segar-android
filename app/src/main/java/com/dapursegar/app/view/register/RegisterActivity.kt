@@ -5,7 +5,9 @@ import androidx.appcompat.app.ActionBar
 import com.dapursegar.app.R
 import com.dapursegar.app.base.activity.BaseActivity
 import com.dapursegar.app.base.extension.getBaseResult
+import com.dapursegar.app.view.login.LoginActivity
 import kotlinx.android.synthetic.main.activity_register.*
+import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 
 /**
@@ -13,6 +15,8 @@ import org.jetbrains.anko.toast
  */
 
 class RegisterActivity : BaseActivity<RegisterViewModel>() {
+
+    private var isBack = false
 
     override fun statusBarColor(): Int = R.color.white
 
@@ -22,11 +26,35 @@ class RegisterActivity : BaseActivity<RegisterViewModel>() {
 
     override fun onCreate(savedInstanceState: Bundle?, actionBar: ActionBar?) {
         initComponent()
+        initIntentExtra()
+    }
+
+    private fun initComponent() {
+
+    }
+
+    private fun initIntentExtra() {
+        intent?.getBooleanExtra("BACK_LOGIN", false)?.let { isBack ->
+            this.isBack = isBack
+        }
+    }
+
+    private fun backToLogin() {
+        if (isBack) {
+            startActivity<LoginActivity>()
+            finish()
+        }
     }
 
     override fun onClick() {
-        tvSkip.setOnClickListener { finish() }
-        tvLogin.setOnClickListener { finish() }
+        tvSkip.setOnClickListener {
+            backToLogin()
+            finish()
+        }
+        tvLogin.setOnClickListener {
+            backToLogin()
+            finish()
+        }
         btnRegister.setOnClickListener { registerUser() }
     }
 
@@ -44,10 +72,6 @@ class RegisterActivity : BaseActivity<RegisterViewModel>() {
                 message?.apply { toast(this) }
             })
         )
-    }
-
-    private fun initComponent() {
-
     }
 }
  

@@ -17,16 +17,16 @@ import org.koin.androidx.viewmodel.ext.android.getViewModel
 import java.lang.reflect.ParameterizedType
 import kotlin.reflect.KClass
 
-abstract class BaseActivity<T : ViewModel> : AppCompatActivity() {
+abstract class BaseActivity<VM : ViewModel> : AppCompatActivity() {
 
-    val viewModel: T by lazy { getViewModel(viewModelClass()) }
+    val viewModel: VM by lazy { getViewModel(viewModelClass()) }
     val disposable: CompositeDisposable by lazy { CompositeDisposable() }
     val loading: BaseLoading by lazy { BaseLoading(this) }
 
     @Suppress("UNCHECKED_CAST")
-    private fun viewModelClass(): KClass<T> {
+    private fun viewModelClass(): KClass<VM> {
         return ((javaClass.genericSuperclass as ParameterizedType)
-            .actualTypeArguments[0] as Class<T>)
+            .actualTypeArguments[0] as Class<VM>)
             .kotlin
     }
 

@@ -28,8 +28,8 @@ class TagAdapter(
         holder.bindItem(items[position], listener)
     }
 
-    fun setData(menus: MutableList<TagItem>) {
-        this.items = menus
+    fun setData(items: MutableList<TagItem>) {
+        this.items = items
         notifyDataSetChanged()
     }
 

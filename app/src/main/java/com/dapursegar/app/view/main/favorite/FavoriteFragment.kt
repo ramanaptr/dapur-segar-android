@@ -32,6 +32,7 @@ class FavoriteFragment : BaseFragment<FavoriteViewModel>() {
     override fun onCreate(savedInstanceState: Bundle?, actionBar: ActionBar?) {
         tvTitle.text = getString(R.string.favorite_title)
         setupAdapter()
+        loadDummyData()
     }
 
     override fun onClick() {
@@ -39,10 +40,7 @@ class FavoriteFragment : BaseFragment<FavoriteViewModel>() {
     }
 
     private fun setupAdapter() {
-        favoriteAdapter =
-            FavoriteAdapter { state, product -> onClickFavorite(state, product) }.apply {
-                setData(loadData())
-            }
+        favoriteAdapter = FavoriteAdapter { state, product -> onClickFavorite(state, product) }
         rvFavorites.apply {
             adapter = favoriteAdapter
             layoutManager = GridLayoutManager(context, 2)
@@ -50,13 +48,13 @@ class FavoriteFragment : BaseFragment<FavoriteViewModel>() {
         }
     }
 
-    private fun loadData(): MutableList<ProductItem> {
+    private fun loadDummyData() {
         val products = mutableListOf<ProductItem>()
-        for (category in 1..5) {
+        for (category in 1..6) {
             products.add(ProductItem(R.drawable.durian, "Durian Bali"))
             categoryHomeDummy.add(CategoryHome("Choice product", products))
         }
-        return products
+        favoriteAdapter?.setData(products)
     }
 
     private fun onClickFavorite(state: String, data: ProductItem) {

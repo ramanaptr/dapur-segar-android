@@ -56,7 +56,7 @@
             android:name="com.dapursegar.app.view.payment.PaymentDetailActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name="com.dapursegar.app.view.cart.CartAlertActivity"
+            android:name="com.dapursegar.app.view.payment.LoginAlertActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name="com.dapursegar.app.view.cart.CartActivity"

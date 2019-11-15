@@ -39,7 +39,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/payment_detail_not_paid"
                     android:textColor="@color/white"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <com.dapursegar.app.base.customview.CustomTextView
@@ -81,9 +81,9 @@
                 android:id="@+id/rvProducts"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
                 android:clipToPadding="false"
                 android:paddingStart="@dimen/default_padding_start"
+                android:paddingTop="24dp"
                 android:paddingEnd="@dimen/default_padding_end"
                 app:layout_constraintTop_toBottomOf="@id/tvHeaderProduct" />
 
@@ -126,14 +126,28 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="@dimen/default_margin_end"
+                android:layout_marginEnd="24dp"
                 android:lineSpacingExtra="11sp"
+                android:text="@string/payment_detail_dummy_address"
                 android:textColor="@color/text_view_color_gray"
                 android:textSize="12sp"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvEditAddress"
                 app:layout_constraintStart_toEndOf="@id/ivLocation"
-                app:layout_constraintTop_toTopOf="@id/ivLocation"
-                tools:text="@string/payment_detail_dummy_address" />
+                app:layout_constraintTop_toTopOf="@id/ivLocation" />
+
+            <com.dapursegar.app.base.customview.CustomTextView
+                android:id="@+id/tvEditAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_margin_end"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:lineSpacingExtra="12sp"
+                android:text="Ubah"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivLocation" />
 
             <View
                 android:id="@+id/vLine3"
@@ -152,7 +166,7 @@
                 android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="@dimen/default_margin_end"
-                android:text="Paying Method"
+                android:text="Metode Pembayaran"
                 android:textColor="#424242"
                 android:textSize="14sp"
                 android:textStyle="bold"
@@ -179,21 +193,22 @@
                 android:text="@string/payment_detail_bank_name_dummy"
                 android:textColor="@color/text_view_color_gray"
                 android:textSize="12sp"
-                app:layout_constraintEnd_toStartOf="@id/tvEdit"
+                app:layout_constraintEnd_toStartOf="@id/tvEditMethod"
                 app:layout_constraintStart_toEndOf="@id/ivCard"
                 app:layout_constraintTop_toTopOf="@id/ivCard" />
 
             <com.dapursegar.app.base.customview.CustomTextView
-                android:id="@+id/tvEdit"
+                android:id="@+id/tvEditMethod"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="@dimen/default_margin_end"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:lineSpacingExtra="12sp"
-                android:text="Edit"
-                android:textColor="@color/text_view_color_gray"
+                android:text="Ubah"
+                android:textColor="@color/colorPrimary"
                 android:textSize="12sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/ivCard" />
 
@@ -205,7 +220,7 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="@dimen/default_margin_end"
                 android:background="@color/transparent_gray"
-                app:layout_constraintTop_toBottomOf="@+id/tvEdit" />
+                app:layout_constraintTop_toBottomOf="@+id/tvEditMethod" />
 
             <com.dapursegar.app.base.customview.CustomTextView
                 android:id="@+id/tvHeaderOrderNumber"
@@ -249,7 +264,7 @@
                 android:layout_marginEnd="@dimen/default_margin_end"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:text="@string/payment_detail_copy"
-                android:textColor="@color/green_light_v4"
+                android:textColor="@color/colorPrimary"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -293,7 +308,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/default_margin_start"
-                android:text="Total Product"
+                android:text="Total Produk"
                 android:textColor="#868686"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/tvPrices"
@@ -320,7 +335,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/default_margin_start"
-                android:text="Shipping costs"
+                android:text="Ongkos Kirim"
                 android:textColor="#868686"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/tvShippingCost"
@@ -347,7 +362,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/default_margin_start"
                 android:layout_marginTop="8dp"
-                android:text="Discount"
+                android:text="Diskon"
                 android:textColor="#868686"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -410,7 +425,6 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvPay"
-                style="@style/selectable_with_ripple"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -420,6 +434,8 @@
                 app:layout_constraintTop_toBottomOf="@+id/btnCancel">
 
                 <Button
+                    android:id="@+id/btnPay"
+                    style="@style/selectable_with_ripple"
                     android:layout_width="match_parent"
                     android:layout_height="57dp"
                     android:background="@color/colorAccent"

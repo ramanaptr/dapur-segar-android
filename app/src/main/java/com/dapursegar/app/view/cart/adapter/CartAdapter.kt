@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.dapursegar.app.R
+import com.dapursegar.app.base.extension.gone
 import com.dapursegar.app.model.home.ProductItem
 import kotlinx.android.synthetic.main.items_product_cart.view.*
 
@@ -17,7 +18,8 @@ class CartAdapter(
         const val EDIT_DETAIL = "EDIT_DETAIL"
     }
 
-    private var items: MutableList<ProductItem> = mutableListOf()
+    private var isCart = false
+    private var items = mutableListOf<ProductItem>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v: View =
@@ -30,11 +32,12 @@ class CartAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindItem(items[position], listener)
+        holder.bindItem(isCart, items[position], listener)
     }
 
-    fun setData(menus: MutableList<ProductItem>) {
-        this.items = menus
+    fun setData(isCart: Boolean, items: MutableList<ProductItem>) {
+        this.isCart = isCart
+        this.items = items
         notifyDataSetChanged()
     }
 
@@ -44,12 +47,18 @@ class CartAdapter(
         private val btnDelete = itemView.btnDelete
 
         fun bindItem(
+            isCart: Boolean,
             data: ProductItem,
             listener: ProductItem.(String) -> Unit
         ) {
             data.apply {
-                btnDelete.setOnClickListener { listener(this, DELETE) }
-                tvEditDetail.setOnClickListener { listener(this, EDIT_DETAIL) }
+                if (isCart) {
+                    btnDelete.setOnClickListener { listener(this, DELETE) }
+                    tvEditDetail.setOnClickListener { listener(this, EDIT_DETAIL) }
+                } else {
+                    btnDelete.gone()
+                    tvEditDetail.gone()
+                }
             }
         }
     }

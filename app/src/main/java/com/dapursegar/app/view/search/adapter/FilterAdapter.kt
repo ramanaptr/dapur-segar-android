@@ -29,8 +29,8 @@ class FilterAdapter(
         if (items.size > 0 && (items.size - 1) == position) holder.itemView.vLine.gone()
     }
 
-    fun setData(menus: MutableList<String>) {
-        this.items = menus
+    fun setData(items: MutableList<String>) {
+        this.items = items
         notifyDataSetChanged()
     }
 

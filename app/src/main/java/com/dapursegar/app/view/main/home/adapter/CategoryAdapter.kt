@@ -31,8 +31,8 @@ class CategoryAdapter(
         holder.bindItem(items[position], moreListener, listener)
     }
 
-    fun setData(menus: MutableList<CategoryHome>) {
-        this.items = menus
+    fun setData(items: MutableList<CategoryHome>) {
+        this.items = items
         notifyDataSetChanged()
     }
 

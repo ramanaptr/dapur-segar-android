@@ -5,6 +5,7 @@ import androidx.appcompat.app.ActionBar
 import com.dapursegar.app.R
 import com.dapursegar.app.base.activity.BaseActivity
 import com.dapursegar.app.base.extension.gone
+import kotlinx.android.synthetic.main.activity_edit_profile.*
 import kotlinx.android.synthetic.main.toolbar_default.*
 
 /**
@@ -34,5 +35,7 @@ class EditProfileActivity : BaseActivity<EditProfileViewModel>() {
 
     private fun initComponents() {
         tvTitle.gone()
+        etDisplayName.setText("Username")
+        etEmail.setText("user@dapursegar.id")
     }
 }

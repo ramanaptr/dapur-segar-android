@@ -56,7 +56,6 @@
 
     <!--Bill-->
     <string name="bill_title">Tagihan</string>
-    <string name="dummy_bill_product">Pay before 06–06–2019 5:05 p.m. through the BCA bank (automatic check)</string>
     <string name="bill_detail">Detail</string>
     <string name="bill_pay">Pembayaran</string>
 
@@ -64,16 +63,16 @@
     <string name="payment_detail">Detail Pembayaran</string>
     <string name="payment_detail_not_paid">Belum terbayar</string>
     <string name="payment_detail_not_paid_description">Silakan Bayar sebelum 06–06-2019 5:05 p.m. melalui bank BCA (cek otomatis), jika tidak membayar, pesanan ini akan dibatalkan secara otomatis.</string>
-    <string name="payment_detail_product_header">Detil Produk</string>
+    <string name="payment_detail_product_header">Rincian Produk</string>
     <string name="image_description_location">Icon location</string>
     <string name="payment_detail_address_header">Alamat</string>
     <string name="payment_detail_dummy_address">Ds, Sente, desa pikat kecamatan dawan, kabupaten klungkung bali., indonesia 80761</string>
     <string name="payment_detail_bank_name_dummy">Bank BCA</string>
     <string name="payment_detail_no_orders_header">No. Pesanan</string>
     <string name="payment_detail_order_time_header">Waktu pesanan</string>
-    <string name="payment_detail_copy">Copy</string>
+    <string name="payment_detail_copy">Salin</string>
     <string name="payment_detail_cancel_order">Batal Pesanan</string>
-    <string name="payment_detail_total_paying_header">Total paying</string>
+    <string name="payment_detail_total_paying_header">Total Pembayaran</string>
 
     <!--Cart-->
     <string name="cart_title">Keranjang</string>
@@ -92,7 +91,7 @@
     <string name="edit_profile_save">Simpan</string>
     <string name="edit_profile_info_verification">Status Verifikasi</string>
     <string name="edit_profile_email">Email</string>
-    <string name="edit_profile_account_status">Status Akun</string>
+    <string name="edit_profile_phone_status">Phone</string>
     <string name="login_login_with">Atau login dengan</string>
     <string name="login_hint_username">Username</string>
     <string name="login_hint_password">Password</string>

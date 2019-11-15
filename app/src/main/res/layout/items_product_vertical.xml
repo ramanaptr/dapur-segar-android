@@ -66,7 +66,7 @@
             android:layout_height="wrap_content"
             android:paddingStart="@dimen/product_item_margin"
             android:paddingEnd="@dimen/product_item_margin"
-            android:text="Durian Mantap"
+            android:text="Durian Segar"
             android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold"

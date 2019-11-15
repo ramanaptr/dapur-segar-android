@@ -32,8 +32,16 @@ class LoginActivity : BaseActivity<LoginViewModel>() {
         initComponent()
     }
 
+    override fun onResume() {
+        super.onResume()
+        loading.dismiss()
+    }
+
     override fun onClick() {
-        tvSkip.setOnClickListener { startActivity<MainActivity>() }
+        tvSkip.setOnClickListener {
+            loading.show()
+            startActivity<MainActivity>()
+        }
         tvForgot.setOnClickListener { startActivity<ForgotPasswordActivity>() }
         tvRegister.setOnClickListener { startActivity<RegisterActivity>() }
         btnEye.setOnClickListener { btnEye.passwordState(etPassword) }

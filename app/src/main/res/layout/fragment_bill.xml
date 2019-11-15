@@ -11,7 +11,7 @@
         android:layout_height="wrap_content" />
 
     <androidx.core.widget.NestedScrollView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
@@ -22,10 +22,10 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvBill"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:clipToPadding="false"
+                android:padding="@dimen/default_padding"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

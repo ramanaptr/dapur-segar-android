@@ -13,9 +13,9 @@ import io.reactivex.schedulers.Schedulers
  * Created by Ramana on 09-Nov-19.
  */
 
-internal fun <T> Flowable<T>.getData(
+internal fun <Response> Flowable<Response>.getData(
     loading: BaseLoading,
-    success: T.() -> Unit,
+    success: Response.() -> Unit,
     exception: Throwable.() -> Unit
 ): Disposable {
     loading.show()
@@ -34,8 +34,8 @@ internal fun <T> Flowable<T>.getData(
         )
 }
 
-internal fun <D, E> Flowable<BaseResult<D, E>>.getBaseResult(
-    success: BaseResult<D, E>.() -> Unit,
+internal fun <Data> Flowable<Data>.getBaseResult(
+    success: Data.() -> Unit,
     exception: Throwable.() -> Unit
 ): Disposable {
     return subscribeOn(Schedulers.io())
@@ -49,9 +49,9 @@ internal fun <D, E> Flowable<BaseResult<D, E>>.getBaseResult(
         )
 }
 
-internal fun <D, E> Flowable<BaseResult<D, E>>.getBaseResult(
+internal fun <Data> Flowable<Data>.getBaseResult(
     loading: BaseLoading,
-    success: BaseResult<D, E>.() -> Unit,
+    success: Data.() -> Unit,
     exception: Throwable.() -> Unit
 ): Disposable {
     loading.show()
@@ -70,6 +70,6 @@ internal fun <D, E> Flowable<BaseResult<D, E>>.getBaseResult(
         )
 }
 
-internal fun <T> createFlowBackPress(block: FlowableEmitter<T>.() -> Unit): Flowable<T> {
+internal fun <Object> createFlowBackPress(block: FlowableEmitter<Object>.() -> Unit): Flowable<Object> {
     return Flowable.create({ block(it) }, BackpressureStrategy.BUFFER)
 }

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="16dp"
     android:clipToPadding="false"
     android:foreground="?attr/selectableItemBackground"
     app:cardCornerRadius="4dp"
@@ -28,7 +29,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/imgMenuIcon"
+                android:id="@+id/ivProduct"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
@@ -57,10 +58,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
-            tools:text="IDR 420.100/ 1 Kg"
-            android:textColor="@color/red"
+            android:text="IDR 420.100/ 1 Kg"
+            android:textColor="@color/black"
             android:textSize="14sp"
-            android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
             app:layout_constraintTop_toBottomOf="@id/tvProductName" />
 
@@ -71,7 +71,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
             android:gravity="center_horizontal"
-            tools:text="Qty 1"
+            android:text="Jumlah 3kg"
             android:textColor="@color/text_view_color_gray"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
@@ -84,9 +84,10 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
             android:gravity="center_horizontal"
-            tools:text="1Kg - IDR 430.100"
+            android:text="1Kg - IDR 430.100"
             android:textColor="@color/text_view_color_gray"
             android:textSize="12sp"
+            android:visibility="gone"
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
             app:layout_constraintTop_toBottomOf="@id/tvQuantity" />
 
@@ -97,11 +98,12 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
             android:gravity="center_horizontal"
-            tools:text="Show 1 product again"
             android:textColor="@color/text_view_color_gray"
             android:textSize="12sp"
+            android:visibility="gone"
             app:layout_constraintStart_toEndOf="@id/cvProductImage"
-            app:layout_constraintTop_toBottomOf="@id/tvInfoWeight" />
+            app:layout_constraintTop_toBottomOf="@id/tvInfoWeight"
+            tools:text="Show 1 product again" />
 
         <TextView
             android:id="@+id/tvDetail"
@@ -113,6 +115,7 @@
             android:text="@string/bill_detail"
             android:textColor="@color/colorPrimary"
             android:textSize="12sp"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@id/tvShowProductAgain"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/tvShowProductAgain" />
@@ -124,11 +127,12 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:gravity="end"
-            android:textColor="@color/text_view_black_light"
-            android:textSize="12sp"
+            android:text="Total : IDR 435.100"
+            android:textColor="@color/red"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvDetail"
-            tools:text="Total : IDR 435.100" />
+            app:layout_constraintTop_toBottomOf="@id/tvDetail" />
 
         <com.dapursegar.app.base.customview.CustomTextView
             android:id="@+id/tvProduct"
@@ -136,12 +140,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:gravity="center_horizontal"
+            android:text="6 Produk"
             android:textColor="@color/text_view_color_gray"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/tvTotalPrice"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tvTotalPrice"
-            tools:text="2 Product" />
+            app:layout_constraintTop_toTopOf="@+id/tvTotalPrice" />
 
         <View
             android:id="@+id/vLine"
@@ -154,48 +158,45 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvLogin"
-            style="@style/selectable_with_ripple"
             android:layout_width="136dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
             app:cardCornerRadius="4dp"
             app:cardElevation="9dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/customTextView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/vLine">
+            app:layout_constraintTop_toTopOf="@+id/customTextView">
 
-            <RelativeLayout
+            <Button
+                android:id="@+id/btnPay"
+                style="@style/selectable_with_ripple"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <com.dapursegar.app.base.customview.CustomTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/button_submit"
-                    android:background="@color/colorAccent"
-                    android:fontFamily="@font/os_bold"
-                    android:gravity="center"
-                    android:text="@string/bill_pay"
-                    android:textColor="@android:color/white"
-                    android:textSize="16sp" />
-
-            </RelativeLayout>
+                android:layout_height="@dimen/button_submit"
+                android:background="@color/colorAccent"
+                android:fontFamily="@font/os_bold"
+                android:gravity="center"
+                android:text="@string/bill_pay"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
 
         </androidx.cardview.widget.CardView>
 
         <com.dapursegar.app.base.customview.CustomTextView
+            android:id="@+id/customTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
-            android:text="@string/dummy_bill_product"
+            android:layout_marginBottom="16dp"
+            android:text="@string/payment_detail_not_paid_description"
             android:textColor="#919191"
             android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@+id/cvLogin"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/cvLogin"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/cvLogin" />
+            app:layout_constraintTop_toBottomOf="@+id/vLine" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

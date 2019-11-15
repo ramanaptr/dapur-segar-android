@@ -83,7 +83,6 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvCheckout"
-                style="@style/selectable_with_ripple"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -97,6 +96,7 @@
 
                 <Button
                     android:id="@+id/btnCheckout"
+                    style="@style/selectable_with_ripple"
                     android:layout_width="157dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"

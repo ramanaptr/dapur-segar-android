@@ -55,7 +55,7 @@ class BSProductQuantity(
             etQuantity.setText(quantity.toString())
             tvWeightPrice.text = "IDR 420.100/ 1 Kg (${quantity}x)"
         }
-        imgMenuIcon.setOnClickListener { startActivity<DetailProductActivity>() }
+        ivProduct.setOnClickListener { startActivity<DetailProductActivity>() }
     }
 
     private fun setupAdapter() {

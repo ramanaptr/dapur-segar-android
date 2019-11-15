@@ -6,11 +6,16 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.dapursegar.app.R
 import com.dapursegar.app.model.home.ProductItem
-import kotlinx.android.synthetic.main.items_product_horizontal.view.*
+import kotlinx.android.synthetic.main.items_bill.view.*
 
 class BillAdapter(
-    private val listener: (ProductItem) -> Unit
+    private val listener: ProductItem.(String) -> Unit
 ) : RecyclerView.Adapter<BillAdapter.ViewHolder>() {
+
+    companion object {
+        const val PAY = "PAY"
+        const val DETAIL = "DETAIL"
+    }
 
     private var items: MutableList<ProductItem> = mutableListOf()
 
@@ -29,17 +34,20 @@ class BillAdapter(
         holder.bindItem(items[position], listener)
     }
 
-    fun setData(menus: MutableList<ProductItem>) {
-        this.items = menus
+    fun setData(items: MutableList<ProductItem>) {
+        this.items = items
         notifyDataSetChanged()
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        private val ivThumbnail = itemView.ivThumbnail
+        private val ivProduct = itemView.ivProduct
+        private val btnPay = itemView.btnPay
 
-        fun bindItem(data: ProductItem, listener: (ProductItem) -> Unit) {
+        fun bindItem(data: ProductItem, listener: ProductItem.(String) -> Unit) {
             data.apply {
+                ivProduct.setOnClickListener { listener(this, PAY) }
+                btnPay.setOnClickListener { listener(this, DETAIL) }
             }
         }
     }

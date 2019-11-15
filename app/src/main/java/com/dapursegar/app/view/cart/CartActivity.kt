@@ -8,6 +8,7 @@ import com.dapursegar.app.base.activity.BaseActivity
 import com.dapursegar.app.model.home.ProductItem
 import com.dapursegar.app.view.cart.adapter.CartAdapter
 import com.dapursegar.app.view.detail.EditProductCartActivity
+import com.dapursegar.app.view.payment.PaymentDetailActivity
 import kotlinx.android.synthetic.main.activity_cart.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
@@ -39,7 +40,7 @@ class CartActivity : BaseActivity<CartViewModel>() {
     }
 
     override fun onClick() {
-
+        btnCheckout.setOnClickListener { startActivity<PaymentDetailActivity>() }
     }
 
     private fun initComponent() {
@@ -69,7 +70,7 @@ class CartActivity : BaseActivity<CartViewModel>() {
         for (i in 1..5) {
             cartData.add(ProductItem())
         }
-        cartAdapter?.setData(cartData)
+        cartAdapter?.setData(true, cartData)
         btnCheckout.text = "Beli (${cartData.size})"
     }
 

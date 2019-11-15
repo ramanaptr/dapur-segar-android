@@ -12,7 +12,7 @@ class MenuAdapter(
     private val listener: (MenuHome) -> Unit
 ) : RecyclerView.Adapter<MenuAdapter.ViewHolder>() {
 
-    private var menus: MutableList<MenuHome> = mutableListOf()
+    private var items: MutableList<MenuHome> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v: View =
@@ -21,21 +21,21 @@ class MenuAdapter(
     }
 
     override fun getItemCount(): Int {
-        return menus.size
+        return items.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindItem(menus[position], listener)
+        holder.bindItem(items[position], listener)
     }
 
-    fun setData(menus: MutableList<MenuHome>) {
-        this.menus = menus
+    fun setData(items: MutableList<MenuHome>) {
+        this.items = items
         notifyDataSetChanged()
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        private val imgMenuIcon = itemView.imgMenuIcon
+        private val imgMenuIcon = itemView.ivProduct
         private val tvMenuTitle = itemView.tvMenuTitle
 
         fun bindItem(menuHome: MenuHome, listener: (MenuHome) -> Unit) {
